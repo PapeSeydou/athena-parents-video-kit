@@ -25,6 +25,7 @@ l'**espace Parents** de l'application mobile **Athena School** (par SEPRO) aux p
 | `design-system/` | `tokens.css` (LA loi palette) et `ui.css` du design system officiel |
 | `voice/` | Take final WAV + MP3, les 9 découpes par scène, le script (propre et avec tags), le prompt de style |
 | `preview/` | La maquette de style NON VALIDÉE (référence, pas un modèle à suivre) |
+| `docs/CAPTURE-BRIEF.md` | Brief de capture pour l'agent (2 pistes : design viewer 412x917 @2x + vraie app, décision paiement, contrat flow.md) |
 | `docs/` | Script, voix, timing, storyboard, captures, design kit, workflow de rendu |
 
 ## Par où commencer

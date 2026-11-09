@@ -39,3 +39,24 @@ Chaque scène dure voix + 0,4 à 0,6 s de queue (les jonctions sonnent coupées 
 
 `voice/scene_01.wav` à `scene_09.wav` = découpes prêtes (loudness équilibrée à ±2 dB,
 clampée, la prise maîtresse n'est pas retouchée). `voice/narration_complet.wav` = take maître.
+
+## Livraison audio — format retenu (un seul WAV + bornes)
+
+Le take maître est `voice/narration_complet.wav` (94,32 s). Bornes de chaque scène DANS ce fichier
+(début inclut, fin exclut) :
+
+| Scène | Début (s) | Fin (s) |
+|---|---|---|
+| 1 ouverture | 0,00 | 3,89 |
+| 2 connexion | 3,89 | 12,49 |
+| 3 code + PIN | 12,49 | 23,57 |
+| 4 accueil | 23,57 | 32,77 |
+| 5 scolarité | 32,77 | 59,25 |
+| 6 factures | 59,25 | 70,85 |
+| 7 notifications | 70,85 | 77,35 |
+| 8 bus + réinscription | 77,35 | 89,59 |
+| 9 fin | 89,59 | 94,32 |
+
+Pour le montage, ajouter 0,4 à 0,6 s de queue après chaque fin (voir le tableau de démarrages du film
+plus haut). Les `voice/scene_XX.wav` sont fournies par commodité (mêmes bornes, loudness équilibrée),
+mais la référence est le take maître + ce tableau.
