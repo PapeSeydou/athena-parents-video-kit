@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Jour précédent",
+  "type": "button",
+  "x": 40,
+  "y": 364,
+  "width": 68,
+  "height": 68,
+  "tap": true
+ },
+ {
+  "label": "Jour suivant",
+  "type": "button",
+  "x": 716,
+  "y": 364,
+  "width": 68,
+  "height": 68,
+  "tap": false
+ },
+ {
+  "label": "Tout",
+  "type": "button",
+  "x": 46,
+  "y": 454,
+  "width": 110,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "À faire",
+  "type": "button",
+  "x": 156,
+  "y": 454,
+  "width": 135,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Choisir une date",
+  "type": "button",
+  "x": 577,
+  "y": 452,
+  "width": 207,
+  "height": 64,
+  "tap": false
+ }
+]

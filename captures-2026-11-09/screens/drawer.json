@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Changer de profil",
+  "type": "button",
+  "x": 184,
+  "y": 52,
+  "width": 604,
+  "height": 116,
+  "tap": false
+ },
+ {
+  "label": "Tout voir ›",
+  "type": "link",
+  "x": 644,
+  "y": 204,
+  "width": 144,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Fatou Sarr est descendue — non lue",
+  "type": "button",
+  "x": 184,
+  "y": 284,
+  "width": 604,
+  "height": 94,
+  "tap": false
+ },
+ {
+  "label": "Non monté à l'arrêt Rue 8 — non lue",
+  "type": "button",
+  "x": 184,
+  "y": 378,
+  "width": 604,
+  "height": 92,
+  "tap": false
+ },
+ {
+  "label": "Enfants",
+  "type": "button",
+  "x": 184,
+  "y": 519,
+  "width": 604,
+  "height": 79,
+  "tap": false
+ },
+ {
+  "label": "Scolarité",
+  "type": "button",
+  "x": 184,
+  "y": 604,
+  "width": 604,
+  "height": 79,
+  "tap": false
+ },
+ {
+  "label": "Finance",
+  "type": "button",
+  "x": 184,
+  "y": 689,
+  "width": 604,
+  "height": 79,
+  "tap": false
+ },
+ {
+  "label": "Transport",
+  "type": "button",
+  "x": 184,
+  "y": 774,
+  "width": 604,
+  "height": 79,
+  "tap": false
+ },
+ {
+  "label": "Réglages",
+  "type": "button",
+  "x": 184,
+  "y": 859,
+  "width": 604,
+  "height": 79,
+  "tap": false
+ },
+ {
+  "label": "Fermer ✕",
+  "type": "button",
+  "x": 184,
+  "y": 976,
+  "width": 604,
+  "height": 68,
+  "tap": false
+ }
+]

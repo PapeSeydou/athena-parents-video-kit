@@ -1,0 +1,42 @@
+9:30
+Factures
+Tous
+À payer
+Amadou Sarr
+Sélectionner
+Oct. 2025
+FA2526-000189
+18 000 F
+Payé :
+0
+F
+Restant :
+18 000
+F
+Khadi Sarr
+Sélectionner
+Oct. 2025
+FA2526-000147
+75 000 F
+Payé :
+0
+F
+Restant :
+75 000
+F
+Amadou Sarr
+Sélectionner
+Fév. 2026
+FA2223-000523
+70 000 F
+Payé :
+60 000
+F
+Restant :
+10 000
+F
+Statut
+✕
+Toutes les factures
+À payer
+Payées

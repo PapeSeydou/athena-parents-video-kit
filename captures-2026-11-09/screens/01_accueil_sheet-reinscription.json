@@ -1,0 +1,20 @@
+[
+ {
+  "label": "Amadou Sarr E220092 · CM1 B Non inscrit(e)",
+  "type": "button",
+  "x": 36,
+  "y": 1322,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ },
+ {
+  "label": "Fatou Sarr E220121 · CP A Non inscrit(e)",
+  "type": "button",
+  "x": 36,
+  "y": 1642,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ }
+]

@@ -1,0 +1,128 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Tout 9",
+  "type": "button",
+  "x": 46,
+  "y": 266,
+  "width": 137,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Non lues 6",
+  "type": "button",
+  "x": 183,
+  "y": 266,
+  "width": 188,
+  "height": 60,
+  "tap": true
+ },
+ {
+  "label": "Fatou Sarr est descendue — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 378,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Non monté à l'arrêt Rue 8 — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 484,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Fatou est sortie avec M. Faye — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 590,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Nouvelle facture disponible — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 696,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Absence à justifier — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 802,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Nouveau devoir au cahier — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 908,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Bulletin du 1er trimestre — lue",
+  "type": "button",
+  "x": 70,
+  "y": 1014,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Paiement enregistré — lue",
+  "type": "button",
+  "x": 70,
+  "y": 1120,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Réinscription 2026-2027 — lue",
+  "type": "button",
+  "x": 70,
+  "y": 1226,
+  "width": 684,
+  "height": 88,
+  "tap": false
+ },
+ {
+  "label": "Tout marquer comme lu",
+  "type": "button",
+  "x": 40,
+  "y": 1368,
+  "width": 744,
+  "height": 72,
+  "tap": true
+ }
+]

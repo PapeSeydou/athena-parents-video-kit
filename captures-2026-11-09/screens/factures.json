@@ -1,0 +1,65 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Tous",
+  "type": "button",
+  "x": 40,
+  "y": 248,
+  "width": 184,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "À payer",
+  "type": "button",
+  "x": 240,
+  "y": 248,
+  "width": 220,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr Sélectionner Oct. 2025 FA2526-000189 18 000 F Payé : 0 F Restant : 1",
+  "type": "card",
+  "x": 40,
+  "y": 340,
+  "width": 744,
+  "height": 266,
+  "tap": false
+ },
+ {
+  "label": "Khadi Sarr Sélectionner Oct. 2025 FA2526-000147 75 000 F Payé : 0 F Restant : 75",
+  "type": "card",
+  "x": 40,
+  "y": 630,
+  "width": 744,
+  "height": 266,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr Sélectionner Fév. 2026 FA2223-000523 70 000 F Payé : 60 000 F Restan",
+  "type": "card",
+  "x": 40,
+  "y": 920,
+  "width": 744,
+  "height": 266,
+  "tap": false
+ }
+]

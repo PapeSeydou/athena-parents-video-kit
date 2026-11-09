@@ -1,0 +1,116 @@
+9:30
+Suivi du bus · états
+Les états du suivi, un par un
+Chaque état porte sa lecture ÉCRITE : la carte n'est jamais le seul chemin vers l'information, et sans tuiles l'écran reste complet.
+E1 · LE BUS N'EST PAS ENCORE PARTI
+Pas encore parti
+Bus A
+Après-midi
+Plein écran
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+
+Tournée du soir pas commencée : aucune position n'est inventée, le trajet à venir est en pointillé.
+
+E2 · LE BUS EST MUET DEPUIS 12 MIN
+En route
+il y a 12 min
+Bus A
+Matin
+Plein écran
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+Position il y a 12 min
+Rue 12 · Médina
+Signal ancien
+
+« Dernière position il y a 12 min » — le silence se DATE, il ne s'interprète jamais. Aucun mot sur une panne : l'app n'en sait rien.
+
+E3 · RIEN DE COCHÉ — DEUX ÉTATS, JAMAIS UN SEUL
+A
+Amadou Sarr
+CM1 B · arrêt Rue 8 · prévu 07:20
+À monter · 07:20
+A
+Amadou Sarr
+CM1 B · bus passé à 07:16
+Non monté · 07:16
+Contacter l'école
+
+AVANT l'arrêt : « À monter · 07:20 » (neutre, le bus n'est pas encore passé). APRÈS l'arrêt : « Non monté · 07:16 » en AMBRE + « Contacter ». Jamais « non monté » avant que le bus soit passé : ce serait faux et cela ferait appeler l'école pour rien.
+
+E4 · AUCUN BUS POUR MA FAMILLE
+
+Aucun bus pour votre famille
+
+Renseignez-vous auprès du secrétariat pour inscrire votre enfant au transport scolaire.
+
+Contacter l'école
+
+Aucune page blanche : l'écran dit ce qu'il en est, et donne la porte de sortie.
+
+E5 · RETARD DÉCLARÉ
+Retard 12 min
+il y a 4 min
+Bus A
+Matin
+Plein écran
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+Retard 12 min
+Circulation · signalé par Mme Diop
+Déclaré
+
+La cause est DÉCLARÉE par l'accompagnateur, jamais déduite d'une position. Ambre, et le trajet parcouru prend la même teinte — un trajet en retard ne peut pas être vert (D4).
+
+E6 · INCIDENT
+Route barrée
+il y a 6 min
+Bus A
+Matin
+Plein écran
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
+Route barrée
+Signalé à 07:18 · itinéraire en cours d'ajustement
+Incident
+
+Rouge réservé à l'incident (D4). Le motif est celui qu'a choisi l'accompagnateur.
+
+E7 · L'AUTRE BUS N'A PAS DE TOURNÉE AUJOURD'HUI
+F
+Fatou Sarr
+CP A · Bus B
+Pas de bus aujourd'hui
+
+Une absence de tournée se dit ; elle ne se devine pas.
+
+E8 · L'ACCOMPAGNATEUR CHANGE
+Bus A · Mme Fall
+Remplace Mme Diop aujourd'hui
+Aujourd'hui
+
+Le nom suit la TOURNÉE, pas le véhicule : le parent sait qui a son enfant ce matin-là.
+
+E9 · POINTAGE HORS LIGNE
+Pointage en attente d'envoi
+3 enfants pointés à 07:22 · réseau indisponible
+En attente
+
+Le geste de l'accompagnateur n'est pas perdu : il est daté et mis en attente. Aucun pointage n'est inventé côté serveur.
+
+E10 · LA CARTE NE S'AFFICHE PAS
+En route
+
+Sans réseau ni WebGL, la grille de repli tient le plan : l'écran perd les tuiles, jamais l'information. L'état des enfants et la ligne de chacun restent lisibles. Le prochain arrêt du bus, lui, n'est pas la question du parent.
+
+E11 · LA JOURNÉE EST TERMINÉE
+Journée terminée
+Amadou et Khadi sont descendus · 17:05
+Terminée
+
+Tout est fait : la carte ne bouge plus, et le mot de la fin est dit. Le journal du jour n'est PLUS un état de l'application (reprise 2026-09-18) : ce qu'il racontait, la carte et la ligne de chaque enfant le disent déjà.
+
+E12 · AUCUN ENFANT SUR LA TOURNÉE
+
+Aucun enfant sur cette tournée
+
+Vérifiez l'itinéraire du jour auprès du secrétariat.
+
+Côté accompagnateur : une tournée vide se dit aussi.

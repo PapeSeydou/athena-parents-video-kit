@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Changer la photo de Amadou",
+  "type": "button",
+  "x": 328,
+  "y": 352,
+  "width": 168,
+  "height": 168,
+  "tap": true
+ },
+ {
+  "label": "Vie scolaire",
+  "type": "link",
+  "x": 40,
+  "y": 924,
+  "width": 232,
+  "height": 166,
+  "tap": false
+ },
+ {
+  "label": "Notes",
+  "type": "link",
+  "x": 296,
+  "y": 924,
+  "width": 232,
+  "height": 166,
+  "tap": false
+ },
+ {
+  "label": "Bulletins",
+  "type": "link",
+  "x": 552,
+  "y": 924,
+  "width": 232,
+  "height": 166,
+  "tap": false
+ },
+ {
+  "label": "Factures",
+  "type": "link",
+  "x": 40,
+  "y": 1114,
+  "width": 232,
+  "height": 166,
+  "tap": false
+ }
+]

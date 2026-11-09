@@ -1,0 +1,38 @@
+[
+ {
+  "label": "✕",
+  "type": "button",
+  "x": 759,
+  "y": 1247,
+  "width": 29,
+  "height": 54,
+  "tap": false
+ },
+ {
+  "label": "Toutes les factures",
+  "type": "button",
+  "x": 36,
+  "y": 1322,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ },
+ {
+  "label": "À payer",
+  "type": "button",
+  "x": 36,
+  "y": 1482,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ },
+ {
+  "label": "Payées",
+  "type": "button",
+  "x": 36,
+  "y": 1642,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ }
+]

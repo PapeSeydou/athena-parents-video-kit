@@ -1,0 +1,29 @@
+[
+ {
+  "label": "✕",
+  "type": "button",
+  "x": 759,
+  "y": 1110,
+  "width": 29,
+  "height": 54,
+  "tap": false
+ },
+ {
+  "label": "Max It",
+  "type": "button",
+  "x": 36,
+  "y": 1422,
+  "width": 752,
+  "height": 120,
+  "tap": true
+ },
+ {
+  "label": "Wave",
+  "type": "button",
+  "x": 36,
+  "y": 1558,
+  "width": 752,
+  "height": 120,
+  "tap": false
+ }
+]

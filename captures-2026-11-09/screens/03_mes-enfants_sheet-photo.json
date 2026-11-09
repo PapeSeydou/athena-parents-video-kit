@@ -1,0 +1,29 @@
+[
+ {
+  "label": "Prendre une photo",
+  "type": "button",
+  "x": 36,
+  "y": 1322,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ },
+ {
+  "label": "Choisir dans la galerie",
+  "type": "button",
+  "x": 36,
+  "y": 1482,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ },
+ {
+  "label": "Retirer la photo",
+  "type": "button",
+  "x": 36,
+  "y": 1642,
+  "width": 752,
+  "height": 144,
+  "tap": false
+ }
+]

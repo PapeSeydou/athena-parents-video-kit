@@ -1,0 +1,56 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "MN Mme Ndiaye 76 214 88 05 Active",
+  "type": "button",
+  "x": 70,
+  "y": 274,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "MF M. Faye 76 908 31 52 Active",
+  "type": "button",
+  "x": 70,
+  "y": 379,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "MD M. Diop 77 305 41 22 Active",
+  "type": "button",
+  "x": 70,
+  "y": 484,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "Ajouter une personne autorisée",
+  "type": "button",
+  "x": 70,
+  "y": 604,
+  "width": 684,
+  "height": 74,
+  "tap": false
+ }
+]

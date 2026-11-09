@@ -1,0 +1,308 @@
+[
+ {
+  "label": "Aujourd'hui",
+  "type": "button",
+  "x": 626,
+  "y": 1138,
+  "width": 162,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Mois précédent",
+  "type": "button",
+  "x": 36,
+  "y": 1228,
+  "width": 60,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Mois suivant",
+  "type": "button",
+  "x": 728,
+  "y": 1228,
+  "width": 60,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "1",
+  "type": "button",
+  "x": 361,
+  "y": 1340,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "2",
+  "type": "button",
+  "x": 467,
+  "y": 1340,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "3",
+  "type": "button",
+  "x": 574,
+  "y": 1340,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "4",
+  "type": "button",
+  "x": 681,
+  "y": 1340,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "5",
+  "type": "button",
+  "x": 40,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "6",
+  "type": "button",
+  "x": 147,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "7",
+  "type": "button",
+  "x": 254,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "8",
+  "type": "button",
+  "x": 361,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "9",
+  "type": "button",
+  "x": 467,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "10",
+  "type": "button",
+  "x": 574,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "11",
+  "type": "button",
+  "x": 681,
+  "y": 1420,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "12",
+  "type": "button",
+  "x": 40,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "13",
+  "type": "button",
+  "x": 147,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "14",
+  "type": "button",
+  "x": 254,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "15",
+  "type": "button",
+  "x": 361,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "16",
+  "type": "button",
+  "x": 467,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "17",
+  "type": "button",
+  "x": 574,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "18",
+  "type": "button",
+  "x": 681,
+  "y": 1500,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "19",
+  "type": "button",
+  "x": 40,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "20",
+  "type": "button",
+  "x": 147,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "21",
+  "type": "button",
+  "x": 254,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "22",
+  "type": "button",
+  "x": 361,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "23",
+  "type": "button",
+  "x": 467,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "24",
+  "type": "button",
+  "x": 574,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "25",
+  "type": "button",
+  "x": 681,
+  "y": 1580,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "26",
+  "type": "button",
+  "x": 40,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "27",
+  "type": "button",
+  "x": 147,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "28",
+  "type": "button",
+  "x": 254,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "29",
+  "type": "button",
+  "x": 361,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "30",
+  "type": "button",
+  "x": 467,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ },
+ {
+  "label": "31",
+  "type": "button",
+  "x": 574,
+  "y": 1660,
+  "width": 103,
+  "height": 76,
+  "tap": false
+ }
+]

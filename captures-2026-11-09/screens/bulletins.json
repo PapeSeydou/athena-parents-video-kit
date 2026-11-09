@@ -1,0 +1,65 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Trimestre 1",
+  "type": "button",
+  "x": 48,
+  "y": 360,
+  "width": 237,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Trimestre 2",
+  "type": "button",
+  "x": 293,
+  "y": 360,
+  "width": 237,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Trimestre 3",
+  "type": "button",
+  "x": 539,
+  "y": 360,
+  "width": 237,
+  "height": 64,
+  "tap": false
+ }
+]

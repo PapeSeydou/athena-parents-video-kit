@@ -1,0 +1,137 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Contact d'urgence",
+  "type": "button",
+  "x": 40,
+  "y": 626,
+  "width": 345,
+  "height": 74,
+  "tap": false
+ },
+ {
+  "label": "Modifier mon adresse",
+  "type": "button",
+  "x": 40,
+  "y": 716,
+  "width": 384,
+  "height": 74,
+  "tap": false
+ },
+ {
+  "label": "Cantine scolaire 15 000 F/mois",
+  "type": "button",
+  "x": 40,
+  "y": 879,
+  "width": 744,
+  "height": 92,
+  "tap": true
+ },
+ {
+  "label": "cantine",
+  "type": "checkbox",
+  "x": 66,
+  "y": 907,
+  "width": 36,
+  "height": 36,
+  "tap": false
+ },
+ {
+  "label": "Tenue de sport 10 000 F/an",
+  "type": "button",
+  "x": 40,
+  "y": 988,
+  "width": 744,
+  "height": 92,
+  "tap": true
+ },
+ {
+  "label": "tenue-sport",
+  "type": "checkbox",
+  "x": 66,
+  "y": 1016,
+  "width": 36,
+  "height": 36,
+  "tap": false
+ },
+ {
+  "label": "Uniforme 15 000 F/an",
+  "type": "button",
+  "x": 40,
+  "y": 1096,
+  "width": 744,
+  "height": 92,
+  "tap": true
+ },
+ {
+  "label": "uniforme",
+  "type": "checkbox",
+  "x": 66,
+  "y": 1124,
+  "width": 36,
+  "height": 36,
+  "tap": false
+ },
+ {
+  "label": "Cahiers & fournitures 20 000 F/an",
+  "type": "button",
+  "x": 40,
+  "y": 1204,
+  "width": 744,
+  "height": 92,
+  "tap": true
+ },
+ {
+  "label": "fournitures",
+  "type": "checkbox",
+  "x": 66,
+  "y": 1233,
+  "width": 36,
+  "height": 36,
+  "tap": true
+ },
+ {
+  "label": "Confirmer la réinscription",
+  "type": "button",
+  "x": 40,
+  "y": 1714,
+  "width": 744,
+  "height": 88,
+  "tap": false
+ }
+]

@@ -1,0 +1,101 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 228,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Emploi du temps",
+  "type": "button",
+  "x": 40,
+  "y": 356,
+  "width": 280,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "Absences",
+  "type": "button",
+  "x": 332,
+  "y": 356,
+  "width": 199,
+  "height": 70,
+  "tap": true
+ },
+ {
+  "label": "Retards",
+  "type": "button",
+  "x": 543,
+  "y": 356,
+  "width": 175,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "Sanctions",
+  "type": "button",
+  "x": 40,
+  "y": 438,
+  "width": 200,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "04 Cours de Français 08h - 09h Justifier",
+  "type": "card",
+  "x": 74,
+  "y": 641,
+  "width": 676,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "21 Cours d'Anglais 10h - 12h Justifier",
+  "type": "card",
+  "x": 74,
+  "y": 1108,
+  "width": 676,
+  "height": 102,
+  "tap": false
+ },
+ {
+  "label": "Signaler une absence",
+  "type": "button",
+  "x": 40,
+  "y": 1268,
+  "width": 744,
+  "height": 88,
+  "tap": false
+ }
+]

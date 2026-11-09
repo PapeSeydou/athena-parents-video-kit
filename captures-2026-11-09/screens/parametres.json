@@ -1,0 +1,74 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Informations de l'établissement École · contacts",
+  "type": "link",
+  "x": 70,
+  "y": 318,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Mes informations Compte et profil",
+  "type": "link",
+  "x": 70,
+  "y": 425,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Personnes autorisées Qui peut venir chercher vos enfants",
+  "type": "link",
+  "x": 70,
+  "y": 532,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Modifier mon code PIN Code secret à 4 chiffres",
+  "type": "link",
+  "x": 70,
+  "y": 638,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Me déconnecter Quitter l'application",
+  "type": "link",
+  "x": 70,
+  "y": 745,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "Conditions générales d'utilisation",
+  "type": "link",
+  "x": 40,
+  "y": 969,
+  "width": 744,
+  "height": 36,
+  "tap": false
+ }
+]

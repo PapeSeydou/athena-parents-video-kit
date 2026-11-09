@@ -1,0 +1,38 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Tout 9",
+  "type": "button",
+  "x": 46,
+  "y": 266,
+  "width": 137,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Non lues 0",
+  "type": "button",
+  "x": 183,
+  "y": 266,
+  "width": 188,
+  "height": 60,
+  "tap": false
+ }
+]

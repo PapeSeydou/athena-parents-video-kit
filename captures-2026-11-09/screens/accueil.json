@@ -1,0 +1,119 @@
+[
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 108,
+  "width": 80,
+  "height": 80,
+  "tap": true
+ },
+ {
+  "label": "Enfant précédent",
+  "type": "button",
+  "x": 40,
+  "y": 572,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Enfant suivant",
+  "type": "button",
+  "x": 720,
+  "y": 572,
+  "width": 64,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Réinscription 2026-2027",
+  "type": "button",
+  "x": 40,
+  "y": 696,
+  "width": 744,
+  "height": 108,
+  "tap": true
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 858,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Fév. 2026 FA2223-000523 10 000 F",
+  "type": "button",
+  "x": 70,
+  "y": 914,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "OUVRIR ›",
+  "type": "link",
+  "x": 617,
+  "y": 1098,
+  "width": 137,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Bus A · Mme Diop En route · arrivée prévue ~07:50 2 enfants à bord",
+  "type": "link",
+  "x": 70,
+  "y": 1154,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "30 30/10/2025 Retards tardifs répétés Sanction",
+  "type": "link",
+  "x": 70,
+  "y": 1383,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "30 30/10/2025 Devoir de classe — Histo-Géo Note · 12",
+  "type": "link",
+  "x": 70,
+  "y": 1489,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "28 28/11/2025 Devoir de classe — EPS Note · 16.5",
+  "type": "link",
+  "x": 70,
+  "y": 1596,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "28 28/10/2025 Cours de Maths Absence",
+  "type": "link",
+  "x": 70,
+  "y": 1703,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "28 28/01/2026 Mathématiques — Exercices 3-5 p.54 Devoir",
+  "type": "link",
+  "x": 70,
+  "y": 1810,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ }
+]
