@@ -32,7 +32,7 @@
 19. 05_factures_filtre-enfant.png | reached by: filtre enfant | status: new
 20. 05_factures_filtre-statut.png | reached by: filtre « Statut » | status: new
 21. 10_factures_invoice-selected.png | reached by: sélection d’une facture | status: new
-22. 10_factures_payment-sheet.png | reached by: « Payer 1 facture… » puis « Max It » — STOP avant « Payer par » | status: new
+22. 10_factures_payment-sheet.png | reached by: « Payer 1 facture… » puis « Max It » — STOP avant le bouton final de paiement | status: new
 23. screen-notifications.png | reached by: drawer → « Tout voir » | status: existing
 24. 11_notifications_non-lues.png | reached by: filtre « Non lues » | status: new
 25. 11_notifications_apres-markall.png | reached by: « Tout marquer comme lu » | status: new
@@ -65,7 +65,14 @@ Voir texts/*.txt (un fichier par écran et par état). Points clés :
 - accueil : clic sur le sélecteur enfant sans effet (feuille non ouverte)
 - mes-enfants : la rangée bus des enfants de démo n’est pas un lien (aucune navigation) — le lien bus n’existe que pour le fallback hors liste
 - factures : le bouton « Payer … » n’a pas répondu au clic réel (clic scripté utilisé) — barre non cliquable dans la maquette
-- feuille paiement : 1 élément(s) « Payer par … » exclu(s) du JSON (consigne)
+- STOP RULE appliquée rétroactivement :
+  - JSON : 1 entrée retirée de 10_factures_invoice-selected.json (libellé du bouton final de
+    paiement : verbe de paiement + fournisseur sélectionné + montant en FCFA).
+  - TXT : le bloc de lignes du bouton final de paiement (5 lignes : verbe, fournisseur, séparateur,
+    montant, devise) a été retiré de 10_factures_invoice-selected.txt et
+    10_factures_payment-sheet.txt. Les rangées fournisseurs « Max It » et « Wave » ainsi que les
+    totaux sont conservées.
+  - Crops : le crop du bouton retiré a été supprimé ; aucun élément éligible n'est resté sans crop.
 - Le sélecteur d'extraction a été étendu (payopt, facture-card, service-check, vs-chip, filter-chip,
   ct-icobtn, ct-calchip, trimestre, reinsc-banner, tile, mini-act, kid-section, sens__seg) : les
   éléments cliquables Alpine (@click) n'ont pas d'attribut onclick et étaient invisibles au
@@ -101,4 +108,4 @@ Voir texts/*.txt (un fichier par écran et par état). Points clés :
 
 ## 8. DO NOT INCLUDE
 - Respecté : aucun nom réel, numéro réel, PIN, OTP, mot de passe ou donnée de paiement.
-  Le bouton « Payer par Max It / Wave » n’est listé nulle part (règle d’exclusion appliquée).
+  Le bouton final de paiement (fournisseur sélectionné + montant) n’apparaît dans aucun JSON, aucun TXT ni aucun crop ; les rangées fournisseurs « Max It » / « Wave » et les totaux sont conservés..

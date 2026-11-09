@@ -25,14 +25,5 @@
   "width": 752,
   "height": 120,
   "tap": false
- },
- {
-  "label": "Payer par Max It · 18000 F",
-  "type": "button",
-  "x": 36,
-  "y": 1698,
-  "width": 752,
-  "height": 88,
-  "tap": false
  }
 ]
