@@ -1,0 +1,1869 @@
+/* Athena showcase — shared UI. Every screen uses these pieces, nothing hand-invented.
+   Loaded AFTER basecoat.cdn.min.css + tokens.css, so we build on Basecoat's
+   reset (@layer base) and mapped variables (--background/--primary/--border...).
+   This file keeps Athena's spacing law and component specifics on top. */
+:root { --page-margin: 20px; --gutter: 16px; }
+
+[x-cloak] { display: none !important; }
+
+/* ---------- transition utilities ----------
+   Alpine's x-transition toggles Tailwind-style classes (transition / ease-out /
+   duration-250 / opacity-0 / translate-x-full …). Basecoat does NOT ship them,
+   so without these the drawer/sheet enter-animation never runs and the panel
+   stays stuck at opacity:0. Define the exact classes Alpine applies. */
+.transition { transition-property: opacity, transform; transition-timing-function: cubic-bezier(0,0,.2,1); }
+.ease-out { transition-timing-function: cubic-bezier(0,0,.2,1); }
+.ease-in  { transition-timing-function: cubic-bezier(.4,0,1,1); }
+.duration-250 { transition-duration: 250ms; }
+.duration-200 { transition-duration: 200ms; }
+.duration-150 { transition-duration: 150ms; }
+.opacity-0   { opacity: 0; }
+.opacity-100 { opacity: 1; }
+.translate-x-full { transform: translateX(100%); }
+.translate-x-0    { transform: translateX(0); }
+.translate-y-full { transform: translateY(100%); }
+.translate-y-0    { transform: translateY(0); }
+
+body.phone {
+  width: 412px; height: 917px;
+  background: var(--mint);
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  overflow: hidden; position: relative;
+  display: flex; flex-direction: column;
+}
+
+/* ---------- status bar — Figma 1384:3718 adaptation ---------- */
+/* Figma: pt 12px px 20px · Roboto Medium 14px #1C1C1C · wifi/signal 17px · battery 8×15 · camera cutout 25px @ top 13px center → 44px centered · light green bg */
+.statusbar {
+  height: 44px; flex: none;
+  position: relative;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px;
+  font-size: 14px; font-weight: 500; color: #1C1C1C;
+  letter-spacing: 0.14px; line-height: 20px;
+  background: var(--mint);
+}
+.statusbar__time {
+  font-family: var(--font-sans);
+  font-size: 14px; font-weight: 500; line-height: 20px; letter-spacing: 0.14px; color: #1C1C1C;
+  font-variant-ligatures: common-ligatures; font-feature-settings: "ss02" 1, "dlig" 1, "lnum" 1, "pnum" 1;
+}
+.statusbar__right {
+  display: inline-grid;
+  grid-template-columns: max-content; grid-template-rows: max-content;
+  place-items: start;
+}
+.statusbar__right svg { display: block; }
+.statusbar__cutout {
+  position: absolute;
+  left: 50%; top: 50%; width: 25px; height: 25px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* ---------- app header ---------- */
+/* Homepage: logo + ATHENA School by SEPRO · Inside: back ‹ + centered title — burger stays right */
+.app-header {
+  flex: none;
+  background: var(--mint);
+  padding: 8px var(--page-margin) 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.app-header .logo-tile {
+  width: 44px; height: 44px; border-radius: 12px; flex: none;
+  background: #fff; border: 1px solid #DFE9D2;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 7.5px; font-weight: 700; letter-spacing: 1.6px; color: var(--olive);
+}
+.app-header .titles { flex: 1; text-align: center; font-size: 15px; font-weight: 700; }
+.app-header .titles span { font-weight: 500; font-size: 12px; }
+.app-header .back {
+  width: 40px; height: 40px; border: none; cursor: pointer;
+  border-radius: 12px; background: transparent; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); text-decoration: none;
+}
+.app-header .back svg { width: 20px; height: 20px; display: block; }
+.app-header .back:active { background: rgba(28,43,75,.08); }
+.app-header .header-title {
+  flex: 1; text-align: center; font-size: 16px; font-weight: 400;
+  color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  letter-spacing: -0.15px;
+}
+.app-header .burger {
+  width: 40px; height: 40px; border: none; cursor: pointer;
+  border-radius: 12px; background: transparent; flex: none;
+  display: flex; flex-direction: column; gap: 4px; align-items: center; justify-content: center;
+}
+.app-header .burger i { width: 20px; height: 2.5px; background: var(--navy); border-radius: 2px; }
+
+/* ---------- sibling switcher — Figma Desktop 1437:5272 ---------- */
+/* Figma: full-width mint bar (#ECF2E3), px-20 py-10, olive 32px round initials avatar,
+   name 14px ink, class·count 12px olive, sage round arrow chips 16px chevrons. */
+.switcher {
+  flex: none;
+  background: var(--mint);
+  padding: 10px var(--page-margin);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.switcher .avatar {
+  width: 32px; height: 32px; border-radius: 50%; flex: none;
+  background: var(--olive); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 12px;
+}
+.switcher .who {
+  flex: 1; min-width: 0;
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+}
+.switcher .who-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; min-width: 0; }
+.switcher .who-text b { display: block; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.switcher .who-text span { font-size: 12px; color: var(--olive); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.switcher .arrow {
+  width: 32px; height: 32px; border: none; cursor: pointer; flex: none;
+  background: #F4F6EF; color: var(--olive);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.switcher .arrow svg { width: 16px; height: 16px; display: block; }
+
+/* ---------- profile switcher — bloc identité drawer + hat sheet (spec profiles-switcher 2026-09-09) ---------- */
+/* Le switcher vit dans le drawer (sidebar) : bloc identité en haut, sur chaque écran
+   de chaque espace (compte ≥2 profils uniquement). Plus de chip dans l'app-header. */
+/* Bloc identité en haut du drawer (compte multi-profils) : initiales olive 36px,
+   nom 13px ink + rôle 10.5px olive, chevron olive. Fond #FAFCF5 + bord hairline. */
+.sdrawer .drawer-account {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  border: 1px solid var(--hairline); background: #FAFCF5;
+  border-radius: 12px; padding: 10px 12px; margin-bottom: 12px;
+  cursor: pointer; font-family: var(--font); text-align: left;
+}
+.sdrawer .drawer-account__avatar {
+  width: 36px; height: 36px; border-radius: 50%; flex: none;
+  background: var(--olive); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+}
+.sdrawer .drawer-account__who { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.sdrawer .drawer-account__who b { font-size: 13px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sdrawer .drawer-account__who span { font-size: 10.5px; color: var(--olive); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sdrawer .drawer-account > svg { width: 14px; height: 14px; color: var(--olive); flex: none; }
+/* Hat sheet : avatar = tuile icône sage/olive 48px (au lieu d'initiales) ; chevron de navigation olive. */
+.kids-sheet__avatar.hat-avatar { border-radius: 12px; }
+.kids-sheet__item .hat-go { color: var(--olive); display: inline-flex; flex: none; }
+.kids-sheet__item .hat-go svg { width: 16px; height: 16px; display: block; }
+
+/* ---------- content zone ---------- */
+.content { flex: 1; overflow-y: auto; padding: 20px var(--page-margin) 26px; background: var(--card); border-radius: 28px 28px 0 0; }
+/* Hide scrollbars everywhere EXCEPT the browser's own page scrollbar — mobile feel.
+   Any inner scroll container (phone body, sheets, drawers) still scrolls, just no visible bar.
+   html/body are excluded so the user's browser scrollbar stays. */
+.content, .notes-views, .notes-tile-list, .sheet, .sdrawer, .tt,
+.frame, .gal, .stage, [class*="scroll"], [style*="overflow"] {
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.content::-webkit-scrollbar, .notes-views::-webkit-scrollbar, .notes-tile-list::-webkit-scrollbar,
+.sheet::-webkit-scrollbar, .sdrawer::-webkit-scrollbar, .tt::-webkit-scrollbar,
+.frame::-webkit-scrollbar, .gal::-webkit-scrollbar, .stage::-webkit-scrollbar, [class*="scroll"]::-webkit-scrollbar, [style*="overflow"]::-webkit-scrollbar {
+  display: none; width: 0; height: 0;
+}
+.section-title {
+  font-size: 13px; font-weight: 600; color: var(--ink-soft);
+  margin: 14px 2px 8px; display: flex; justify-content: space-between; align-items: baseline;
+}
+.section-title a { font-size: 11px; color: var(--olive); text-decoration: none; font-weight: 600; }
+
+/* ---------- menu grid cards — Figma Desktop 1387:1494 ---------- */
+/* Figma: 3×2 grid, gap 12px · card white, border #F0F0F0 1.5px, radius 12px,
+   drop-shadow 0 2px 4px rgba(0,0,0,.08) · icon tile #F6FAED radius 10px 36px ·
+   icon olive 24px · label Outfit SemiBold 12px #232B40. Mapped to Athena tokens. */
+.tile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.tile {
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  padding: 12px; text-align: center; text-decoration: none; color: var(--ink);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  position: relative;
+}
+.tile .ic {
+  width: 36px; height: 36px; border-radius: 10px; flex: none;
+  background: #F6FAED; color: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+}
+.tile .ic svg { width: 24px; height: 24px; }
+.tile span { font-size: 12px; font-weight: 600; line-height: 1.25; }
+.tile .badge {
+  position: absolute; top: 8px; right: 10px;
+  min-width: 17px; height: 17px; border-radius: 999px; padding: 0 4px;
+  background: var(--late); color: #fff; font-size: 10px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ---------- announcement banner ---------- */
+.hero { background: var(--mint); flex: none; padding: 20px 0 14px; }
+
+/* ---------- RÉINSCRIPTION banner — temporary, prominent, distinct amber, finger-drag scrollable ---------- */
+.reinsc-banner {
+  display: flex; align-items: center; gap: 12px;
+  background: linear-gradient(135deg, #FBF1DE 0%, #F6E3B8 100%);
+  border: 1.5px solid #E8C46A; border-radius: 16px;
+  padding: 14px 16px; margin: 10px 20px 18px; /* bottom margin so it doesn't stick to content */
+  color: #6B4E00; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(155, 107, 20, .12);
+  cursor: pointer; user-select: none;
+}
+.reinsc-banner__icon {
+  flex: none; width: 44px; height: 44px; border-radius: 12px;
+  background: #fff; color: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 6px rgba(155, 107, 20, .15);
+}
+.reinsc-banner__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.reinsc-banner__body b { font-size: 14px; font-weight: 700; }
+.reinsc-banner__body span { font-size: 12px; line-height: 1.4; opacity: .85; }
+.reinsc-banner__arrow { flex: none; color: var(--olive); margin-left: auto; }
+
+/* ---------- RÉINSCRIPTION form ---------- */
+.form-section { margin: 16px 0 0; }
+.form-section__head {
+  font-size: 14px; font-weight: 600; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .4px; margin-bottom: 8px;
+}
+.form-field { display: block; margin-bottom: 10px; }
+.form-field span { display: block; font-size: 12px; color: var(--ink-soft); margin-bottom: 4px; }
+.form-field input {
+  width: 100%; box-sizing: border-box; padding: 10px 12px;
+  background: var(--sage); border: 1.5px solid #E4EBD2; border-radius: 12px;
+  font-size: 14px; font-family: var(--font); color: var(--ink);
+  outline: none;
+}
+.form-field input:focus { border-color: var(--olive); background: #fff; }
+
+/* ---------- voiceField — dictée vocale (spec: profs-cahier-voice-input, 2026-09-09) ---------- */
+.vf-box { display: flex; align-items: center; gap: 8px; }
+.vf-box input { flex: 1; min-width: 0; }
+.vf-mic {
+  flex: none; width: 42px; height: 42px; border-radius: 12px;
+  background: var(--sage); border: 1.5px solid #E4EBD2; color: var(--olive);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; padding: 0;
+}
+.vf-mic svg { width: 18px; height: 18px; }
+.vf-mic:disabled { opacity: .38; cursor: default; }
+.vf-rec { margin: -6px 0 10px; }
+.vf-rec__bar {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--sage); border: 1.5px solid #E4EBD2; border-radius: 12px;
+  padding: 9px 12px;
+}
+.vf-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--late); animation: vf-pulse 1.1s ease-in-out infinite; }
+@keyframes vf-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
+.vf-eq { flex: none; display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+.vf-eq i { width: 2.5px; border-radius: 2px; background: var(--olive); height: 100%; animation: vf-eq 1s ease-in-out infinite; }
+.vf-eq i:nth-child(2) { animation-delay: .15s; }
+.vf-eq i:nth-child(3) { animation-delay: .3s; }
+.vf-eq i:nth-child(4) { animation-delay: .45s; }
+.vf-eq i:nth-child(5) { animation-delay: .6s; }
+@keyframes vf-eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+.vf-rec__label { flex: 1; min-width: 0; font-size: 13px; font-weight: 600; color: var(--olive); }
+.vf-timer { flex: none; font-size: 12px; font-weight: 700; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.vf-cancel {
+  display: block; width: 100%; margin: 6px 0 0; padding: 4px 0;
+  background: none; border: none; color: var(--ink-faint);
+  font-family: var(--font); font-size: 11.5px; cursor: pointer; text-align: center;
+}
+
+/* Situation badge */
+.situation-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--sage); color: var(--ok-ink);
+  border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 600;
+}
+
+/* Réinscription slim — apprenant card (2026-09-06 cleanup) */
+.reinsc-card {
+  background: #fff; border: 1.5px solid var(--hairline); border-radius: 14px;
+  padding: 16px 14px; display: flex; flex-direction: column; gap: 12px;
+}
+.reinsc-card__name { font-size: 17px; font-weight: 500; color: var(--ink); }
+.reinsc-card__name b { font-weight: 700; }
+.reinsc-card__level { display: flex; flex-direction: column; gap: 4px; }
+.reinsc-card__label {
+  font-size: 12px; font-weight: 600; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .4px;
+}
+.reinsc-card__arrow { display: flex; align-items: center; gap: 8px; color: var(--olive); }
+.reinsc-card__arrow-ico { font-weight: 600; font-size: 13px; }
+.reinsc-card__chip {
+  background: var(--sage); color: var(--ok-ink); border-radius: 999px;
+  padding: 6px 12px; font-size: 13px; font-weight: 600;
+}
+.reinsc-card__chip--new { background: var(--olive); color: #fff; }
+
+/* Réinscription — two discreet action buttons (icône + texte, une ligne) */
+.reinsc-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 4px; }
+.mini-act {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1.5px solid var(--hairline); border-radius: 999px;
+  padding: 8px 14px; font-family: var(--font); font-size: 12.5px; font-weight: 600;
+  color: var(--ink); cursor: pointer;
+}
+/* État danger du mini-act — règle maison R3 (2026-09-22) : même pastille, teinte rouge.
+   Mesuré : --late-ink sur --late-bg = 4,94:1 (AA dès 4,5:1 à 12,5 px) ;
+   --late sur ce même fond ne ferait que 3,27:1, donc c'est --late-ink qui porte le texte. */
+.mini-act.danger { background: var(--late-bg); border-color: var(--late); color: var(--late-ink); }
+.mini-act svg { width: 17px; height: 17px; color: var(--olive); flex: none; }
+.mini-act:active { background: var(--sage); }
+
+/* Action bottom sheets (Contact d'urgence / Adresse — réinscription) */
+.action-sheet { padding-bottom: 22px; }
+.action-sheet__head {
+  font-size: 16px; font-weight: 600; color: var(--ink);
+  text-align: center; margin-bottom: 14px;
+}
+.contact-form { display: flex; flex-direction: column; gap: 10px; }
+.contact-form .form-field input { background: #fff; }
+.contact-list { display: flex; flex-direction: column; gap: 8px; }
+.contact-row {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--sage); border-radius: 12px; padding: 10px 12px;
+}
+.contact-row__ic {
+  flex: none; width: 30px; height: 30px; border-radius: 9px;
+  background: #fff; color: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-row__ic svg { width: 15px; height: 15px; }
+.contact-row__main { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.25; }
+.contact-row__main b { font-size: 13px; color: var(--ink); }
+.contact-row__main span { font-size: 11.5px; color: var(--ink-soft); }
+.contact-row__del {
+  flex: none; width: 28px; height: 28px; border: none; border-radius: 8px;
+  background: transparent; color: var(--ink-faint); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-row__del svg { width: 15px; height: 15px; }
+.contact-empty { font-size: 12.5px; color: var(--ink-faint); padding: 6px 0 2px; text-align: center; }
+
+/* Service checks */
+.service-checks { display: flex; flex-direction: column; gap: 8px; }
+.service-check {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff; border: 1.5px solid #EDF1E4; border-radius: 12px;
+  padding: 12px; cursor: pointer; transition: border-color .15s, background .15s;
+}
+.service-check.on { border-color: var(--olive); background: var(--sage); }
+.service-check input { accent-color: var(--olive); width: 18px; height: 18px; flex: none; }
+.service-check__name { flex: 1; font-size: 13.5px; font-weight: 500; color: var(--ink); }
+.service-check__price { font-size: 13px; font-weight: 700; color: var(--olive); white-space: nowrap; }
+
+/* Fee summary */
+.fee-summary {
+  margin-top: 6px; background: #fff; border: 1.5px solid #EDF1E4; border-radius: 14px;
+  padding: 14px; display: flex; flex-direction: column; gap: 6px;
+}
+.fee-row { display: flex; justify-content: space-between; font-size: 13.5px; color: var(--ink-soft); }
+.fee-row b { color: var(--ink); }
+.fee-total { border-top: 1px dashed #EDF1E4; padding-top: 8px; font-size: 15px; }
+.fee-total b { color: var(--olive); font-size: 17px; }
+
+/* Sticky confirm */
+.reinsc-confirm {
+  position: sticky; bottom: 0; background: #fff;
+  border-top: 1px solid #EDF1E4; padding: 16px 20px;
+  display: flex; align-items: center; justify-content: center;
+}
+.reinsc-confirm button {
+  width: 100%; padding: 14px; border: none; border-radius: 14px;
+  background: var(--olive); color: #fff; font-size: 15px; font-weight: 700;
+  font-family: var(--font); cursor: pointer;
+  box-shadow: 0 6px 18px rgba(107, 140, 33, .35);
+}
+
+/* Full-width buttons — navy primary (Figma "Bouton pleine largeur"), 44px tall, centered */
+.btn.btn-full {
+  display: flex; width: 100%; min-height: 44px;
+  align-items: center; justify-content: center;
+  background: var(--navy); color: #fff;
+  border-radius: 14px; padding: 0 20px;
+  font-size: 15px; font-weight: 600; font-family: var(--font);
+  text-decoration: none; box-sizing: border-box;
+}
+
+/* Sticky "Signaler" bar — nee en Vie scolaire (2026-09-07), partagee avec la Tournee de
+   l'accompagnateur (2026-09-21). UN SEUL traitement, deux selecteurs : la barre d'action qui reste
+   au pouce est la meme idee dans les deux espaces, elle ne se recopie pas. Aucune declaration de
+   `.vs-signal` ne change, donc la Vie scolaire rend exactement comme avant. */
+.vs-signal, .signal-bar {
+  position: sticky; bottom: 0; z-index: 4;
+  background: linear-gradient(180deg, rgba(246,247,242,0) 0%, var(--page-bg, #F5F6F1) 30%);
+  padding: 14px 20px 18px; margin: 0 -20px -4px;
+}
+/* La seule chose neuve : cette barre porte DEUX choses (un compte et un geste) et doit donc les
+   repartir sur une ligne, la ou la Vie scolaire n'en porte qu'une. */
+/* Mise en page propre a cette barre. Trois choses, et chacune vient d'un defaut mesure :
+   1. `bottom: -26px` : le collage se compte depuis le bord du SCROLLPORT, donc `bottom: 0` laissait
+      la barre 26 px trop haut, au-dessus du padding bas de la carte, et elle flottait. Le padding
+      d'un parent ne se mange pas par une marge : c'est le collage qu'il faut decaler.
+   2. `background` OPAQUE et non le degrade transparent du traitement partage : ici le contenu
+      DEFILE DERRIERE la barre, et un haut transparent laissait voir les rangees au travers. En Vie
+      scolaire la barre est le dernier element, il n'y a rien derriere ; ici il y a quarante
+      enfants. Meme idee, conditions differentes, donc cette barre se declare opaque.
+   3. Le bouton en ligne : l'icone et le libelle sur UNE ligne, c'est ce qu'on lit.
+   Le traitement partage du dessus n'est pas touche : la Vie scolaire garde ses 14/20/18 et son -4. */
+.signal-bar { position: sticky; bottom: -26px; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; margin: 0 -20px -26px; padding: 14px 20px 24px;
+  background: var(--card); border-top: 1px solid var(--hairline); }
+.signal-bar .btn { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.signal-bar .btn svg { flex: none; }
+.signal-bar__compte { font-size: 13px; font-weight: 700; color: var(--ink); }
+/* Absence justification block — full-width lines under the row (not inline pills) */
+.vs-abs { padding: 0; }
+.vs-abs .row { border-bottom: none; }
+.vs-abs__sub {
+  margin: -2px 0 10px 50px; padding: 6px 10px;
+  background: #FAFBF7; border: 1px solid #EEF1E7; border-radius: 10px;
+}
+.vs-abs__docs { display: flex; flex-direction: column; gap: 2px; }
+.vs-abs__doc {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--ink); padding: 3px 0;
+}
+.vs-abs__doc svg { flex: none; color: var(--olive); }
+.vs-abs__doc span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Downloadable doc link inside the cahier de texte (parent view, boss 2026-09-07). */
+.ct-docs { display: flex; flex-direction: column; gap: 2px; margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--hairline); }
+a.vs-abs__doc.ct-doc { cursor: pointer; border-radius: 6px; padding: 2px 4px; margin: 0 -4px; transition: background .15s; }
+a.vs-abs__doc.ct-doc:hover { background: var(--sage); }
+a.vs-abs__doc.ct-doc .mid-b { display: none; }
+.vs-abs__doc .doc-rm {
+  flex: none; border: none; background: transparent; cursor: pointer;
+  color: var(--late-ink); font-size: 16px; line-height: 1; padding: 2px 4px;
+}
+.doc-rm:hover { opacity: .7; }
+.vs-abs__note {
+  font-size: 12px; color: var(--ink-soft); line-height: 1.45;
+  border-top: 1px dashed var(--hairline); margin-top: 4px; padding-top: 6px;
+}
+
+/* Secondary buttons — light blue background + navy text (blue version of the olive ghost) */
+.btn.btn-soft {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--cyan-bg); color: var(--navy);
+  border-radius: 12px; padding: 10px 16px;
+  font-size: 13px; font-weight: 600; font-family: var(--font);
+  text-decoration: none; box-sizing: border-box;
+  border: 1.5px solid #C4E0F2;
+}
+.btn.btn-soft svg { flex: none; }
+
+/* Espace Profs home (2026-09-07 boss rework) */
+/* Day chips — bigger, wrap; selected = due */
+.daychip { font-size: 12.5px; font-weight: 700; padding: 8px 14px; border-radius: 999px; cursor: pointer; font-family: var(--font); border: none; }
+/* Subject pastel chip inside a course row title (Maths = sage, Français = soft blue) */
+.subj-chip {
+  display: inline-block; border-radius: 999px; padding: 1px 7px;
+  font-size: 10.5px; font-weight: 700; vertical-align: 1px; white-space: nowrap;
+  max-width: 110px; overflow: hidden; text-overflow: ellipsis;
+}
+/* Pointer empty-state block — always present on the home (boss: styled like empty state w/ button) */
+.pointer-empty { background: #F3F6EC; border-radius: 14px; margin: 2px 0 6px; }
+/* Pointage inactif — module qui existe mais n'est pas actif pour l'établissement
+   (spec .agents/design/profs-pointage-inactif.md, 2026-09-09) : même layout global, neutres. */
+.pointer-empty.is-off { background: #F4F5F1; }
+.pointer-empty.is-off .empty-state__illustration { background: #E7E9E3; color: var(--ink-faint); }
+.pointer-empty.is-off .empty-state__title { color: var(--ink-soft); }
+.pointer-empty.is-off .empty-state__subtitle { color: var(--ink-faint); }
+.row .lead svg { width: 20px; height: 20px; }
+
+/* ---------- announcement banner ---------- */
+.banner {
+  background: var(--cyan-bg); color: var(--cyan-ink);
+  border: 1.5px solid #C4E0F2; border-radius: 18px;
+  padding: 14px 14px 12px; margin: 4px 0 0;
+  display: flow-root;
+}
+.banner .b-title { font-size: 14px; font-weight: 700; }
+.banner .b-date { font-size: 11px; opacity: .75; margin: 2px 0 6px; }
+.banner .b-body { font-size: 12px; line-height: 1.45; opacity: .92;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.banner .more {
+  float: right; margin-top: 8px;
+  background: var(--navy); color: #fff; text-decoration: none;
+  font-size: 11px; font-weight: 600; border-radius: 999px; padding: 7px 14px;
+}
+.dots { display: flex; gap: 5px; justify-content: center; padding: 12px 0 12px; }
+.dots i { width: 6px; height: 6px; border-radius: 99px; background: #C9D6BE; }
+.dots i.on { width: 16px; background: var(--olive); }
+
+/* ---------- home hero: medallion + Espace Parents ---------- */
+.medallion {
+  width: 110px; height: 110px; margin: 0 auto; position: relative; z-index: 2;
+  background: #fff; border: 1px solid #DCE6F2; border-radius: 24px;
+  box-shadow: var(--shadow);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; letter-spacing: 3px; color: var(--olive);
+}
+/* Le salut d'ouverture de page (user 2026-09-28). Le titre de l'espace est monté dans l'en-tête
+   (`appHeader`, emplacement `espace`) : le corps ouvre sur le salut du lecteur, aligné à gauche.
+   Remplace `.esp-title` et `.esp-sub`, qui n'avaient pas d'autre appelant. */
+.greet { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin: 0 0 12px; }
+.greet__hello { font-size: 21px; font-weight: 700; color: var(--ink); letter-spacing: -.3px; }
+.greet__side { font-size: 12px; color: var(--ink-soft); white-space: nowrap; }
+/* Brand iconbox (sheets/empty states): olive icon on sage bubble. */
+.iconbox { width: 52px; height: 52px; border-radius: 16px; background: var(--sage); color: var(--olive); display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; }
+.iconbox svg { width: 26px; height: 26px; }
+
+/* ---------- generic cards & rows (Athena wrappers around Basecoat primitives) ---------- */
+/* Basecoat provides .card (border, shadow, radius) and .badge — we keep Athena's
+   spacing/color specifics but inherit its radius/border via mapped vars. */
+.card {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  padding: 12px 14px; margin-bottom: 10px;
+}
+.row { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--hairline); }
+.row:last-child { border-bottom: none; padding-bottom: 2px; }
+.row:first-of-type { padding-top: 2px; }
+.row .lead {
+  width: 38px; height: 38px; border-radius: 50%; flex: none;
+  background: var(--sage); color: var(--olive);
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;
+}
+.row .mid { flex: 1; min-width: 0; line-height: 1.3; }
+.row .mid b { display: block; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .mid span { font-size: 11px; color: var(--ink-soft); }
+.row .end { text-align: right; flex: none; }
+.row .end b { display: block; font-size: 13px; color: var(--navy); white-space: nowrap; }
+
+/* ---------- chips (Athena, complements Basecoat .badge) ---------- */
+/* Basecoat .badge is available if you need it; .chip keeps Athena's status colors. */
+.chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; font-weight: 600; border-radius: 999px; padding: 3px 9px;
+  background: var(--accent); color: var(--accent-foreground);
+  border: 1px solid transparent;
+}
+/* Deux états, deux sens, un seul rendu (user 2026-09-28) : `class` dit « voici la classe de
+   l'élève », `more` dit « toucher pour voir la suite ». Le rendu est partagé ici, la définition
+   reste séparée : changer la pastille de classe demain ne doit pas déplacer les « Tout voir › ».
+   `more` porte le vrai geste, aucune pastille existante ne le portait. */
+.chip.class,
+.chip.more { background: var(--sage); color: var(--olive); }
+.chip.more { cursor: pointer; }
+.chip.more:active { background: var(--olive); color: #fff; }
+.chip.ok    { background: var(--ok-bg);   color: var(--ok-ink); }
+.chip.due   { background: var(--due-bg);  color: var(--due-ink); }
+.chip.late  { background: var(--late-bg); color: var(--late-ink); }
+.chip.muted { background: #F0F2F6; color: var(--ink-soft); }
+/* Etat d'ACTION d'une pastille (reprise ligne enfant, 2026-09-21) : une pastille qui se tape.
+   C'est le traitement de `.mini-act` (fond blanc, liseré, icone olive) porte a la taille d'une
+   pastille, et il reprend aussi `.chip.ct-today` qui faisait deja d'une pastille un bouton.
+   Aucune pastille existante ne porte cet etat : la declaration l'ajoute, elle ne modifie rien. */
+.chip.act { background: #fff; color: var(--ink); border: 1px solid var(--hairline);
+            font-size: 11.5px; font-weight: 600; padding: 4px 10px; cursor: pointer; }
+.chip.act svg { color: var(--olive); flex: none; }
+.chip.act:active { background: var(--sage); }
+/* L'état `danger` d'une pastille d'action — la pastille d'annulations de l'accueil (spec
+   athena-manager-annulations-lot2, 2026-10-02). Ambre pleine, encre de la maison.
+   `--due` et non `--due-ink` : blanc sur `--due-ink` passe (4,64:1) mais la pastille devient brune ;
+   encre `--ink` sur `--due` = 6,41:1 et l'ambre reste franc. Le nom est `.danger`, PAS `.alert` :
+   basecoat définit `.alert { width: 100% }` et la pastille remplissait alors toute la largeur.
+   `width: max-content` la tient à son contenu, `flex: none` l'empêche de se faire écraser. */
+.chip.act.danger {
+  background: var(--due); border-color: var(--due); color: var(--ink);
+  font-size: 11px; font-weight: 700; padding: 3px 8px;
+  white-space: nowrap; flex: none; width: max-content;
+}
+.chip.act.danger svg { color: var(--ink); }
+/* Etat de SELECTION d'une pastille (fiche enfant et feuille incident, 2026-09-21) : la pastille
+   choisie porte un anneau d'encre — le MEME dispositif que le bus actif de la carte, pour la meme
+   idee. La teinte reste celle de la famille du motif : c'est elle qui porte le sens, l'anneau dit
+   seulement « c'est celui-la ». Etat NEUF : aucune pastille existante ne le porte. */
+.chip.on { box-shadow: 0 0 0 2px var(--card), 0 0 0 4px var(--ink); }
+/* Le rail qui porte des pastilles de choix : il les fait passer a la ligne au lieu de les tasser. */
+.motif-rail { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+/* Espace Profs — presentToggle display chip (E1 rework 2026-09-03): display-only chip, row tap opens action sheet */
+/* Boss 2026-09-07: chip plus petite — padding réduit, icône 14, police 12 */
+.chip.toggle-chip { font-size: 12px; font-weight: 700; padding: 4px 9px; gap: 4px; }
+.chip.toggle-chip svg { width: 14px; height: 14px; flex: none; }
+/* ---------- boardToggle — pointage de l'accompagnateur (spec athena-suivi-bus, 2026-09-16) ---------- */
+/* Le geste vit ici : 1 tap = monté. Tons alignés sur l'appel (Présent = muted) ; « Non monté » = due
+   (attention), JAMAIS rouge — le rouge reste au retard et à l'incident. Un silence (rien de coché,
+   arrêt pas encore passé) ne dit jamais « non monté » : c'est « À cocher ». */
+.board-toggle { cursor: pointer; }
+.board-toggle__ring {
+  display: block; width: 14px; height: 14px; box-sizing: border-box; flex: none;
+  border: 2px solid currentColor; border-radius: 50%; opacity: .5;
+}
+
+/* ---------- buttons (Athena on top of Basecoat .btn) ---------- */
+/* Basecoat's .btn handles focus ring, disabled, svg alignment via --ring/--radius.
+   We keep Athena's block/100% + navy/olive colors but ensure font/radius align. */
+.btn {
+  display: block; width: 100%; border: none; cursor: pointer;
+  background: var(--primary); color: var(--primary-foreground);
+  font-family: var(--font-sans); font-size: 14px; font-weight: 600;
+  border-radius: calc(var(--radius) - 2px); padding: 13px; text-align: center; text-decoration: none;
+}
+.btn:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.btn.small { width: auto; padding: 8px 16px; font-size: 12px; border-radius: var(--radius); }
+.btn.olive { background: var(--secondary); color: var(--secondary-foreground); }
+
+/* ---------- Un bouton porte une icône ET un libellé : ils vont CÔTÉ À CÔTÉ (2026-09-29) ----------
+   Cette règle ne vivait que dans `.signal-bar .btn` : partout ailleurs, `display: block` empilait
+   l'icône AU-DESSUS du libellé (vu en galerie sur `sessionRow`, signalé par Pape). L'alignement est
+   une propriété du BOUTON, pas de la barre qui l'accueille. */
+.btn.small { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.btn.small svg { flex: none; }
+
+/* Arrêter une session porte l'état `.danger` du dépôt — ni le vert (qui dit « ça va »),
+   ni la couleur de l'action principale (`.btn` = `var(--primary)` = `var(--navy)`, donc un bouton
+   peint en navy serait IDENTIQUE à « Démarrer »). Relevé le 2026-09-29 : `--primary: var(--navy)`.
+   Aucune classe neuve n'a été ajoutée pour ça. */
+.btn.olive:focus-visible { outline-color: var(--ring); }
+
+/* ---------- Règles d'action dans une feuille (2026-09-22) ----------
+   Demandées par le collègue de Pape, arbitrées par lui : portée SYSTÈME, les deux forks. */
+
+/* R1 — Dans une feuille, une action prend toute la largeur. C'est une règle du CONTENANT : elle
+   vaut pour toutes les feuilles des deux forks sans qu'aucun écran ait à la déclarer, et elle ne
+   peut pas être oubliée. Hors feuille, un .mini-act reste une pastille : les cartes Réinscription
+   et Vie scolaire ne bougent pas. */
+.sheet .mini-act, .sheet .btn.btn-soft, .sheet .btn.small {
+  display: flex; width: 100%; justify-content: center;
+}
+
+/* R3 — L'action négative est rouge : le jumeau négatif du bouton navy, donc PLEIN comme lui (les
+   pastilles restent teintées, les boutons restent pleins). Le rouge est `--late-ink` et non `--late` :
+   mesuré, --late (#D9534F) sur blanc donne 3,96:1, sous le seuil AA pour un texte de 14 px ;
+   --late-ink (#B03A36) donne 5,99:1. Le rouge clair reste celui des pastilles d'état, où le texte
+   ne porte pas l'action. `--destructive` existe mais pointe sur `--late`, trop clair pour un
+   bouton plein : c'est `--late-ink` qui sert ici. */
+.btn.danger { background: var(--late-ink); color: #fff; }
+.btn.danger:focus-visible { outline-color: var(--ring); }
+
+/* L'action qui attend une condition (confirmer un refus sans motif) : cet état manquait à la famille
+   des boutons. Mêmes jetons que `.mini-act[disabled]` — l'app n'a qu'une façon de dire « pas encore ». */
+.btn[disabled], .btn:disabled { background: var(--hairline); color: var(--ink-faint); cursor: not-allowed; }
+
+/* ---------- onglets (rail pleine largeur) ---------- */
+/* Le nom n'est PAS `.tabs` : basecoat possède `.tabs` pour SON composant (conteneur tablist + panneau)
+   et sa règle de colonne est plus forte — le contrôle du projet ne se rendait donc jamais comme prévu.
+   `.tabbar` n'appartient à personne. Vert de la maison : `--ok-ink` et non `--olive`, parce que blanc sur
+   `--olive` = 3,89:1 (sous AA à 12,5 px) alors que blanc sur `--ok-ink` = 5,65:1 et `--ok-ink` sur
+   `--sage` = 4,85:1. Hauteur mesurée : 34 px. */
+.tabbar { display: flex; background: var(--sage); border-radius: 12px; padding: 3px; margin-bottom: 12px; }
+.tabbar button {
+  flex: 1; border: none; cursor: pointer; font-family: var(--font);
+  font-size: 12.5px; font-weight: 600; color: var(--ok-ink);
+  background: transparent; border-radius: 9px; padding: 4.5px 9px;
+}
+.tabbar button.on { background: var(--ok-ink); color: #fff; }
+/* panel visibility owned by Alpine x-show (+x-cloak before init) */
+
+/* ---------- average ring ---------- */
+.ring-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 10px 0 4px; }
+.ring {
+  width: 118px; height: 118px; border-radius: 50%;
+  background: conic-gradient(var(--chart-1) 0 62%, var(--chart-faint) 62% 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.ring .hole {
+  width: 92px; height: 92px; border-radius: 50%; background: var(--card);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.ring .hole b { font-size: 24px; }
+.ring .hole span { font-size: 11px; color: var(--ink-soft); }
+
+.grade-chips { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; padding: 6px 0 2px; }
+
+/* ---------- bottom sheet (paiement) ---------- */
+.dim { position: absolute; inset: 0; background: rgba(28, 43, 75, .45); z-index: 5; }
+.sheet {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 6;
+  background: var(--card); border-radius: 20px 20px 0 0;
+  padding: 18px 18px 24px; box-shadow: 0 -10px 30px rgba(28,43,75,.18);
+}
+.sheet .grab { width: 44px; height: 5px; border-radius: 99px; background: #E3E7DC; margin: 0 auto 14px; }
+
+/* ---------- side drawer (sdrawer) ---------- */
+/* Class is "sdrawer" (NOT "drawer") on purpose: basecoat ships a dialog-style
+   .drawer component (opacity:0, position:fixed inset:0, `.drawer > *` child
+   rules with position:fixed + margins) that fights our right-side nav panel.
+   Scoping to .sdrawer avoids that collision entirely. */
+.sdrawer {
+  position: absolute; top: 0; bottom: 0; right: 0; width: 82%; max-width: 340px; z-index: 7;
+  background: var(--card); border-radius: 20px 0 0 20px;
+  padding: 26px 18px; box-shadow: -12px 0 30px rgba(28,43,75,.18);
+  display: flex; flex-direction: column; gap: 6px;
+  overflow-y: auto;
+}
+.sdrawer h3 { font-size: 14px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sdrawer h3 .dhead { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+/* Action compacte du bloc Notifications (spec athena-notifications 2026-09-14) : depuis le
+   2026-09-28 c'est la MÊME pastille que les « Tout voir › » des modules (`chip.more`), portée par
+   le markup. L'ancienne règle de lien texte, qui prétendait ajouter zéro hauteur, part avec elle. */
+.sdrawer .notif-count {
+  background: var(--late); color: #fff; border-radius: 999px;
+  font-size: 10.5px; font-weight: 700; padding: 2px 8px;
+}
+.sdrawer .dlink {
+  display: block; text-decoration: none; color: var(--ink);
+  font-size: 13.5px; font-weight: 500; padding: 13px 8px; border-bottom: 1px solid var(--hairline);
+}
+.sdrawer .dlink.out { color: var(--late); border-bottom: none; margin-top: auto; }
+.sdrawer .drawer-nav { display: flex; flex-direction: column; gap: 2px; margin-top: 2px; }
+.sdrawer .dgroup { border-bottom: 1px solid var(--hairline); }
+.sdrawer .dgroup__head {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  background: none; border: none; cursor: pointer; padding: 10px 6px;
+  font-family: var(--font); font-size: 13px; font-weight: 600; color: var(--ink);
+}
+.sdrawer .dgroup__head span { display: inline-flex; align-items: center; gap: 8px; }
+.sdrawer .dgroup__head svg { transition: transform .2s; color: var(--olive); flex: none; }
+.sdrawer .dgroup__head[aria-expanded="true"] svg { transform: rotate(90deg); }
+/* Marqueur « en cours » d'un en-tête de groupe (2026-09-18, design/athena-suivi-bus.md §25.5) : dit
+   qu'une activité du jour est ouverte, sans ouvrir le groupe. Le mot est écrit parce qu'un point seul
+   serait implicite. --navy est la teinte d'ACTION, jamais une teinte d'état : ambre veut dire retard
+   déclaré, rouge veut dire incident, les employer ici accuserait le bus à tort. Aucun fond : une
+   pastille colorée dans une ligne de navigation concurrente le libellé du groupe.
+   TROIS classes dans le sélecteur, exprès : la règle `.sdrawer .dgroup__head span` ci-dessus est plus
+   spécifique qu'une règle à deux classes et écraserait display/gap. */
+.sdrawer .dgroup__head .dgroup__live {
+  display: inline-flex; align-items: center; gap: 5px; margin-left: 2px;
+  font-size: 10.5px; font-weight: 600; color: var(--navy); white-space: nowrap;
+}
+.sdrawer .dgroup__head .dgroup__live i {
+  width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none;
+}
+.sdrawer .dgroup__body { display: flex; flex-direction: column; }
+.sdrawer .dgroup__body .dlink {
+  padding: 9px 6px 9px 30px; font-size: 12.5px; font-weight: 500;
+  border-bottom: none; border-left: 2px solid var(--hairline); margin-left: 18px;
+}
+.sdrawer .dgroup__body .dlink:last-child { border-bottom: none; }
+.sdrawer .drawer-empty { font-size: 12px; color: var(--ink-soft); padding: 4px 8px; }
+
+/* ---------- timetable ---------- */
+.tt { display: grid; grid-template-columns: 46px repeat(5, 1fr); gap: 4px; font-size: 10px; }
+.tt .h { color: var(--ink-faint); font-weight: 600; padding: 6px 2px; }
+.tt .d { text-align: center; font-weight: 700; color: var(--ink-soft); padding: 4px 0; }
+.tt .c { border-radius: 8px; padding: 7px 3px; text-align: center; font-weight: 600; color: var(--ink); min-height: 44px; display:flex; flex-direction:column; justify-content:center; gap:2px;}
+.tt .c span { font-weight: 400; font-size: 9px; color: var(--ink-soft); }
+.tt .c.sage { background: var(--sage); }
+.tt .c.cyan { background: var(--cyan-bg); }
+.tt .c.blank { background: #F6F8F1; }
+
+/* ---------- global states ---------- */
+.state-demo { text-align: center; padding: 26px 20px; border-bottom: 1px dashed var(--hairline); }
+.state-demo:last-child { border-bottom: none; }
+.state-demo .big { font-size: 34px; margin-bottom: 8px; }
+.state-demo p { font-size: 12.5px; color: var(--ink-soft); margin-bottom: 12px; }
+.spinner {
+  width: 42px; height: 42px; margin: 0 auto 12px;
+  border-radius: 50%; border: 4px solid var(--sage); border-top-color: var(--olive);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.row .lead.ok  { background: var(--ok-bg);   color: var(--ok-ink); }
+.row .lead.due { background: var(--due-bg);  color: var(--due-ink); }
+.row .lead.late{ background: var(--late-bg); color: var(--late-ink); }
+/* Empty-state lead (course not done yet) — pale neutral, no fill icon */
+.row .lead.muted { background: #EEF0F3; color: var(--ink-faint); }
+/* Gender leads — fiche classe appel (boss 2026-09-07: boy = blue, girl = pink, simple head SVG) */
+.row .lead.boy  { background: var(--subject-fr-bg);  color: var(--subject-fr-ink); }
+.row .lead.girl { background: #FCE4EC; color: #9C3A5F; }
+.row .end .sub { font-size: 10.5px; display: block; margin-top: 2px; }
+
+/* ---------- payment methods ---------- */
+.payopt {
+  display: flex; align-items: center; gap: 10px;
+  border: 2px solid #EEF1E7; border-radius: 12px;
+  padding: 12px; margin-bottom: 8px; background: #FBFCF8;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.payopt .radio {
+  width: 18px; height: 18px; border-radius: 50%; flex: none;
+  border: 2px solid #C9D1BE; position: relative;
+}
+/* Payment-method logo slot — placeholder icon now, swap for real logo <img> later */
+.payopt__logo {
+  width: 32px; height: 32px; border-radius: 8px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #fff; border: 1px solid var(--hairline); color: var(--olive);
+}
+.payopt__logo svg { width: 18px; height: 18px; }
+.payopt__nom { font-weight: 600; }
+.payopt.sel { border-color: var(--olive); background: #F7FAEE; }
+.payopt.sel .radio { border-color: var(--olive); }
+.payopt.sel .radio::after {
+  content: ""; position: absolute; inset: 3px; border-radius: 50%; background: var(--olive);
+}
+.payopt .tag { margin-left: auto; }
+
+/* ---------- misc ---------- */
+.avatar-lg {
+  width: 84px; height: 84px; border-radius: 50%;
+  background: var(--sage); color: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 32px; margin: 0 auto;
+}
+/* Photo de l'enfant — la vignette remplit la boîte de l'appelant (spec athena-photo-enfant, 2026-10-01).
+   Aucune taille nouvelle : les boîtes sont celles qui existent déjà. */
+.ca { display: block; object-fit: cover; }
+.ca--lg { width: 84px; height: 84px; border-radius: 50%; margin: 0 auto; }
+.ca--fill { width: 100%; height: 100%; border-radius: inherit; }
+.photo-wrap { position: relative; display: inline-block; }
+.photo-edit { position: absolute; right: -3px; bottom: -3px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--olive); color: #fff; display: flex; align-items: center; justify-content: center;
+  border: 2px solid var(--card); }
+.sheet-photo { width: 196px; height: 196px; border-radius: 16px; object-fit: cover; display: block; margin: 0 auto 14px; }
+.pick-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.pick-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; display: block; cursor: pointer; }
+.pick-grid img.sel { outline: 2.5px solid var(--olive); outline-offset: 2px; }
+.kids-sheet__item.danger { color: #B03A36; }
+.kids-sheet__item.danger .kids-sheet__avatar { background: #FBE9E8; color: #B03A36; }
+.back-link { font-size: 12px; color: var(--ink-soft); text-decoration: none; display: inline-block; margin-bottom: 8px; }
+
+/* ---------- facture card — Figma Desktop adaptation (74:1716) ---------- */
+/* Figma: outer #E1F0C0 · inner #F0F0F0 · chip #DBDBDB · green #166534 · red #DB3030
+   Mapped to Athena: keep Figma's payment semantics (8px radius, 12.64/16/11.24 scale)
+   but inherit Poppins + Athena shadows. Spacing 8px matches law's compact gutter. */
+.facture-card {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #E1F0C0;
+  /* no box-shadow — drop shadow made the card look "silly"; flat is cleaner (round 8) */
+  margin-bottom: 0;
+}
+.facture-list { display: flex; flex-direction: column; gap: 12px; }
+.facture-card a { text-decoration: none; color: inherit; display: block; }
+.facture-card__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 4px 10px;               /* slimmer vertical — chip is 36px, head hugs it */
+  font-size: 12.64px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #314207;
+  background: #E1F0C0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.facture-card__head > .facture-card__name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.facture-card__body {
+  background: #F0F0F0;
+  border-radius: 8px;
+  padding: 8px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.facture-card__top {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.facture-card__main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.facture-card__period {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  color: var(--ink);
+}
+.facture-card__num {
+  font-size: 12.64px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #636363;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.facture-card__chip {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #DBDBDB;
+  border-radius: 6px;
+  padding: 4px 8px 4px 6px;
+  font-size: 11.24px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #2A2A2A;
+  white-space: nowrap;
+}
+.facture-card__chip svg { width: 16px; height: 16px; flex: none; }
+.facture-card__stats { display: flex; gap: 8px; }
+.facture-card__stat {
+  flex: 1;
+  min-width: 0;
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.facture-card__label {
+  font-size: 11.24px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #636363;
+  white-space: nowrap;
+}
+.facture-card__amount {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.facture-card__amount small {
+  font-size: 12.64px;
+  font-weight: 600;
+  line-height: 12px;
+  color: #7A7A7A;
+}
+.facture-card__amount.pay { color: #166534; }
+.facture-card__amount.due { color: var(--ink); }
+.facture-card__amount.late { color: #DB3030; }
+/* Receipt-style summary rows inside the pay sheet (round 14 — flat, no card chrome) */
+.bill-receipt-list { display: flex; flex-direction: column; }
+.bill-receipt-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 9px 2px; border-bottom: 1px solid var(--hairline);
+}
+.bill-receipt-row:last-child { border-bottom: none; }
+.bill-receipt-row__main { min-width: 0; }
+.bill-receipt-row__name { font-size: 13.5px; font-weight: 600; color: var(--ink); }
+.bill-receipt-row__meta { font-size: 11.5px; color: var(--ink-faint); margin-top: 1px; }
+.bill-receipt-row__amount { font-size: 14px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+
+/* Selection chip — explicit action, lives in the green head bar (right side).
+   Unselected: WHITE pill + ink text ("Sélectionner") — reads as a button on the green head.
+   Selected: NAVY solid + white text + check ("Sélectionné"); card bg turns light blue.
+   Width hugs content (icon + text) — the name span owns flex:1, NOT the chip. */
+.facture-card { position: relative; }
+.facture-select-chip {
+  flex: none; display: inline-flex; align-items: center; gap: 4px;
+  height: 28px; padding: 0 14px;              /* 28px chip — compact but tappable */
+  background: #fff; color: var(--ink);
+  border-radius: 8px;
+  font-size: 11.5px; font-weight: 600; line-height: 1;
+  white-space: nowrap; cursor: pointer;
+  border: 1px solid #E4EBD2;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.facture-select-chip.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+.facture-select-chip svg { width: 12px; height: 12px; flex: none; }
+/* Selected card — card + head turn cyan; body KEEPS its #F0F0F0 grey (user round 13) */
+.facture-card.sel { background: var(--cyan-bg); }
+.facture-card.sel .facture-card__head { background: var(--cyan-bg); color: var(--cyan-ink); }
+/* .facture-card.sel .facture-card__body stays #F0F0F0 by design — no override needed */
+
+/* Filter chips row (child + status) — NO own margins: inherits .content padding (--page-margin 20px) */
+.facture-filters { display: flex; gap: 8px; margin: 0; flex-wrap: wrap; }
+.filter-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--sage); color: var(--ink); border: 1.5px solid #E4EBD2;
+  border-radius: 999px; padding: 6px 11px; font-size: 12px; font-weight: 600;
+  font-family: var(--font); cursor: pointer;
+}
+.filter-chip svg:first-child { width: 15px; height: 15px; color: var(--olive); }
+.filter-chip svg:last-child { width: 12px; height: 12px; color: var(--ink-faint); }
+
+/* Selection bar — pinned to page bottom, appears when ≥1 selected.
+   Reworked (round 10) to match reinscription's confirm bar: white bg, full-width
+   button "Payer N facture(s) · X F". Count/deselect moved to a filter chip at top.
+   As a flex child of body.phone (column flex), flex:none pins it under .content
+   (flex:1) — always at the page bottom, no matter how much content. */
+.facture-confirm {
+  flex: none; z-index: 4;
+  position: static;
+}
+.facture-confirm .btn { min-height: 44px; }
+
+/* Selection count chip in the filter row — "Tout effacer", tap to clear (cyan, round 12) */
+.filter-chip--sel { border-color: var(--cyan-bg); background: var(--cyan-bg); color: var(--cyan-ink); }
+.filter-chip--sel svg:first-child { color: var(--cyan-ink); }
+/* Rail de filtres scrollable (LE-C, spec manager-classe-dossier 2026-09-14) — puces .filter-chip
+   en ligne, sélection unique ; masqué le scrollbar, les puces ne se compressent jamais. */
+.filter-rail { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 4px; scrollbar-width: none; }
+.filter-rail::-webkit-scrollbar { display: none; }
+.filter-rail .filter-chip { flex: none; }
+/* Champ sans libellé (LE-B) : la recherche porte son texte dans le placeholder. */
+.form-field input::placeholder { color: var(--ink-faint); }
+
+/* ---------- Empty State Box — Figma 1437:6078 ---------- */
+/* Figma: outer 16px radius, 20px pad, 16px gap, 1px #F0F0F0 border · illustration 64px circle #EBF0DB · icon 32px olive
+   Title Outfit SemiBold 16px #1C2B4B · subtitle Plus Jakarta Regular 12px #666 · gap 6px centered
+   Mapped to Athena: Poppins + tokens (--sage/--olive/--ink), hex kept where Figma specifies. */
+.empty-state {
+  background: var(--card);
+  border: 1px solid #F0F0F0;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+.empty-state__illustration {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: #EBF0DB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  color: var(--olive);
+}
+.empty-state__illustration svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.empty-state__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.empty-state__title {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--ink);
+  margin: 0;
+  white-space: nowrap;
+}
+.empty-state__subtitle {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #666666;
+  margin: 0;
+  width: min-content;
+  min-width: 100%;
+}
+.empty-state--inline {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 28px 12px;
+}
+/* Small navy CTA inside states — Figma 1437:6096 (12px, px-16 py-8, radius 8, #1C2B4B) */
+.state-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #1C2B4B; color: #fff;
+  font-family: var(--font); font-size: 12px; font-weight: 600;
+  padding: 8px 16px; border-radius: 8px;
+  text-decoration: none; margin-top: 4px;
+}
+/* State boxes in gallery — Figma 1437:6077 boxes are 388×270; match height */
+.empty-state { min-height: 270px; }
+/* Loading spinner inside empty-state: drop the auto-centering margin, keep olive ring */
+.empty-state .spinner { margin: 0 auto; }
+
+/* ---------- Notes (grades) — Figma 1410:4679 / 1410:3308 ---------- */
+/* Trimestre segmented control — Figma 1410:4651: track #EEF7DA radius 6, active #78A019 white text */
+.trimestre-seg {
+  display: flex; gap: 4px; padding: 4px;
+  background: #EEF7DA; border-radius: 6px;
+  margin: 0 0 14px;
+}
+.trimestre-seg button {
+  flex: 1; height: 32px; border: none; cursor: pointer;
+  background: transparent; color: var(--ink);
+  font-family: var(--font); font-size: 12.5px; font-weight: 500;
+  border-radius: 4px;
+}
+.trimestre-seg button.on { background: #78A019; color: #fff; font-weight: 500; }
+
+/* Vie scolaire — 4 selection chips with icons (2026-09-06 cleanup) */
+/* 3 chips after 2026-09-09 (Cahier de texte moved to its own screen): natural widths fit ONE row
+   on 412px (measured: 141+99+101+2×6 gaps ≈ 353 ≤ 372 usable) — no grow, no wrap on the phone. */
+.vs-chips {
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 0 10px;
+}
+.vs-chip {
+  flex: 0 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  background: #fff; border: 1.5px solid var(--hairline); border-radius: 999px;
+  padding: 8px 10px; font-family: var(--font); font-size: 11.5px; font-weight: 600;
+  color: var(--ink-soft); cursor: pointer; white-space: nowrap;
+}
+.vs-chip svg { width: 15px; height: 15px; color: var(--ink-faint); flex: none; }
+.vs-chip.on { background: var(--sage); border-color: var(--olive); color: var(--olive); }
+.vs-chip.on svg { color: var(--olive); }
+/* État `scroll` du rail (user 2026-09-28) : une SEULE ligne, qui défile. L'état par défaut
+   continue de passer à la ligne (les 4 onglets parents tiennent sur 2 lignes en 412 px) et reste
+   pinné par verify_library_events : cet état est ADDITIF, il ne le remplace pas.
+   Le rail déborde de 20 px de chaque côté pour que le dépassement se voie. */
+.vs-chips.scroll { flex-wrap: nowrap; overflow-x: auto; margin: 0 -20px; padding: 2px 20px 10px; }
+.vs-chips.scroll .vs-chip { font-size: 10.5px; padding: 6px 10px; gap: 4px; }
+.vs-chips.scroll .vs-chip svg { width: 13px; height: 13px; }
+/* État `counts` du rail (2026-09-28, Bus scolaire) : le compteur d'une puce, à droite de son
+   libellé. ADDITIF — les puces sans compteur rendent exactement comme avant, et
+   verify_library_events épingle le défaut. Le zéro prend l'encre faible : lisible, discret. */
+.vs-chip__n { font-weight: 700; font-size: 11px; color: var(--ink); margin-left: 1px; }
+.vs-chip.on .vs-chip__n { color: var(--olive); }
+.vs-chip__n--vide { color: var(--ink-faint); font-weight: 600; }
+/* Notes section: subject/month header (14px semibold) + tile list */
+.notes-section { margin-bottom: 16px; }
+.notes-section__head {
+  font-size: 14px; font-weight: 600; color: var(--ink);
+  margin: 0 0 8px;
+}
+.notes-tile-list { display: flex; flex-wrap: wrap; gap: 8px; }
+/* Grade tile — white card, soft border (matches grid cards), radius 12 */
+.grade-tile {
+  flex: 1 1 130px; min-width: 130px;
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: 12px;
+  padding: 8px 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.grade-tile__main { min-width: 0; line-height: 1.3; }
+.grade-tile__main b { display: block; font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.grade-tile__main span { font-size: 11px; color: var(--ink-soft); }
+/* Solid colored grade chip — Figma 1410:4705 (white text, px-8 py-6, radius 6) */
+.grade-chip-solid {
+  flex: none; display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 14px; font-weight: 500;
+  padding: 6px 8px; border-radius: 6px; min-width: 34px;
+}
+/* Sort FAB bottom-right — Figma 1410:3308 (vuesax-linear-sort) */
+.sort-fab {
+  position: fixed; right: 20px; bottom: 24px; z-index: 40;
+  width: 56px; height: 56px; border-radius: 16px; border: none; cursor: pointer;
+  background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 16px rgba(28, 43, 75, .35);
+}
+.sort-fab svg { width: 24px; height: 24px; }
+/* Sort bottom sheet — reuse .sheet overlay pattern; options list per Figma 1410:4254 */
+.sort-sheet__opts { display: flex; flex-direction: column; gap: 8px; }
+.sort-opt {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%; padding: 12px 12px 12px 12px; border: none; cursor: pointer;
+  background: #F0F0F0; border-radius: 12px;
+  font-family: var(--font); text-align: left;
+}
+.sort-opt .so-ic {
+  width: 48px; height: 48px; border-radius: 8px; background: #fff; flex: none;
+  display: flex; align-items: center; justify-content: center; color: var(--olive);
+}
+.sort-opt .so-ic svg { width: 24px; height: 24px; }
+.sort-opt .so-label { flex: 1; font-size: 16px; font-weight: 600; color: var(--ink); }
+.sort-opt .radio {
+  width: 20px; height: 20px; border-radius: 50%; border: 2px solid #C9C9C9; flex: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.sort-opt.sel { background: #E1F0C0; }
+.sort-opt.sel .so-label { color: #374A0B; }
+.sort-opt.sel .radio { border-color: var(--olive); }
+.sort-opt.sel .radio::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--olive); }
+/* Espace Profs — action-sheet option states (amendment 2026-09-03): danger = mark absent, navy = mark present */
+.sort-opt.danger { background: var(--late-bg); }
+.sort-opt.danger .so-ic { color: var(--late); }
+.sort-opt.danger .so-label { color: var(--late-ink); }
+.sort-opt.navy { background: var(--cyan-bg); }
+.sort-opt.navy .so-ic { color: var(--cyan-ink); }
+.sort-opt.navy .so-label { color: var(--cyan-ink); }
+/* Espace Profs 2026-09-07 (boss): Retard action = amber option */
+.sort-opt.due { background: var(--due-bg); }
+.sort-opt.due .so-ic { color: var(--due-ink); }
+.sort-opt.due .so-label { color: var(--due-ink); }
+
+/* Vie scolaire rows — 2-line detail (sanction title + description / absence course + time) */
+.row .mid span { white-space: pre-line; line-height: 1.45; }
+
+/* Kids-selection bottom sheet — Figma 1384:4007 "Mes Enfants" (Informations détails).
+   Rounded 12px top, white bg, centered header, #DBDBDB hairline below header,
+   #F0F0F0 12px-radius list items with 48px avatar + name + matricule + class chip. */
+.kids-sheet__head {
+  text-align: center; font-size: 16px; font-weight: 500; color: var(--ink);
+  padding: 0 0 14px; border-bottom: 1px solid #DBDBDB; margin-bottom: 14px;
+}
+.kids-sheet__list { display: flex; flex-direction: column; gap: 8px; }
+.kids-sheet__item {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 12px; border: none; cursor: pointer;
+  background: #F0F0F0; border-radius: 12px;
+  font-family: var(--font); text-align: left;
+}
+.kids-sheet__item.disabled {
+  opacity: .45; cursor: not-allowed; filter: grayscale(.6);
+  pointer-events: none;
+}
+.kids-sheet__avatar {
+  width: 48px; height: 48px; border-radius: 8px; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 16px; font-weight: 700;
+}
+.kids-sheet__main { flex: 1; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.kids-sheet__main b { font-size: 15px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kids-sheet__meta { font-size: 12px; font-weight: 500; color: var(--ink-soft); }
+
+/* ---------- alt-home dashboard (spec: accueil-alternate-sidebar) ---------- */
+/* Image ad carousel — full-width image slide, rounded, swipe/drag + dots */
+.ad-carousel { position: relative; margin: 0 var(--page-margin); }
+.ad-carousel .ad-slide { border-radius: 16px; overflow: hidden; position: relative; box-shadow: var(--shadow); }
+.ad-carousel .ad-slide img { width: 100%; height: 150px; object-fit: cover; display: block; }
+.ad-carousel .ad-slide__title {
+  position: absolute; left: 12px; bottom: 10px; z-index: 2;
+  background: rgba(28,43,75,.55); color: #fff; border-radius: 999px;
+  padding: 4px 10px; font-size: 11px; font-weight: 600;
+}
+.ad-carousel .dots { padding: 10px 0 2px; }
+
+/* Alert summary (M3) — per-child alert rows (expanded) / calm chips (collapsed) */
+.alert-summary { margin: 14px 0 0; }
+.alert-summary__head {
+  font-size: 13px; font-weight: 600; color: var(--ink-soft);
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin: 0 2px 8px;
+}
+.alert-summary__head a { font-size: 11px; color: var(--olive); text-decoration: none; font-weight: 600; }
+.alert-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; margin-bottom: 8px;
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: 12px;
+  text-decoration: none; color: inherit;
+}
+.alert-row .alert-row__avatar {
+  width: 34px; height: 34px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 12px; font-weight: 700;
+}
+.alert-row .alert-row__main { flex: 1; min-width: 0; line-height: 1.25; }
+.alert-row .alert-row__main b { font-size: 12.5px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.alert-row .alert-row__main span { font-size: 11px; color: var(--ink-soft); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.alert-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.alert-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: 999px;
+  padding: 6px 11px 6px 6px; font-size: 12px; font-weight: 600; color: var(--ink);
+  text-decoration: none;
+}
+.alert-chip .alert-chip__dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.alert-chip .alert-chip__dot.ok { background: var(--ok); }
+.alert-chip .alert-chip__dot.due { background: var(--due); }
+.alert-chip .alert-chip__dot.late { background: var(--late); }
+.alert-chip .alert-chip__avatar {
+  width: 24px; height: 24px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 10px; font-weight: 700;
+}
+
+/* Kid briefing section — header (avatar+name+chevron) + module card body */
+.kid-section { margin: 16px 0 0; }
+.kid-section__head {
+  display: flex; align-items: center; justify-content: space-between; width: 100%;
+  background: none; border: none; cursor: pointer; padding: 2px 4px;
+  font-family: var(--font); font-size: 14px; font-weight: 700; color: var(--ink);
+}
+.kid-section__head .kid-id { display: flex; align-items: center; gap: 9px; }
+.kid-section__head .kid-id .kid-avatar {
+  width: 30px; height: 30px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 11px; font-weight: 700;
+}
+.kid-section__head .kid-id b { font-size: 14px; }
+/* Identite de l'en-tete (reprise ligne enfant, 2026-09-21) : nom et classe sur UNE ligne, la classe
+   en pastille. La regle precedente `.kid-id span { display: block }` etait AVEUGLE : elle frappait
+   tous les span sous l'identite, y compris celui de la classe, qui tombait a la ligne par effet de
+   bord et non par decision, et l'avatar, sauve seulement par l'ordre des regles. Mesure du
+   2026-09-21 : la retirer ne change RIEN a l'avatar (display deja flex, texte centre a 0,0, deux
+   captures au bit pres, meme SHA-256). Ce qui la remplace est une partie NOMMEE. */
+.kid-section__head .kid-id__nom { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+.kid-section__head .kid-id__nom .chip { font-size: 11px; padding: 2px 7px; }
+.kid-section__chev { color: var(--olive); transition: transform .2s; flex: none; }
+.kid-section__head[aria-expanded="true"] .kid-section__chev { transform: rotate(90deg); }
+/* Fin d'en-tête optionnelle (2026-09-18, §25.2) : le chip d'état de la ligne enfant du suivi du bus.
+   Le chevron vit dedans, donc l'en-tête garde deux enfants flex et rien ne bouge quand l'emplacement
+   est vide : c'est le cas de tous les appelants d'aujourd'hui. */
+.kid-section__end { display: flex; align-items: center; gap: 8px; flex: none; }
+
+.kid-section__body { margin-top: 10px; }
+.kid-module {
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: var(--radius);
+  padding: 12px 14px; margin-bottom: 10px;
+}
+.kid-module__title {
+  font-size: 12px; font-weight: 700; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .4px;
+  /* `center` et non `baseline` (2026-09-28) : la sortie est une pastille, elle n'a pas de ligne
+     de base commune avec un titre en capitales. */
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;
+}
+/* ---------- fin de l'en-tête d'un module ---------- */
+/* La pastille d'alerte (éventuelle) puis le lien « Tout voir ». Nommé parce que `moduleTitle` le rend
+   pour ses 71 appelants ; le conteneur n'est émis que s'il porte quelque chose. */
+.kid-module__title-end { display: flex; align-items: center; gap: 6px; }
+
+/* La pastille d'état d'une rangée vit dans `.mid`. `.row .mid span` (0,2,1) la repeindrait en gris
+   alors que `.chip.late` (0,2,0) est plus faible : l'état garderait son fond et perdrait son encre.
+   Mesuré à l'aperçu : fond rgb(251,228,227) mais encre rgb(90,101,119) au lieu de rgb(176,58,54). */
+.row .mid .chip.late { color: var(--late-ink); }
+.row .mid .chip.due  { color: var(--due-ink); }
+.kid-module .row { padding: 8px 0; }
+.kid-module .row .lead { width: 32px; height: 32px; font-size: 12px; border-radius: 10px; }
+.kid-module .row .mid b { font-size: 12px; }
+.kid-module .row .mid span { font-size: 11px; }
+.kid-module .row .end b { font-size: 12px; }
+.kid-module__empty { font-size: 12px; color: var(--ok-ink); padding: 6px 0 2px; display: flex; align-items: center; gap: 6px; }
+.kid-module__empty svg { flex: none; }
+
+/* ---------- Centre de notifications (spec: athena-notifications, 2026-09-14) ---------- */
+/* notifRow = composition de listRow — listRow n'est PAS modifié : le wrapper porte l'état
+   (is-unread / is-read) et la densité (compact = drawer, complète = page). Les règles
+   ci-dessous viennent APRÈS `.kid-module .row` (spécificité égale → ordre décide).
+   Le point non lu reprend --late : même sémantique que la pastille de comptage. */
+.notif-row { cursor: pointer; }
+.notif-row .row { padding: 10px 0; border-bottom: 1px solid var(--hairline); }
+.notif-row:last-child .row { border-bottom: none; padding-bottom: 2px; }
+.notif-row .row .lead svg { width: 17px; height: 17px; }
+/* titre ET détail sur UNE ligne (contrat des deux lignes de listRow) : sans ça une copie un peu
+   longue passe sur 2-3 lignes et la rangée grandit (mesuré 78 px contre 57 px) → rythme cassé. */
+.notif-row .row .mid span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.notif-row.is-read .row .mid b { font-weight: 500; color: var(--ink-soft); }
+.notif-row .row .end .ndot {
+  display: block; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--late); margin: 4px 0 0 auto;
+}
+/* densité compacte — drawer (colonne étroite de la sidebar) */
+/* Le bloc garde la hauteur de l'ancien .nrow (mesuré 47 px contre ~48 px) : rien à rogner ici,
+   la troncature à une ligne est déjà la règle de base ci-dessus. */
+.notif-row.compact .row { padding: 8px 0; gap: 10px; }
+.notif-row.compact .row .lead { width: 26px; height: 26px; border-radius: 8px; }
+.notif-row.compact .row .lead svg { width: 14px; height: 14px; }
+.notif-row.compact .row .mid b { font-size: 11.5px; }
+.notif-row.compact .row .mid span { font-size: 10.5px; }
+.notif-row.compact .row .end b { font-size: 10.5px; color: var(--ink-faint); }
+.notif-row.compact .row .end .ndot { width: 6px; height: 6px; margin-top: 3px; }
+
+/* Page dédiée — rail segmenté collant + action globale */
+.nt-rail { position: sticky; top: 0; z-index: 3; background: var(--sheet); padding: 6px 0 10px; }
+.nt-markall { margin-top: 14px; }
+
+/* "Infos école" announcements module (alt home, Q4-b) */
+.school-info { margin: 16px 0 0; }
+.school-info__head {
+  font-size: 13px; font-weight: 600; color: var(--ink-soft);
+  margin: 0 2px 8px; display: flex; justify-content: space-between; align-items: center;
+}
+.school-info .banner { margin-bottom: 8px; }
+
+/* Réinscription banner — slim variant (alt-home M1): no margin, no sub-text, tighter */
+.reinsc-banner--slim { margin: 0; padding: 10px 14px; width: 100%; }
+.reinsc-banner--slim .reinsc-banner__icon { width: 34px; height: 34px; border-radius: 10px; }
+.reinsc-banner--slim .reinsc-banner__icon svg { width: 20px; height: 20px; }
+.reinsc-banner--slim .reinsc-banner__body b { font-size: 13px; }
+.reinsc-banner--slim .reinsc-banner__arrow svg { width: 15px; height: 15px; }
+
+/* Subject pastel pill (briefing schedule) — per-subject friendly color chip */
+.kid-subject {
+  display: inline-block; padding: 2px 9px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; line-height: 1.5;
+}
+
+/* ---------- Manager space (spec: manager-space) ---------- */
+/* metricBand — 2×2 grid of metric tiles; 4-up = Finance résumé variant */
+.metric-band {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  margin: 0 0 14px;
+}
+.metric-tile {
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: var(--radius);
+  padding: 10px 12px; min-width: 0; position: relative;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.metric-tile__head.has-act { padding-right: 22px; }
+.metric-tile__head { display: flex; align-items: center; gap: 7px; min-width: 0; }
+.metric-tile__ic {
+  width: 26px; height: 26px; border-radius: 8px; flex: none;
+  background: var(--sage); color: var(--olive);
+  display: flex; align-items: center; justify-content: center;
+}
+.metric-tile__ic svg { width: 15px; height: 15px; }
+.metric-tile__label {
+  font-size: 11px; font-weight: 600; color: var(--ink-soft);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+/* Action de tuile — chevron › qui ouvre une liste (LE-D, spec manager-classe-vie-scolaire 2026-09-14).
+   Optionnel : le composant ne l'émet que si l'hôte passe `action`. La tuile reste une tuile. */
+/* Chevron d'action : posé dans le COIN de la tuile (mesuré 2026-09-14 — en ligne, il rognait 4-5 px
+   sur « Absences — mois » / « Sanctions — mois » et les tronquait). La place réservée n'existe que
+   sur les têtes qui portent une action (.has-act) : les autres usages de metricBand sont intacts. */
+.metric-tile__act {
+  position: absolute; top: 7px; right: 7px;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 7px; color: var(--ink-soft); text-decoration: none;
+}
+.metric-tile__act svg { width: 14px; height: 14px; }
+.metric-tile__act:hover { background: var(--sage); color: var(--olive); }
+/* La valeur se colle au bord droit de la tuile (user 2026-09-28). Le `delta` a été supprimé du
+   composant le même jour : le pied n'a plus qu'une colonne, donc plus de `space-between`. */
+.metric-tile__foot { display: flex; align-items: baseline; justify-content: flex-end; gap: 6px; }
+.metric-tile__value { font-size: 16px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+/* zero = a real 0 (weekend) — neutral grey value, data still shown; n/a = missing data */
+.metric-tile.zero .metric-tile__value { color: var(--ink-soft); }
+.metric-tile.na .metric-tile__value { color: var(--ink-faint); }
+/* Section header with action at the far end — title left, filter/action right (user amendment 2026-09-04) */
+.spread-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+
+/* ---------- Manager graphs (boss 2026-09-07 — "graphs thanks HTML"; pure CSS, no lib) ---------- */
+/* barChart — bars in --chart-1; current period = --chart-cur; zero value = --chart-faint stub.
+   Palette par défaut = chart (général). Les hôtes argent (finance) posent l'override
+   --chart-1/2/cur en vars CSS sur le conteneur .bar-chart (valeurs --debt-*) : les classes ci-dessous
+   lisent les variables, donc l'override cascade sans toucher au markup. */
+.bar-chart {
+  display: flex; align-items: flex-end; gap: 5px;
+  padding: 2px 0 0; border-bottom: 1px solid var(--hairline);
+}
+.bar-chart__col { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; }
+.bar-chart__bar {
+  width: 100%; max-width: 26px; border-radius: 5px 5px 2px 2px;
+  background: var(--chart-1); opacity: .9;
+}
+.bar-chart__col.cur .bar-chart__bar { background: var(--chart-cur); opacity: 1; }
+/* Le galon de la période courante (user 2026-09-28) : la couleur ne porte plus seule le signal.
+   Le galon est DESSINÉ DANS le haut de la barre, jamais au-dessus : une barre peut porter son
+   étiquette de valeur juste au-dessus d'elle, et un pseudo-élément en top négatif l'écraserait.
+   L'état `cur` est partagé avec le pointage des profs : une seule définition, un seul rendu. */
+.bar-chart__col.cur .bar-chart__bar { position: relative; }
+.bar-chart__col.cur .bar-chart__bar::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 5px 5px 0 0; background: var(--ink);
+}
+.bar-chart__col.zero .bar-chart__bar { background: var(--chart-faint); opacity: 1; }
+.bar-chart__label { font-size: 9px; color: var(--ink-faint); white-space: nowrap; overflow: hidden; max-width: 100%; text-overflow: ellipsis; }
+.bar-chart__val { font-size: 10px; font-weight: 700; color: var(--ink-soft); line-height: 1; }
+/* barChart[pair] — two series side by side per column (spec manager-finance-v2 2026-09-08):
+   barre 1 = v (--chart-1 = Encaissé), barre 2 = v2 (--chart-2 = Facturé) ; légende fournie par l'hôte.
+   En contexte argent, le conteneur override --chart-1/2 vers --debt-1/2 (Encaissé orange · Facturé cramoisi). */
+.bar-chart__col.pair { gap: 3px; }
+.bar-chart__pair { display: flex; align-items: flex-end; justify-content: center; gap: 4px; }
+.bar-chart__p { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0; }
+.bar-chart__pair .bar-chart__bar { width: 11px; max-width: none; opacity: 1; }
+.bar-chart__pair .bar-chart__bar.f2 { background: var(--chart-2); }
+.bar-chart__pair .bar-chart__val { font-size: 8.5px; white-space: nowrap; }
+.bar-chart__pair .bar-chart__val.v2 { color: var(--chart-2); }
+/* legend dots under a pair chart head — host-built (spec manager-finance-v2) */
+.chart-legend { display: flex; gap: 12px; font-size: 10px; font-weight: 600; color: var(--ink-soft); }
+.chart-legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; vertical-align: 0; }
+/* chartCard — a white card with a header row (title left, chips/actions right), body bars or rows. */
+.chart-card { background: var(--sheet); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 13px; margin-bottom: 10px; }
+.chart-card__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.chart-card__head b { font-size: 12px; font-weight: 700; color: var(--ink); }
+.chart-card__head span { font-size: 10.5px; color: var(--ink-soft); }
+/* right-aligned mini text label used above totals in Dépenses */
+.spread-sub { font-size: 10px; color: var(--ink-faint); font-weight: 600; letter-spacing: .4px; text-transform: uppercase; }
+/* caption under a bar chart */
+.chart-card__cap { font-size: 10px; color: var(--ink-faint); margin: 6px 0 0; }
+/* rows without a lead — mid starts flush (boss "rm useless leading"); listRow omits the lead div, so .row keeps its gap but the first child is .mid. */
+.row.no-lead { gap: 0; padding-left: 0; }
+/* finance-hero — grande section « Restant — toutes périodes » plein largeur (spec manager-finance-v2 2026-09-08) */
+.finance-hero {
+  background: #fff; border: 1.5px solid #F0F0F0; border-radius: var(--radius);
+  padding: 14px 16px; margin-bottom: 10px;
+}
+.finance-hero__label {
+  font-size: 10.5px; font-weight: 700; color: var(--ink-faint);
+  text-transform: uppercase; letter-spacing: .5px; display: flex; align-items: center; justify-content: space-between;
+}
+.finance-hero__label a { font-size: 10.5px; text-transform: none; color: var(--olive); text-decoration: none; font-weight: 600; letter-spacing: 0; }
+.finance-hero__total { font-size: 30px; font-weight: 800; color: var(--ink); line-height: 1.15; letter-spacing: -.4px; margin-top: 2px; }
+.finance-hero__sub { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+.finance-hero.sold { border-color: var(--ok); }
+.finance-hero.sold .finance-hero__total { color: var(--ok-ink); font-size: 20px; letter-spacing: 0; }
+/* Module accueil Finance — modèle C (re-lock 2026-09-08, spec manager-finance-v2) : total + barre
+   segmentée par cycle. Barre = page pattern (statut .finance-hero) ; segments = liens cycle,
+   couleurs = tokens cycles (--chart-1..3), proportions = restants. */
+/* La barre segmentée du module accueil Finance, son total au-dessus et sa légende en dessous ont été
+   RETIRÉS le 2026-09-28 (user) : le module dessine maintenant le donut de « Restants par cycle »
+   (donutChart + lignes de cycle). `.debt-total`, `.cycle-stack` et `.debt-legend` n'avaient plus
+   d'appelant de production. Ne pas les ressusciter : un module, une façon de le lire. */
+
+/* donutChart — répartition par cycle (spec manager-effectifs-rework, 2026-09-08).
+   Disque conique pur CSS (boss « graphs thanks HTML ») + trou central portant le total. */
+.donut { position: relative; border-radius: 50%; flex: none; }
+/* Rangée donut + légende. display:flex DOIT venir d'une classe : x-show retire la
+   propriété display inline au démarrage (retombée en block). Jamais de display inline
+   sur un élément porteur d'un x-show. */
+.donut-row { display: flex; align-items: center; gap: 14px; }
+.donut__hole {
+  position: absolute; inset: 24%; border-radius: 50%;
+  background: var(--card);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; line-height: 1.2;
+}
+.donut__hole b { font-size: 16px; font-weight: 700; color: var(--ink); }
+.donut__hole b.small { font-size: 12px; } /* spec manager-finance-v2 : centre = chiffre plein 8+ caractères */
+.donut__hole span { font-size: 8.5px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .4px; }
+/* Pastille de cycle en tête de titre de ligne (contenu de slot listRow, pas un état). Couleur passée en var(--chart-1/2/3). */
+.ldot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+/* En-tête de niveau dans la sheet de cycle (effectifs hub) */
+.cycle-level-head {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px;
+  margin: 2px 2px 2px; padding-top: 6px;
+}
+.cycle-level-head b { font-size: 12px; font-weight: 700; color: var(--ink); }
+.cycle-level-head span { font-size: 10.5px; color: var(--ink-soft); font-weight: 600; white-space: nowrap; }
+.cycle-level-head .chip { margin-left: 6px; }
+
+/* ---------- Cahier de texte — parent day-browser (spec: athena-cahier-texte-navigation, 2026-09-09) ---------- */
+.ct-head { position: sticky; top: 0; z-index: 3; background: var(--sheet); padding: 6px 0 0; }
+.ct-nav { display: flex; align-items: center; gap: 8px; }
+.ct-icobtn { flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--hairline); background: var(--card); color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+.ct-icobtn svg { width: 16px; height: 16px; }
+.ct-icobtn:disabled { opacity: .35; cursor: default; }
+.ct-nav__mid { flex: 1; min-width: 0; text-align: center; line-height: 1.3; }
+.ct-nav__day { display: block; font-size: 13px; color: var(--ink); font-weight: 700; }
+.ct-nav__week { display: block; font-size: 10px; color: var(--ink-faint); }
+.chip.ct-today { cursor: pointer; border: 1px solid var(--hairline); appearance: none; font-family: var(--font); }
+.chip.ct-today:active { background: var(--sage); }
+.ct-subrow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0 4px; }
+/* Segmented Tout|À faire (2026-09-09): one rail → chips stick together and toggle one
+   another; selected keeps .filter-chip--sel (cyan), unselected is transparent on the rail. */
+.ct-seg {
+  display: inline-flex; align-items: center; padding: 2px;
+  background: var(--card); border: 1px solid var(--hairline);
+  border-radius: 999px;
+}
+.ct-seg .filter-chip { border: 0; background: transparent; color: var(--ink-soft); padding: 6px 14px; }
+.ct-seg .filter-chip--sel { background: var(--cyan-bg); color: var(--cyan-ink); }
+/* Date chip — replaces the bare calendar icon (2026-09-09): same silhouette as .filter-chip,
+   label = selected day's date, opens the month sheet. */
+.ct-calchip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--sage); color: var(--ink); border: 1.5px solid #E4EBD2;
+  border-radius: 999px; padding: 6px 11px; font-size: 12px; font-weight: 600;
+  font-family: var(--font); cursor: pointer;
+}
+.ct-calchip svg { width: 14px; height: 14px; color: var(--olive); }
+.card.ct-card { padding: 2px 16px; gap: 0; /* rows spaced by their own padding only — basecoat .card is flex w/ 24px gap (2026-09-09) */ }
+/* Feed block sits under the sticky head — margin separates it from the chips */
+.ct-feed { margin-top: 12px; }
+/* One row = subject pill above the content (flex column, full reading width).
+   Rows are separated only by a tight vertical padding — no divider, no loose gap
+   (2026-09-09: 8px after the 11px version read as floating blocks). */
+.ct-row { display: flex; flex-direction: column; align-items: flex-start; padding: 8px 0; }
+.ct-subj { font-size: 10.5px; font-weight: 600; padding: 3px 8px; border-radius: 99px; white-space: nowrap; margin-bottom: 4px; }
+.ct-body { flex: 1; min-width: 0; width: 100%; display: flex; flex-direction: column; }
+.ct-cours { font-size: 12px; line-height: 1.45; color: var(--ink); margin: 0; }
+.ct-faire { font-size: 11.5px; font-weight: 600; color: var(--olive); margin-top: 3px; }
+/* quiet (LE-A, spec manager-classe-dossier 2026-09-14) : lecture Manager — le devoir est une
+   information sur le travail donné, pas une tâche pour le directeur. Aucune couleur neuve. */
+.ct-faire--quiet { font-size: 11px; font-weight: 500; color: var(--ink-soft); }
+.ct-docs { margin-top: 4px; }
+.ct-empty { justify-content: flex-start; padding: 12px 2px; }
+/* Calendar month sheet (S4) */
+.ct-cal-head { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+.ct-cal-title { font-size: 13.5px; font-weight: 700; text-align: center; }
+.ct-cal-arrows { display: flex; gap: 10px; }
+.ct-cal-arrows .ct-icobtn { width: 30px; height: 30px; }
+.ct-dow, .ct-grid { display: grid; grid-template-columns: repeat(7, 1fr); }
+.ct-dow { margin: 10px 2px 2px; }
+.ct-dow span { text-align: center; font-size: 9.5px; font-weight: 600; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .3px; }
+.ct-grid { gap: 2px; margin: 0 2px; }
+.ct-dcell { position: relative; height: 38px; border: 0; background: transparent; border-radius: 9px; font-size: 12px; color: var(--ink); cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1px; }
+.ct-dcell.off { pointer-events: none; visibility: hidden; }
+.ct-dcell.has { font-weight: 600; }
+.ct-dcell.today { box-shadow: inset 0 0 0 1.5px var(--olive); }
+.ct-dcell.sel { background: var(--olive); color: #fff; font-weight: 600; }
+.ct-dcell.sel .ct-dot { background: #fff; }
+.ct-dot { display: block; width: 4px; height: 4px; border-radius: 99px; background: var(--olive); }
+
+/* ==========================================================================
+   BOUTIQUE — spec athena-boutique (2026-09-15).  Nouvelle section, aucune règle
+   existante modifiée. Contrainte : la bibliothèque ne possède NI panier, NI camion,
+   NI repère (37 icônes) -> les actions portent un LIBELLÉ TEXTE, aucune icône improvisée.
+   ========================================================================== */
+
+/* P1 — callout : chantier (neutre) / annonce (cyan). Aucune action, aucun clic. */
+.callout { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px;
+  border-radius: var(--radius); margin: 0 0 14px; }
+.callout__icon { flex: none; display: flex; margin-top: 1px; }
+.callout__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.callout__body b { font-size: 13.5px; font-weight: 700; }
+.callout__body span { font-size: 12px; line-height: 1.45; }
+.callout--wip { background: var(--muted); color: var(--ink-soft); border: 1.5px solid var(--hairline); }
+.callout--wip .callout__body b { color: var(--ink); }
+.callout--info { background: var(--cyan-bg); color: var(--cyan-ink); }
+
+/* P2 — productRow : ligne article (vignette livre + méta + prix + action). */
+.product-row { display: flex; gap: 12px; padding: 12px 0; align-items: flex-start;
+  border-bottom: 1px solid var(--hairline); }
+.product-row:last-child { border-bottom: none; padding-bottom: 2px; }
+.product-row__thumb { flex: none; width: 56px; height: 72px; border-radius: 8px;
+  background: var(--sage); color: var(--olive); overflow: hidden;
+  display: flex; align-items: center; justify-content: center; }
+.product-row__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.product-row__mid { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.product-row__mid b { font-size: 13.5px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.product-row__mid span { font-size: 11.5px; color: var(--ink-soft); }
+.product-row__end { flex: none; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.product-row__price { font-size: 13.5px; font-weight: 700; color: var(--navy); white-space: nowrap; }
+.product-row--rupture .product-row__thumb { opacity: .45; }
+
+/* Rupture : le mot est porté par la puce ; ici, du TEXTE simple — pas une fausse pilule
+   désactivée qui se lit comme un bouton cassé (contrôle visuel 2026-09-15). */
+.product-row__off { font-size: 12.5px; color: var(--ink-soft); font-weight: 600; }
+/* Le mot d'état vit dans la colonne d'INFO (propriété de l'article), jamais dans la colonne
+   d'action — sinon le chip se lit comme un bouton désactivé (contrôle visuel 2026-09-15). */
+.product-row__mid .chip { margin-top: 5px; align-self: flex-start; }
+
+/* Ligne de panier : total de ligne + « Retirer » en libellé texte (jamais d'icône nue). */
+.product-row__remove { background: none; border: none; padding: 0; cursor: pointer;
+  font-family: var(--font); font-size: 11.5px; font-weight: 600; color: var(--late-ink); }
+
+/* P3 — qtyStepper : − / valeur / +. Le − s'inactive au minimum. */
+.qty-stepper { display: inline-flex; align-items: center; border: 1.5px solid var(--hairline);
+  border-radius: 999px; overflow: hidden; background: #fff; }
+.qty-stepper button { width: 30px; height: 30px; border: none; background: #fff; color: var(--olive);
+  font-family: var(--font); font-size: 16px; line-height: 1; cursor: pointer; }
+.qty-stepper button[disabled] { color: var(--ink-faint); cursor: default; }
+.qty-stepper__val { min-width: 26px; text-align: center; font-size: 13px; font-weight: 700; color: var(--ink); }
+
+/* P4 — mapPin : fond de plan figé (CSS, aucune carto réelle) + point + légende. */
+.map-pin { position: relative; height: 132px; border-radius: var(--radius); background: var(--muted);
+  border: 1.5px solid var(--hairline); overflow: hidden; }
+.map-pin__grid, .bus-map__grid { position: absolute; inset: 0;
+  background-image: linear-gradient(var(--hairline) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+  background-size: 28px 28px; }
+.map-pin__dot { position: absolute; left: 50%; top: 44%; width: 16px; height: 16px; margin: -8px 0 0 -8px;
+  border-radius: 50%; background: var(--olive); border: 3px solid #fff; box-shadow: var(--shadow);
+  display: none; }
+.map-pin--pose .map-pin__dot { display: block; }
+/* Fond de plan réel (MapLibre GL 5.9.0). Sans réseau ni WebGL, la grille CSS de repli reste
+   seule visible : la maquette ne casse jamais, elle perd juste les tuiles. */
+.map-pin--live .map-pin__grid,
+.map-pin--live > .map-pin__dot { display: none; }
+.map-pin .maplibregl-map { background: var(--muted); font-family: var(--font); }
+.map-pin .maplibregl-canvas { outline: none; }
+.map-pin .maplibregl-ctrl-attrib { font-size: 9px; background: var(--card); color: var(--ink-soft); }
+.map-pin .maplibregl-ctrl-attrib a { color: var(--ink-soft); }
+
+/* ---------- busMap — suivi du bus (spec athena-suivi-bus, 2026-09-16) ---------- */
+/* Deuxième primitive de carte, métier distinct de mapPin (N2a) : ici on RACONTE un trajet qui
+   avance. La carte ne détient aucune information seule — le chip d'état et la fraîcheur sont du
+   TEXTE (lisibles sans le plan) et la frise d'arrêts vit dans l'écran. Sans MapLibre ni réseau,
+   la grille de repli tient le fond : l'écran ne perd aucune information, il perd les tuiles. */
+.bus-map { position: relative; border-radius: var(--radius); background: var(--muted);
+  border: 1.5px solid var(--hairline); overflow: hidden; }
+.bus-map--live .bus-map__grid { display: none; }
+.bus-map__hud { position: absolute; left: 10px; top: 10px; z-index: 2; display: flex; flex-direction: column;
+  align-items: flex-start; gap: 5px; pointer-events: none; }
+/* La pastille de fraîcheur séparée n'existe plus : elle est FUSIONNÉE dans le chip d'état
+   (`.bus-map__etat`, spec §16.4). Un seul objet à balayer au lieu de deux pastilles empilées. */
+.bus-map__etat { font-size: 11px; font-weight: 700; padding: 4px 9px; gap: 5px; }
+.bus-map__sep { width: 1px; height: 11px; background: currentColor; opacity: 0.35; margin: 0 1px; }
+/* Bascule des voies — une pastille par bus, avec SA teinte (spec §18). Elle vit dans le bloc du haut
+   à gauche, sous le chip d'état : le chip dit « où en est-il », la pastille dit « quelle ligne ».
+   Dans le bas, elle recouvrait l'attribution sur ~84 px (mesuré) ; le bas revient à l'attribution
+   seule et le coin haut-droite à la bascule plein écran. */
+.bus-map__voies { display: flex; flex-wrap: wrap; gap: 5px; pointer-events: auto; }
+.voie { display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow);
+  color: var(--ink); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
+.voie__pastille { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+/* Masquée : la pastille se vide et pâlit — elle reste lisible et cliquable pour revenir. */
+.voie--off { opacity: 0.55; }
+.voie--off .voie__pastille { background: var(--hairline) !important; }
+.voie:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Bascule de PÉRIODE — deux segments visibles plutôt qu'un point de couleur : les pastilles disent QUEL
+   bus, celle-ci dit QUAND. Deux axes, deux formes : on ne les confond pas d'un coup d'œil. */
+.sens { display: inline-flex; padding: 2px; border-radius: 999px; background: var(--card);
+  border: 1px solid var(--hairline); box-shadow: var(--shadow); pointer-events: auto; }
+.sens__seg { font: inherit; font-size: 11px; font-weight: 700; color: var(--muted); background: none;
+  border: 0; border-radius: 999px; padding: 3px 9px; cursor: pointer; }
+.sens__seg[aria-pressed="true"] { background: var(--ink); color: var(--card); }
+.sens__seg:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+/* Une SEULE période dans la carte : une étiquette, pas une bascule — elle dit ce qu'on regarde sans
+   proposer un choix qui n'existe pas. */
+.sens--fixe { padding: 4px 10px; font-size: 11px; color: var(--ink); }
+/* Le repère de l'ÉCOLE — un LIEU : teinte neutre (jamais une teinte de bus), et son nom écrit. */
+.marqueur--masque { display: none !important; }
+.bus-map__ecole { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px;
+  border-radius: 999px; background: var(--card); border: 1px solid var(--ink); color: var(--ink);
+  font-size: 11px; font-weight: 700; box-shadow: var(--shadow); white-space: nowrap; }
+/* La pastille du bus (décision utilisateur 2026-09-21) : fond ET bord de la TEINTE DE SA VOIE, texte
+   blanc, et une VRAIE ombre portée qui la pose sur le plan. Avant, toutes les pastilles étaient
+   blanches et seule l'active passait à l'encre : sur une carte qui porte deux voies, on ne savait
+   pas quel bus était lequel sans lire. L'ACTIVE ne passe plus par le fond (elle perdrait sa voie) :
+   elle porte un anneau clair. Un dispositif de plus, pour une autre idée (sélection), la teinte
+   restant celle du bus. */
+.bus-map__bus { display: inline-flex; align-items: center; gap: 3px; padding: 3px 7px; border-radius: 999px;
+  background: var(--voie, var(--card)); border: 1.5px solid var(--voie, var(--hairline)); color: #fff;
+  font-size: 10.5px; font-weight: 700; box-shadow: 0 2px 6px rgba(15, 23, 42, .3); }
+.bus-map__bus--actif { box-shadow: 0 0 0 2px var(--card), 0 2px 8px rgba(15, 23, 42, .38); }
+/* ---------- Plein écran des cartes (spec §16.3, décision 2026-09-17) ---------- */
+/* UN bouton, deux faces : « Plein écran » ⇄ « Quitter ». Haut-droite dans les DEUX primitives —
+   une action, une place. Le plein écran est INTERNE (la carte remplit la coque) et non l'API
+   Fullscreen du navigateur : même comportement partout, et vérifiable. */
+.map-bascule { position: absolute; right: 10px; top: 10px; z-index: 5;
+  display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: 999px;
+  background: var(--card); border: 1px solid var(--hairline); box-shadow: var(--shadow);
+  color: var(--ink); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
+.map-bascule__face { display: inline-flex; align-items: center; gap: 5px; }
+/* `[hidden]` natif contre le `display: inline-flex` ci-dessus : une déclaration d'auteur bat le
+   `display: none` du navigateur, sans cette ligne la face cachée resterait visible. */
+.map-bascule__face[hidden] { display: none; }
+.map-bascule:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+.map-bascule--fige { position: static; pointer-events: none; }
+/* Deux `!important` assumés, chacun pour une raison précise :
+   1. `position` — MapLibre ajoute sa classe `maplibregl-map` sur le conteneur et sa feuille
+      (`maplibre-gl.css`) est chargée APRÈS la nôtre : à spécificité égale, son
+      `.maplibregl-map { position: relative }` gagne et la carte ne sort jamais de son bloc.
+      (Diagnostic : `inset` et `height` passaient, `position` non — un bloc ne s'applique pas à
+      moitié, c'est donc une AUTRE feuille qui gagnait.)
+   2. `height` — la hauteur d'écran est un style EN LIGNE par instance ; `auto` + `inset: 0`
+      étire le bloc sur toute la coque (un élément positionné dont top et bottom sont posés
+      tient sa hauteur de ses marges, pas de son contenu). */
+.bus-map--plein, .map-pin--plein { position: fixed !important; inset: 0; height: auto !important;
+  border-radius: 0; border: 0; z-index: 90; }
+.map-pin--plein .map-pin__hint { font-size: 12px; padding: 6px 11px; }
+.bus-map .maplibregl-ctrl-attrib { font-size: 9px; background: var(--card); color: var(--ink-soft); }
+.bus-map .maplibregl-ctrl-attrib a { color: var(--ink-soft); }
+/* Le tap du pointage : le bouton n'est qu'un PORTEUR de geste — toute la sémantique visuelle reste
+   dans `boardToggle`. Deux porteurs, un seul dessin : lecture seule côté parent, tap côté
+   accompagnateur (loi 9 — recopier le chip dans l'écran serait un défaut). */
+.board-toggle__tap { border: 0; background: none; padding: 0; font: inherit; cursor: pointer;
+  display: inline-flex; align-items: center; }
+.board-toggle__tap:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; border-radius: 999px; }
+.map-pin__dot--live {
+  /* Repère de destination : à l'échelle du téléphone, un point de 10 px de vert se lit comme
+     une tache. On l'épaissit et on garde le cerclage blanc + l'ombre de la maquette. */
+  display: block; width: 20px; height: 20px; box-sizing: border-box;
+  background: var(--olive); border: 4px solid var(--card); border-radius: 50%;
+  box-shadow: var(--shadow);
+}
+
+.map-pin__hint { position: absolute; left: 10px; right: 10px; bottom: 10px; background: var(--card);
+  border-radius: 8px; padding: 5px 9px; font-size: 11px; color: var(--ink-soft); }
+
+/* P5 — trackTimeline : chaîne d'états verticale. */
+.track { display: flex; flex-direction: column; }
+.track__step { display: flex; gap: 12px; }
+.track__rail { flex: none; width: 16px; display: flex; flex-direction: column; align-items: center; }
+.track__dot { width: 12px; height: 12px; border-radius: 50%; background: var(--hairline); margin-top: 4px; flex: none; }
+.track__line { flex: 1; width: 2px; background: var(--hairline); min-height: 16px; }
+.track__body { flex: 1; min-width: 0; padding-bottom: 16px; display: flex; flex-direction: column; gap: 2px; }
+.track__body b { font-size: 13px; font-weight: 600; color: var(--ink); }
+.track__body span { font-size: 11.5px; color: var(--ink-soft); line-height: 1.4; }
+.track__date { color: var(--ink-faint); }
+.track__step--done .track__dot, .track__step--done .track__line { background: var(--olive); }
+/* Un trait qui MÈNE à une annulation n'est pas une progression verte (contrôle visuel 2026-09-15).
+   Spécificité volontairement supérieure à `.track__step--done .track__line`. */
+.track__step--done .track__line--cancel,
+.track__step--done .track__line--todo { background: var(--hairline); }
+.track__step--current .track__dot { background: #fff; border: 3px solid var(--olive); width: 14px; height: 14px; margin-top: 3px; }
+.track__step--todo .track__body b { color: var(--ink-faint); }
+.track__step--cancel .track__dot { background: var(--late); }
+.track__step--cancel .track__body b { color: var(--late-ink); }
+
+/* Barre de portée du panier (sticky). 3e famille sticky de l'app — écart G8 déclaré
+   (les 2 autres : .reinsc-confirm, .vs-signal, toutes deux CSS-only et nommées métier). */
+.shop-bar { position: sticky; bottom: 0; z-index: 4; background: #fff;
+  border-top: 1px solid var(--hairline); padding: 10px 20px 14px;
+  display: flex; flex-direction: column; gap: 8px; }
+.shop-bar__scope { flex: 1; min-width: 0; font-size: 11.5px; color: var(--ink-soft); }
+.shop-bar__scope b { display: block; font-size: 14px; color: var(--ink); }
+/* Variantes de la boutique : grande vignette (feuille produit) + deux primitives de texte
+   pour les corps d'hôte — évite tout override de taille en style inline. */
+.product-row__thumb--lg { width: 72px; height: 92px; }
+.bq-meta { font-size: 12px; color: var(--ink-soft); line-height: 1.45; }
+.bq-amount { display: block; margin-top: 6px; font-size: 17px; font-weight: 700; color: var(--navy); }
+.bq-sheet-row { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; }
+.bq-sheet-body { display: flex; gap: 12px; align-items: flex-start; }
+.bq-sheet-thumb { flex: 1; min-width: 0; }
+
+/* ============================================================================
+   LIBRAIRIE — révision 2026-09-16 (spec .agents/design/athena-boutique.md §18)
+   Renommage visible « Boutique » → « Librairie » (R1) : les identifiants de code
+   restent `boutique`/`bqt`/`.bq-` — décision utilisateur, dérive de vocabulaire assumée.
+   ========================================================================= */
+
+/* R3 — grille produit : 3 colonnes, gouttière 8 px → (412 − 2×20 − 2×8) / 3 = 118,7 px.
+   Idiome CSS et NON composant : aucune anatomie, aucun paramètre, un seul site — précédent
+   exact du hub Mes Enfants, qui écrit `.tile-grid` à la main (écart G14 : `CMP.tileGrid`
+   n'est appelé nulle part). NE PAS réutiliser `.tile-grid` : elle code
+   `repeat(3,1fr); gap:12px` en dur (ui.css:181) et ignore son propre `--cols` (écart G13). */
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+/* P6 — productCard : carte article verticale. Hauteur CONSTANTE dans une rangée : le
+   monogramme de librairie, le compteur d'ajout et la puce de rupture sont tous posés
+   EN SURIMPRESSION sur la vignette, jamais dans le flux du texte — sinon une carte en
+   rupture ferait grandir toute sa rangée. */
+.product-card { display: flex; flex-direction: column; gap: 6px; color: var(--ink); }
+.product-card__cover { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 10px;
+  background: var(--sage); color: var(--olive); overflow: hidden;
+  display: flex; align-items: center; justify-content: center; }
+.product-card__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.product-card__body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.product-card__title { font-size: 10.5px; font-weight: 600; line-height: 1.25; color: var(--ink);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  min-height: 26px; }
+.product-card__price { font-size: 11.5px; font-weight: 700; color: var(--navy); white-space: nowrap; }
+.product-card--rupture .product-card__cover img { opacity: .45; }
+.product-card--rupture .product-card__price { color: var(--ink-faint); }
+/* Monogramme de librairie (M5) — sur la vignette, 20 px, lisible sur photo. */
+.lib-mark { position: absolute; top: 6px; left: 6px; display: inline-flex; align-items: center;
+  justify-content: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px;
+  background: rgba(255,255,255,.94); color: var(--navy); font-size: 9.5px; font-weight: 700;
+  letter-spacing: .02em; box-shadow: 0 1px 3px rgba(28,43,75,.30); }
+.product-card__cover .chip { position: absolute; left: 6px; bottom: 6px; }
+.product-card__cover .count-pill { position: absolute; right: 6px; bottom: 6px; }
+
+/* P7 — countPill : compteur d'articles. Même visuel que les DEUX compteurs hérités
+   (`.tile .badge` ui.css:196 · `.sdrawer .notif-count` ui.css:596) — écart G15 déclaré :
+   leur unification est une passe bibliothèque, refusée pour cette révision (décision Q9). */
+.count-pill { min-width: 17px; height: 17px; border-radius: 999px; padding: 0 4px;
+  background: var(--late); color: #fff; font-size: 10px; font-weight: 700;
+  display: inline-flex; align-items: center; justify-content: center; }
+
+/* P8 — basketButton : accès panier de la rangée collante du catalogue (R2, 2026-09-16).
+   Cible 40×40, compteur en surimpression sur le coin de l'icône. `appHeader` n'est PAS
+   touché (52 écrans partagés, 3 espaces). */
+.basket-btn { position: relative; flex: none; width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; color: var(--navy);
+  text-decoration: none; }
+.basket-btn__ic { display: flex; }
+.basket-btn__ic svg { width: 24px; height: 24px; display: block; }
+.basket-btn .count-pill { position: absolute; top: 1px; right: 1px; }
+.basket-btn:active { background: var(--sage); }
+
+/* N30 — callout[attention] : état AJOUTÉ le 2026-09-16 (événement bibliothèque approuvé).
+   Attention ≠ erreur : `--due` (ambre), jamais `--late` (rouge = retard). Les états `wip`
+   et `info` sont inchangés — l'ajout est purement additif, aucun appelant ne change. */
+.callout--attention { background: var(--due-bg); color: var(--due-ink); }
+.callout--attention .callout__body b { color: var(--due-ink); }
+
+/* A11 — action indisponible : le libellé reste lisible, l'action ne fait rien. Convention
+   du projet — un CTA indisponible porte son libellé TEXTE et se neutralise (cf. l'état
+   `rupture` de productRow), jamais un bouton cliquable et mort (défaut consigné §8.4). */
+.mini-act[disabled], .mini-act[aria-disabled="true"] {
+  color: var(--ink-faint); cursor: default; border-style: dashed; }
+.mini-act[disabled] svg, .mini-act[aria-disabled="true"] svg { color: var(--ink-faint); }
+.mini-act[disabled]:active, .mini-act[aria-disabled="true"]:active { background: #fff; }

@@ -1,0 +1,116 @@
+/* Athena School — design tokens. THE LAW. Nothing outside this palette.
+   This file is loaded AFTER basecoat.cdn.min.css, so it overrides Basecoat's defaults.
+   Two layers: 1) Athena primitives (mint/olive/navy...), 2) mapping → Basecoat variables
+   (background/foreground/primary...). Keep both — Athena code uses primitives directly,
+   Basecoat components read the mapped vars. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ——— Athena primitives ——— */
+  /* Surfaces */
+  --mint: #ECF2E3;          /* top header zone */
+  --sheet: #FFFFFF;         /* body canvas */
+  --card: #FFFFFF;          /* cards */
+  --hairline: #EDF1E4;
+
+  /* Brand */
+  --olive: #6B8C21;         /* icons, accents, good status */
+  --sage: #EBF0DB;          /* icon chips */
+  --navy: #1C2B4B;          /* primary actions, emphasis */
+  /* Voies de bus — UNE teinte par bus (décision 2026-09-17). La couleur dit QUI, le trait dit OÙ :
+     PLEIN = le bus est passé · POINTILLÉ à 40 % = il reste à passer. La teinte n'a donc plus à
+     raconter l'avancement — quand elle le faisait, deux bus se confondaient en un même tracé.
+     Vives à dessein : leur travail est de se séparer du fond, pas de signifier un état (c'est
+     pourquoi elles ne sont PAS dans la famille d'état). Un 3ᵉ bus = une 3ᵉ teinte. */
+  --voie-1: #35C759;   /* bus A */
+  --voie-2: #0A84FF;   /* bus B */
+
+  /* Banner */
+  --cyan-bg: #D9EEF8;
+  --cyan-ink: #1C2B4B;
+
+  /* Status */
+  --ok: #6B8C21;      --ok-bg: #EBF0DB;      --ok-ink: #55701A;
+  --due: #E8A13D;     --due-bg: #FBF1DE;     --due-ink: #9C6B14;
+  --late: #D9534F;    --late-bg: #FBE4E3;    --late-ink: #B03A36;
+
+  /* Text */
+  --ink: #1C2B4B;
+  --ink-soft: #5A6577;
+  --ink-faint: #97A0AE;
+
+  /* Subject pastel palette (per-subject friendly colors — briefing schedule) */
+  /* Background + ink pair per subject family; used as --subject-<family>-bg / -ink */
+  --subject-maths-bg: #EBF0DB;      --subject-maths-ink: #55701A;   /* Mathématiques — sage */
+  --subject-fr-bg:    #DEEBFF;      --subject-fr-ink:    #2B4A8C;   /* Français — soft blue */
+  --subject-en-bg:    #FCE4EC;      --subject-en-ink:    #9C3A5F;   /* Anglais — soft pink */
+  --subject-sci-bg:   #D9EEF8;      --subject-sci-ink:   #1C5C78;   /* Sciences / SVT — soft cyan */
+  --subject-hist-bg:  #FBF1DE;      --subject-hist-ink:  #9C6B14;   /* Histoire-Géo — soft amber */
+  --subject-arts-bg:  #EDE4F6;      --subject-arts-ink:  #6A3D9C;   /* Arts / EPS — soft violet */
+  --subject-default-bg: #F0F2F6;    --subject-default-ink: var(--ink-soft);
+
+  /* Chart palettes — two families, data-viz only (user rules 2026-09-09):
+     Chart marks must NEVER reuse app/status tokens — a segment must not read as an ok/due/late chip.
+     1) GENERAL (--chart-*) — donut/bars hors contexte argent (effectifs, vie scolaire, pointage) :
+        violet/teal/rose + gris neutre « Non pointé / sans donnée ».
+     2) DETTE (--debt-*) — RÉSERVÉ aux graphiques d'argent impayé (finance, restants, module
+        Finance de l'accueil). Six séries à 60° d'écart (user 2026-09-28) : un établissement qui
+        suit plus de quatre cycles ne répète plus de couleur. La série 2 reste cramoisi, c'est la
+        série d'attention ; la série 1 est l'ancre or. Voir .agents/design/athena-global-pass.md. */
+  --chart-1: #7C66D6;   /* violet */
+  --chart-2: #2BA3A0;   /* teal */
+  --chart-3: #D06A9E;   /* rose */
+  --chart-4: #9AA2B0;   /* gris neutre « Non pointé / sans donnée » */
+  --chart-cur: #5646B8; /* variante foncée chart-1 (période courante) */
+  --chart-faint: #E9ECF2; /* stub valeur 0 */
+  --debt-1: #BEA32D;    /* or — Encaissé / série 1 */
+  --debt-2: #BE2D47;    /* cramoisi — Facturé / attention */
+  --debt-3: #A32DBE;    /* violet — série 3 */
+  --debt-4: #2D47BE;    /* bleu — série 4 */
+  --debt-5: #2DBEA3;    /* teal — série 5 */
+  --debt-6: #47BE2D;    /* vert — série 6 */
+  --debt-cur: #846F15;  /* or foncé — période courante (argent) */
+
+  /* Shape & depth */
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(28, 43, 75, .08);
+
+  --font: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+
+  /* ——— Basecoat mapping (Athena → shadcn vars) ——— */
+  /* Basecoat's CDN sets defaults in oklch; we override with Athena hex. */
+  --background: var(--sheet);
+  --foreground: var(--ink);
+  --card-foreground: var(--ink);
+  --popover: var(--card);
+  --popover-foreground: var(--ink);
+  --primary: var(--navy);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--sage);
+  --secondary-foreground: var(--ink);
+  --muted: #F2F4EC;
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--sage);
+  --accent-foreground: var(--ink);
+  --destructive: var(--late);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--hairline);
+  --input: var(--hairline);
+  --ring: var(--olive);
+
+  /* Basecoat expects --radius as a base unit; its theme derives --radius-sm/md/lg/xl from it */
+  /* We keep 14px (0.875rem) as the base — matches our card radius */
+
+  /* Font mapping for Basecoat (it reads --font-sans) */
+  --font-sans: var(--font);
+
+  /* Sidebar tokens for Basecoat's sidebar component (viewer stays vanilla but keep consistent) */
+  --sidebar: var(--sheet);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--navy);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--sage);
+  --sidebar-accent-foreground: var(--ink);
+  --sidebar-border: var(--hairline);
+  --sidebar-ring: var(--olive);
+}
