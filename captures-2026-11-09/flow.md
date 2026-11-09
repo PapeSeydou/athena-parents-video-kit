@@ -66,13 +66,14 @@ Voir texts/*.txt (un fichier par écran et par état). Points clés :
 - mes-enfants : la rangée bus des enfants de démo n’est pas un lien (aucune navigation) — le lien bus n’existe que pour le fallback hors liste
 - factures : le bouton « Payer … » n’a pas répondu au clic réel (clic scripté utilisé) — barre non cliquable dans la maquette
 - STOP RULE appliquée rétroactivement :
+  - [crops] Crops régénérés (naming par stem) : 46 fichiers dans elements/, un par élément éligible (tap: true, ou type card / checkbox) des 41 JSON. Règle de nom : elements/<stem PNG>__<slug>.png, slug = libellé en minuscules sans accents, non-alnum → « - », 40 caractères max ; collisions dans un même état suffixées -2, -3 (aucune ici). Sources : captures/screens/ pour les 19 nouveaux états, assets/screens/ (PNG livrés, même géométrie 824x1834) pour les 22 écrans existants. Exclusions : le bouton final de paiement (retiré, stop rule) et 0 rectangle dégénéré ; aucun élément éligible n’est resté sans crop (46/46).
   - JSON : 1 entrée retirée de 10_factures_invoice-selected.json (libellé du bouton final de
     paiement : verbe de paiement + fournisseur sélectionné + montant en FCFA).
   - TXT : le bloc de lignes du bouton final de paiement (5 lignes : verbe, fournisseur, séparateur,
     montant, devise) a été retiré de 10_factures_invoice-selected.txt et
     10_factures_payment-sheet.txt. Les rangées fournisseurs « Max It » et « Wave » ainsi que les
     totaux sont conservées.
-  - Crops : le crop du bouton retiré a été supprimé ; aucun élément éligible n'est resté sans crop.
+  - Crops régénérés (naming par stem) : 46 fichiers dans elements/, un par élément éligible (tap: true, ou type card / checkbox) des 41 JSON. Règle de nom : elements/<stem PNG>__<slug>.png, slug = libellé en minuscules sans accents, non-alnum → « - », 40 caractères max ; collisions dans un même état suffixées -2, -3 (aucune ici). Sources : captures/screens/ pour les 19 nouveaux états, assets/screens/ (PNG livrés, même géométrie 824x1834) pour les 22 écrans existants. Exclusions : le bouton final de paiement (retiré, stop rule) et 0 rectangle dégénéré.
 - Le sélecteur d'extraction a été étendu (payopt, facture-card, service-check, vs-chip, filter-chip,
   ct-icobtn, ct-calchip, trimestre, reinsc-banner, tile, mini-act, kid-section, sens__seg) : les
   éléments cliquables Alpine (@click) n'ont pas d'attribut onclick et étaient invisibles au
