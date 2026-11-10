@@ -1,0 +1,1267 @@
+[
+ {
+  "word": "Athena,",
+  "start": 0.0,
+  "end": 0.58
+ },
+ {
+  "word": "c’est",
+  "start": 0.9,
+  "end": 0.94
+ },
+ {
+  "word": "l’école",
+  "start": 0.94,
+  "end": 1.2
+ },
+ {
+  "word": "de",
+  "start": 1.2,
+  "end": 1.4
+ },
+ {
+  "word": "vos",
+  "start": 1.4,
+  "end": 1.56
+ },
+ {
+  "word": "enfants,",
+  "start": 1.56,
+  "end": 1.88
+ },
+ {
+  "word": "dans",
+  "start": 1.88,
+  "end": 2.24
+ },
+ {
+  "word": "votre",
+  "start": 2.24,
+  "end": 2.44
+ },
+ {
+  "word": "POCHE.",
+  "start": 2.44,
+  "end": 2.92
+ },
+ {
+  "word": "Et",
+  "start": 3.3,
+  "end": 3.48
+ },
+ {
+  "word": "pour",
+  "start": 3.48,
+  "end": 3.62
+ },
+ {
+  "word": "y",
+  "start": 3.62,
+  "end": 3.72
+ },
+ {
+  "word": "entrer,",
+  "start": 3.72,
+  "end": 4.02
+ },
+ {
+  "word": "rien",
+  "start": 4.28,
+  "end": 4.62
+ },
+ {
+  "word": "de",
+  "start": 4.62,
+  "end": 4.74
+ },
+ {
+  "word": "plus",
+  "start": 4.74,
+  "end": 4.88
+ },
+ {
+  "word": "simple",
+  "start": 4.88,
+  "end": 5.18
+ },
+ {
+  "word": ":",
+  "start": 5.18,
+  "end": 5.18
+ },
+ {
+  "word": "vous",
+  "start": 5.62,
+  "end": 5.78
+ },
+ {
+  "word": "entrez",
+  "start": 5.78,
+  "end": 6.06
+ },
+ {
+  "word": "votre",
+  "start": 6.06,
+  "end": 6.2
+ },
+ {
+  "word": "numéro",
+  "start": 6.2,
+  "end": 6.5
+ },
+ {
+  "word": "de",
+  "start": 6.5,
+  "end": 6.5
+ },
+ {
+  "word": "téléphone",
+  "start": 6.5,
+  "end": 7.02
+ },
+ {
+  "word": "et",
+  "start": 7.02,
+  "end": 7.4
+ },
+ {
+  "word": "le",
+  "start": 7.4,
+  "end": 7.54
+ },
+ {
+  "word": "code",
+  "start": 7.54,
+  "end": 7.66
+ },
+ {
+  "word": "de",
+  "start": 7.66,
+  "end": 7.8
+ },
+ {
+  "word": "l’établissement,",
+  "start": 7.8,
+  "end": 8.34
+ },
+ {
+  "word": "et",
+  "start": 8.68,
+  "end": 8.92
+ },
+ {
+  "word": "l’application",
+  "start": 8.92,
+  "end": 9.52
+ },
+ {
+  "word": "vous",
+  "start": 9.52,
+  "end": 9.72
+ },
+ {
+  "word": "reconnaît",
+  "start": 9.72,
+  "end": 10.22
+ },
+ {
+  "word": "AUSSITÔT.",
+  "start": 10.22,
+  "end": 10.84
+ },
+ {
+  "word": "Un",
+  "start": 12.02,
+  "end": 12.2
+ },
+ {
+  "word": "code",
+  "start": 12.2,
+  "end": 12.42
+ },
+ {
+  "word": "à",
+  "start": 12.42,
+  "end": 12.56
+ },
+ {
+  "word": "six",
+  "start": 12.56,
+  "end": 12.76
+ },
+ {
+  "word": "chiffres",
+  "start": 12.76,
+  "end": 13.04
+ },
+ {
+  "word": "arrive",
+  "start": 13.04,
+  "end": 13.26
+ },
+ {
+  "word": "par",
+  "start": 13.26,
+  "end": 13.48
+ },
+ {
+  "word": "SMS",
+  "start": 13.48,
+  "end": 13.76
+ },
+ {
+  "word": "pour",
+  "start": 13.76,
+  "end": 14.04
+ },
+ {
+  "word": "confirmer",
+  "start": 14.04,
+  "end": 14.5
+ },
+ {
+  "word": "que",
+  "start": 14.5,
+  "end": 14.64
+ },
+ {
+  "word": "c’est",
+  "start": 14.64,
+  "end": 14.8
+ },
+ {
+  "word": "bien",
+  "start": 14.8,
+  "end": 14.96
+ },
+ {
+  "word": "vous,",
+  "start": 14.96,
+  "end": 15.18
+ },
+ {
+  "word": "et",
+  "start": 15.58,
+  "end": 15.78
+ },
+ {
+  "word": "un",
+  "start": 15.78,
+  "end": 15.94
+ },
+ {
+  "word": "code",
+  "start": 15.94,
+  "end": 16.14
+ },
+ {
+  "word": "PIN",
+  "start": 16.14,
+  "end": 16.38
+ },
+ {
+  "word": "à",
+  "start": 16.38,
+  "end": 16.62
+ },
+ {
+  "word": "quatre",
+  "start": 16.62,
+  "end": 16.88
+ },
+ {
+  "word": "chiffres",
+  "start": 16.88,
+  "end": 17.32
+ },
+ {
+  "word": "protège",
+  "start": 17.32,
+  "end": 17.78
+ },
+ {
+  "word": "votre",
+  "start": 17.78,
+  "end": 17.94
+ },
+ {
+  "word": "accès.",
+  "start": 17.94,
+  "end": 18.3
+ },
+ {
+  "word": "Saisissez-le,",
+  "start": 18.8,
+  "end": 19.2
+ },
+ {
+  "word": "et",
+  "start": 19.2,
+  "end": 19.66
+ },
+ {
+  "word": "vous",
+  "start": 19.66,
+  "end": 19.78
+ },
+ {
+  "word": "êtes",
+  "start": 19.78,
+  "end": 19.9
+ },
+ {
+  "word": "CHEZ",
+  "start": 19.9,
+  "end": 20.08
+ },
+ {
+  "word": "VOUS.",
+  "start": 20.08,
+  "end": 20.18
+ },
+ {
+  "word": "Bienvenue",
+  "start": 20.76,
+  "end": 21.4
+ },
+ {
+  "word": "chez",
+  "start": 21.4,
+  "end": 21.84
+ },
+ {
+  "word": "vous",
+  "start": 21.84,
+  "end": 22.06
+ },
+ {
+  "word": "!",
+  "start": 22.06,
+  "end": 22.06
+ },
+ {
+  "word": "Vos",
+  "start": 22.98,
+  "end": 23.22
+ },
+ {
+  "word": "enfants",
+  "start": 23.22,
+  "end": 23.46
+ },
+ {
+  "word": "sont",
+  "start": 23.46,
+  "end": 23.66
+ },
+ {
+  "word": "réunis",
+  "start": 23.66,
+  "end": 23.96
+ },
+ {
+  "word": "sur",
+  "start": 23.96,
+  "end": 24.12
+ },
+ {
+  "word": "l’accueil,",
+  "start": 24.12,
+  "end": 24.56
+ },
+ {
+  "word": "une",
+  "start": 25.02,
+  "end": 25.22
+ },
+ {
+  "word": "flèche",
+  "start": 25.22,
+  "end": 25.52
+ },
+ {
+  "word": "suffit",
+  "start": 25.52,
+  "end": 25.8
+ },
+ {
+  "word": "pour",
+  "start": 25.8,
+  "end": 25.96
+ },
+ {
+  "word": "passer",
+  "start": 25.96,
+  "end": 26.18
+ },
+ {
+  "word": "de",
+  "start": 26.18,
+  "end": 26.34
+ },
+ {
+  "word": "l’un",
+  "start": 26.34,
+  "end": 26.5
+ },
+ {
+  "word": "à",
+  "start": 26.5,
+  "end": 26.64
+ },
+ {
+  "word": "l’autre,",
+  "start": 26.64,
+  "end": 26.9
+ },
+ {
+  "word": "et",
+  "start": 27.14,
+  "end": 27.38
+ },
+ {
+  "word": "tout",
+  "start": 27.38,
+  "end": 27.54
+ },
+ {
+  "word": "ce",
+  "start": 27.54,
+  "end": 27.64
+ },
+ {
+  "word": "que",
+  "start": 27.64,
+  "end": 27.74
+ },
+ {
+  "word": "vous",
+  "start": 27.74,
+  "end": 27.86
+ },
+ {
+  "word": "voyez",
+  "start": 27.86,
+  "end": 28.1
+ },
+ {
+  "word": "concerne",
+  "start": 28.1,
+  "end": 28.58
+ },
+ {
+  "word": "l’enfant",
+  "start": 28.58,
+  "end": 28.88
+ },
+ {
+  "word": "affiché.",
+  "start": 28.88,
+  "end": 29.32
+ },
+ {
+  "word": "Et",
+  "start": 29.94,
+  "end": 30.38
+ },
+ {
+  "word": "c’est",
+  "start": 30.38,
+  "end": 30.58
+ },
+ {
+  "word": "là",
+  "start": 30.58,
+  "end": 30.74
+ },
+ {
+  "word": "qu’Athena",
+  "start": 30.74,
+  "end": 31.18
+ },
+ {
+  "word": "change",
+  "start": 31.18,
+  "end": 31.4
+ },
+ {
+  "word": "VRAIMENT",
+  "start": 31.4,
+  "end": 31.76
+ },
+ {
+  "word": "votre",
+  "start": 31.76,
+  "end": 31.92
+ },
+ {
+  "word": "quotidien",
+  "start": 31.92,
+  "end": 32.44
+ },
+ {
+  "word": ":",
+  "start": 32.86,
+  "end": 33.3
+ },
+ {
+  "word": "FINI",
+  "start": 33.3,
+  "end": 33.72
+ },
+ {
+  "word": "les",
+  "start": 33.72,
+  "end": 34.1
+ },
+ {
+  "word": "carnets",
+  "start": 34.1,
+  "end": 34.1
+ },
+ {
+  "word": "perdus,",
+  "start": 34.1,
+  "end": 34.1
+ },
+ {
+  "word": "les",
+  "start": 34.44,
+  "end": 34.58
+ },
+ {
+  "word": "appels",
+  "start": 34.58,
+  "end": 34.92
+ },
+ {
+  "word": "et",
+  "start": 34.92,
+  "end": 35.02
+ },
+ {
+  "word": "les",
+  "start": 35.02,
+  "end": 35.16
+ },
+ {
+  "word": "allers-retours",
+  "start": 35.16,
+  "end": 35.58
+ },
+ {
+  "word": "pour",
+  "start": 35.58,
+  "end": 35.76
+ },
+ {
+  "word": "savoir",
+  "start": 35.76,
+  "end": 35.94
+ },
+ {
+  "word": "où",
+  "start": 35.94,
+  "end": 36.16
+ },
+ {
+  "word": "en",
+  "start": 36.16,
+  "end": 36.26
+ },
+ {
+  "word": "est",
+  "start": 36.26,
+  "end": 36.32
+ },
+ {
+  "word": "votre",
+  "start": 36.32,
+  "end": 36.46
+ },
+ {
+  "word": "enfant.",
+  "start": 36.46,
+  "end": 36.82
+ },
+ {
+  "word": "Les",
+  "start": 38.18,
+  "end": 38.4
+ },
+ {
+  "word": "notes",
+  "start": 38.4,
+  "end": 38.64
+ },
+ {
+  "word": "et",
+  "start": 38.64,
+  "end": 38.76
+ },
+ {
+  "word": "les",
+  "start": 38.76,
+  "end": 38.86
+ },
+ {
+  "word": "bulletins",
+  "start": 38.86,
+  "end": 39.2
+ },
+ {
+  "word": "trimestre",
+  "start": 39.42,
+  "end": 39.76
+ },
+ {
+  "word": "par",
+  "start": 39.76,
+  "end": 39.96
+ },
+ {
+  "word": "trimestre,",
+  "start": 39.96,
+  "end": 40.46
+ },
+ {
+  "word": "la",
+  "start": 40.86,
+  "end": 40.96
+ },
+ {
+  "word": "vie",
+  "start": 40.96,
+  "end": 41.08
+ },
+ {
+  "word": "scolaire",
+  "start": 41.08,
+  "end": 41.56
+ },
+ {
+  "word": "avec",
+  "start": 41.56,
+  "end": 41.74
+ },
+ {
+  "word": "absences,",
+  "start": 41.74,
+  "end": 42.16
+ },
+ {
+  "word": "retards",
+  "start": 42.46,
+  "end": 42.62
+ },
+ {
+  "word": "et",
+  "start": 42.62,
+  "end": 42.88
+ },
+ {
+  "word": "sanctions,",
+  "start": 42.88,
+  "end": 43.1
+ },
+ {
+  "word": "le",
+  "start": 43.7,
+  "end": 43.82
+ },
+ {
+  "word": "cahier",
+  "start": 43.82,
+  "end": 44.12
+ },
+ {
+  "word": "de",
+  "start": 44.12,
+  "end": 44.12
+ },
+ {
+  "word": "texte",
+  "start": 44.12,
+  "end": 44.46
+ },
+ {
+  "word": "que",
+  "start": 44.46,
+  "end": 44.54
+ },
+ {
+  "word": "les",
+  "start": 44.54,
+  "end": 44.62
+ },
+ {
+  "word": "professeurs",
+  "start": 44.62,
+  "end": 45.04
+ },
+ {
+  "word": "remplissent",
+  "start": 45.04,
+  "end": 45.38
+ },
+ {
+  "word": "au",
+  "start": 45.38,
+  "end": 45.54
+ },
+ {
+  "word": "fil",
+  "start": 45.54,
+  "end": 45.66
+ },
+ {
+  "word": "de",
+  "start": 45.66,
+  "end": 45.78
+ },
+ {
+  "word": "la",
+  "start": 45.78,
+  "end": 45.9
+ },
+ {
+  "word": "journée...",
+  "start": 45.9,
+  "end": 46.14
+ },
+ {
+  "word": "tout",
+  "start": 46.78,
+  "end": 46.92
+ },
+ {
+  "word": "est",
+  "start": 46.92,
+  "end": 47.08
+ },
+ {
+  "word": "là,",
+  "start": 47.08,
+  "end": 47.24
+ },
+ {
+  "word": "LIMPIDE.",
+  "start": 47.56,
+  "end": 48.02
+ },
+ {
+  "word": "Vous",
+  "start": 48.54,
+  "end": 48.7
+ },
+ {
+  "word": "voyez",
+  "start": 48.7,
+  "end": 49.0
+ },
+ {
+  "word": "tout,",
+  "start": 49.0,
+  "end": 49.22
+ },
+ {
+  "word": "en",
+  "start": 49.22,
+  "end": 49.6
+ },
+ {
+  "word": "un",
+  "start": 49.6,
+  "end": 49.84
+ },
+ {
+  "word": "coup",
+  "start": 49.84,
+  "end": 49.98
+ },
+ {
+  "word": "d’œil.",
+  "start": 49.98,
+  "end": 50.24
+ },
+ {
+  "word": "Les",
+  "start": 50.78,
+  "end": 50.9
+ },
+ {
+  "word": "factures,",
+  "start": 50.9,
+  "end": 51.24
+ },
+ {
+  "word": "c’est",
+  "start": 51.46,
+  "end": 51.56
+ },
+ {
+  "word": "pareil",
+  "start": 51.56,
+  "end": 51.8
+ },
+ {
+  "word": ":",
+  "start": 51.8,
+  "end": 51.8
+ },
+ {
+  "word": "à",
+  "start": 52.36,
+  "end": 52.54
+ },
+ {
+  "word": "payer",
+  "start": 52.54,
+  "end": 52.72
+ },
+ {
+  "word": "ou",
+  "start": 52.72,
+  "end": 52.9
+ },
+ {
+  "word": "déjà",
+  "start": 52.9,
+  "end": 53.12
+ },
+ {
+  "word": "réglées,",
+  "start": 53.12,
+  "end": 53.44
+ },
+ {
+  "word": "tout",
+  "start": 53.64,
+  "end": 53.74
+ },
+ {
+  "word": "est",
+  "start": 53.74,
+  "end": 53.86
+ },
+ {
+  "word": "listé.",
+  "start": 53.86,
+  "end": 54.16
+ },
+ {
+  "word": "Sélectionnez",
+  "start": 54.7,
+  "end": 55.14
+ },
+ {
+  "word": "une",
+  "start": 55.14,
+  "end": 55.24
+ },
+ {
+  "word": "facture,",
+  "start": 55.24,
+  "end": 55.66
+ },
+ {
+  "word": "choisissez",
+  "start": 56.02,
+  "end": 56.4
+ },
+ {
+  "word": "Max",
+  "start": 56.4,
+  "end": 56.76
+ },
+ {
+  "word": "It",
+  "start": 56.76,
+  "end": 57.06
+ },
+ {
+  "word": "ou",
+  "start": 57.06,
+  "end": 57.34
+ },
+ {
+  "word": "Wave,",
+  "start": 57.34,
+  "end": 57.64
+ },
+ {
+  "word": "et",
+  "start": 57.64,
+  "end": 58.24
+ },
+ {
+  "word": "l’école",
+  "start": 58.24,
+  "end": 58.48
+ },
+ {
+  "word": "est",
+  "start": 58.48,
+  "end": 58.64
+ },
+ {
+  "word": "payée",
+  "start": 58.64,
+  "end": 58.88
+ },
+ {
+  "word": "sans",
+  "start": 58.88,
+  "end": 59.1
+ },
+ {
+  "word": "file",
+  "start": 59.1,
+  "end": 59.32
+ },
+ {
+  "word": "d’attente",
+  "start": 59.32,
+  "end": 59.66
+ },
+ {
+  "word": "ni",
+  "start": 59.66,
+  "end": 59.88
+ },
+ {
+  "word": "déplacement.",
+  "start": 59.88,
+  "end": 60.38
+ },
+ {
+  "word": "Et",
+  "start": 60.8,
+  "end": 60.96
+ },
+ {
+  "word": "voilà,",
+  "start": 60.96,
+  "end": 61.16
+ },
+ {
+  "word": "c’est",
+  "start": 61.58,
+  "end": 61.66
+ },
+ {
+  "word": "RÉGLÉ",
+  "start": 61.66,
+  "end": 61.98
+ },
+ {
+  "word": "!",
+  "start": 61.98,
+  "end": 61.98
+ },
+ {
+  "word": "Chaque",
+  "start": 64.82,
+  "end": 65.26
+ },
+ {
+  "word": "annonce",
+  "start": 65.26,
+  "end": 65.46
+ },
+ {
+  "word": "de",
+  "start": 65.46,
+  "end": 65.58
+ },
+ {
+  "word": "l’école",
+  "start": 65.58,
+  "end": 65.8
+ },
+ {
+  "word": "arrive",
+  "start": 65.8,
+  "end": 66.02
+ },
+ {
+  "word": "directement",
+  "start": 66.02,
+  "end": 66.52
+ },
+ {
+  "word": "dans",
+  "start": 66.52,
+  "end": 66.7
+ },
+ {
+  "word": "vos",
+  "start": 66.7,
+  "end": 66.82
+ },
+ {
+  "word": "notifications",
+  "start": 66.82,
+  "end": 67.24
+ },
+ {
+  "word": ":",
+  "start": 67.24,
+  "end": 67.24
+ },
+ {
+  "word": "rien",
+  "start": 67.82,
+  "end": 68.18
+ },
+ {
+  "word": "à",
+  "start": 68.18,
+  "end": 68.34
+ },
+ {
+  "word": "chercher,",
+  "start": 68.34,
+  "end": 68.6
+ },
+ {
+  "word": "tout",
+  "start": 69.06,
+  "end": 69.14
+ },
+ {
+  "word": "est",
+  "start": 69.14,
+  "end": 69.3
+ },
+ {
+  "word": "ici.",
+  "start": 69.3,
+  "end": 69.58
+ },
+ {
+  "word": "Et",
+  "start": 70.3,
+  "end": 70.42
+ },
+ {
+  "word": "si",
+  "start": 70.42,
+  "end": 70.56
+ },
+ {
+  "word": "votre",
+  "start": 70.56,
+  "end": 70.72
+ },
+ {
+  "word": "enfant",
+  "start": 70.72,
+  "end": 70.94
+ },
+ {
+  "word": "prend",
+  "start": 70.94,
+  "end": 71.18
+ },
+ {
+  "word": "le",
+  "start": 71.18,
+  "end": 71.26
+ },
+ {
+  "word": "bus,",
+  "start": 71.26,
+  "end": 71.46
+ },
+ {
+  "word": "vous",
+  "start": 71.88,
+  "end": 71.92
+ },
+ {
+  "word": "suivez",
+  "start": 71.92,
+  "end": 72.34
+ },
+ {
+  "word": "son",
+  "start": 72.34,
+  "end": 72.48
+ },
+ {
+  "word": "trajet",
+  "start": 72.48,
+  "end": 72.84
+ },
+ {
+  "word": "EN",
+  "start": 72.84,
+  "end": 73.08
+ },
+ {
+  "word": "DIRECT",
+  "start": 73.08,
+  "end": 73.54
+ },
+ {
+  "word": ":",
+  "start": 74.44,
+  "end": 74.88
+ },
+ {
+  "word": "monté",
+  "start": 74.88,
+  "end": 74.88
+ },
+ {
+  "word": "à",
+  "start": 74.88,
+  "end": 75.04
+ },
+ {
+  "word": "7",
+  "start": 75.04,
+  "end": 75.5
+ },
+ {
+  "word": "heures",
+  "start": 75.9,
+  "end": 76.08
+ },
+ {
+  "word": "12,",
+  "start": 76.08,
+  "end": 76.08
+ },
+ {
+  "word": "deux",
+  "start": 76.08,
+  "end": 76.08
+ },
+ {
+  "word": "arrêts",
+  "start": 76.08,
+  "end": 76.3
+ },
+ {
+  "word": "restants.",
+  "start": 76.3,
+  "end": 76.64
+ },
+ {
+  "word": "La",
+  "start": 77.18,
+  "end": 77.36
+ },
+ {
+  "word": "réinscription,",
+  "start": 77.36,
+  "end": 77.82
+ },
+ {
+  "word": "elle",
+  "start": 77.86,
+  "end": 78.22
+ },
+ {
+  "word": "aussi,",
+  "start": 78.22,
+  "end": 78.46
+ },
+ {
+  "word": "se",
+  "start": 78.54,
+  "end": 78.62
+ },
+ {
+  "word": "fait",
+  "start": 78.62,
+  "end": 78.74
+ },
+ {
+  "word": "en",
+  "start": 78.74,
+  "end": 78.88
+ },
+ {
+  "word": "quelques",
+  "start": 78.88,
+  "end": 79.08
+ },
+ {
+  "word": "minutes,",
+  "start": 79.08,
+  "end": 79.48
+ },
+ {
+  "word": "sans",
+  "start": 79.64,
+  "end": 79.84
+ },
+ {
+  "word": "bouger",
+  "start": 79.84,
+  "end": 80.08
+ },
+ {
+  "word": "de",
+  "start": 80.08,
+  "end": 80.16
+ },
+ {
+  "word": "chez",
+  "start": 80.16,
+  "end": 80.26
+ },
+ {
+  "word": "vous.",
+  "start": 80.26,
+  "end": 80.42
+ },
+ {
+  "word": "Athena",
+  "start": 81.46,
+  "end": 81.9
+ },
+ {
+  "word": "School,",
+  "start": 81.9,
+  "end": 82.14
+ },
+ {
+  "word": "par",
+  "start": 82.4,
+  "end": 82.68
+ },
+ {
+  "word": "SEPRO.",
+  "start": 82.68,
+  "end": 82.8
+ },
+ {
+  "word": "L’école,",
+  "start": 83.56,
+  "end": 83.9
+ },
+ {
+  "word": "plus",
+  "start": 84.32,
+  "end": 84.38
+ },
+ {
+  "word": "près",
+  "start": 84.38,
+  "end": 84.56
+ },
+ {
+  "word": "de",
+  "start": 84.56,
+  "end": 84.66
+ },
+ {
+  "word": "vous.",
+  "start": 84.66,
+  "end": 84.78
+ }
+]
