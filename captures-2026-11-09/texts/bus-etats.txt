@@ -7,6 +7,8 @@ Pas encore parti
 Bus A
 Après-midi
 Plein écran
+A
+École
 OpenFreeMap © OpenMapTiles Data from OpenStreetMap
 
 Tournée du soir pas commencée : aucune position n'est inventée, le trajet à venir est en pointillé.
@@ -17,6 +19,8 @@ il y a 12 min
 Bus A
 Matin
 Plein écran
+A
+École
 OpenFreeMap © OpenMapTiles Data from OpenStreetMap
 Position il y a 12 min
 Rue 12 · Médina
@@ -53,6 +57,8 @@ il y a 4 min
 Bus A
 Matin
 Plein écran
+A
+École
 OpenFreeMap © OpenMapTiles Data from OpenStreetMap
 Retard 12 min
 Circulation · signalé par Mme Diop
@@ -66,6 +72,8 @@ il y a 6 min
 Bus A
 Matin
 Plein écran
+A
+École
 OpenFreeMap © OpenMapTiles Data from OpenStreetMap
 Route barrée
 Signalé à 07:18 · itinéraire en cours d'ajustement

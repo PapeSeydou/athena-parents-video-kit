@@ -7,6 +7,9 @@ Bus B
 Matin
 Après-midi
 Plein écran
+École
+A
+OpenFreeMap © OpenMapTiles Data from OpenStreetMap
 Amadou Sarr
 CM1 B
 Monté · 07:12

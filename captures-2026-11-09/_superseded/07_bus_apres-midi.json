@@ -1,0 +1,101 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Bus A",
+  "type": "button",
+  "x": 92,
+  "y": 366,
+  "width": 131,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Bus B",
+  "type": "button",
+  "x": 233,
+  "y": 366,
+  "width": 132,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Matin",
+  "type": "button",
+  "x": 98,
+  "y": 438,
+  "width": 93,
+  "height": 52,
+  "tap": false
+ },
+ {
+  "label": "Après-midi",
+  "type": "button",
+  "x": 191,
+  "y": 438,
+  "width": 151,
+  "height": 52,
+  "tap": true
+ },
+ {
+  "label": "Plein écran",
+  "type": "button",
+  "x": 533,
+  "y": 296,
+  "width": 199,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr CM1 B Monté · 07:12",
+  "type": "button",
+  "x": 40,
+  "y": 1092,
+  "width": 744,
+  "height": 68,
+  "tap": false
+ },
+ {
+  "label": "Khadi Sarr CM2 A Monté · 07:14",
+  "type": "button",
+  "x": 40,
+  "y": 1192,
+  "width": 744,
+  "height": 68,
+  "tap": false
+ },
+ {
+  "label": "Fatou Sarr CP A Absent déclaré",
+  "type": "button",
+  "x": 40,
+  "y": 1292,
+  "width": 744,
+  "height": 68,
+  "tap": false
+ },
+ {
+  "label": "Absence déclarée pour Fatou Sarr. Appuyer pour ouvrir sa fiche.",
+  "type": "button",
+  "x": 494,
+  "y": 1302,
+  "width": 234,
+  "height": 48,
+  "tap": false
+ }
+]

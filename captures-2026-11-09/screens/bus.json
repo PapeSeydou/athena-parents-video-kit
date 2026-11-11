@@ -63,6 +63,15 @@
   "tap": false
  },
  {
+  "label": "Map marker",
+  "type": "button",
+  "x": 290,
+  "y": 482,
+  "width": 80,
+  "height": 56,
+  "tap": false
+ },
+ {
   "label": "OpenFreeMap",
   "type": "link",
   "x": 204,

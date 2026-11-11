@@ -63,6 +63,42 @@
   "tap": false
  },
  {
+  "label": "Map marker",
+  "type": "button",
+  "x": 92,
+  "y": 394,
+  "width": 80,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "OpenFreeMap",
+  "type": "link",
+  "x": 204,
+  "y": 978,
+  "width": 116,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "© OpenMapTiles",
+  "type": "link",
+  "x": 325,
+  "y": 978,
+  "width": 135,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "OpenStreetMap",
+  "type": "link",
+  "x": 549,
+  "y": 978,
+  "width": 127,
+  "height": 20,
+  "tap": false
+ },
+ {
   "label": "Amadou Sarr CM1 B Monté · 07:12",
   "type": "button",
   "x": 40,

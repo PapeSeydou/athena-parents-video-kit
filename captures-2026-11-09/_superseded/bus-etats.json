@@ -1,0 +1,110 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Bus A",
+  "type": "button",
+  "x": 92,
+  "y": 635,
+  "width": 131,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Plein écran",
+  "type": "button",
+  "x": 533,
+  "y": 565,
+  "width": 199,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "OpenFreeMap",
+  "type": "link",
+  "x": 204,
+  "y": 839,
+  "width": 116,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "© OpenMapTiles",
+  "type": "link",
+  "x": 325,
+  "y": 839,
+  "width": 135,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "OpenStreetMap",
+  "type": "link",
+  "x": 549,
+  "y": 839,
+  "width": 127,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "Bus A",
+  "type": "button",
+  "x": 92,
+  "y": 1188,
+  "width": 131,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Plein écran",
+  "type": "button",
+  "x": 533,
+  "y": 1118,
+  "width": 199,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "OpenFreeMap",
+  "type": "link",
+  "x": 204,
+  "y": 1392,
+  "width": 116,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "© OpenMapTiles",
+  "type": "link",
+  "x": 325,
+  "y": 1392,
+  "width": 135,
+  "height": 20,
+  "tap": false
+ },
+ {
+  "label": "OpenStreetMap",
+  "type": "link",
+  "x": 549,
+  "y": 1392,
+  "width": 127,
+  "height": 20,
+  "tap": false
+ }
+]
