@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Filtres",
+  "type": "button",
+  "x": 585,
+  "y": 256,
+  "width": 199,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Toutes",
+  "type": "button",
+  "x": 40,
+  "y": 367,
+  "width": 130,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Mathématiques",
+  "type": "button",
+  "x": 182,
+  "y": 367,
+  "width": 243,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Français",
+  "type": "button",
+  "x": 438,
+  "y": 367,
+  "width": 153,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Anglais",
+  "type": "button",
+  "x": 603,
+  "y": 367,
+  "width": 140,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Histo-Géo",
+  "type": "button",
+  "x": 755,
+  "y": 367,
+  "width": 69,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Rechercher (matière, contenu, devoir)",
+  "type": "input",
+  "x": 40,
+  "y": 439,
+  "width": 744,
+  "height": 86,
+  "tap": false
+ }
+]

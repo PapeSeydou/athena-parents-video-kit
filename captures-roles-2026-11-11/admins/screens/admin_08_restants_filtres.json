@@ -1,0 +1,110 @@
+[
+ {
+  "label": "Tous les cycles",
+  "type": "button",
+  "x": 36,
+  "y": 1406,
+  "width": 199,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire",
+  "type": "button",
+  "x": 247,
+  "y": 1406,
+  "width": 168,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Moyen",
+  "type": "button",
+  "x": 428,
+  "y": 1406,
+  "width": 112,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Secondaire",
+  "type": "button",
+  "x": 552,
+  "y": 1406,
+  "width": 161,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Tous les mois",
+  "type": "button",
+  "x": 36,
+  "y": 1522,
+  "width": 184,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Septembre",
+  "type": "button",
+  "x": 232,
+  "y": 1522,
+  "width": 159,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Octobre",
+  "type": "button",
+  "x": 403,
+  "y": 1522,
+  "width": 126,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Novembre",
+  "type": "button",
+  "x": 541,
+  "y": 1522,
+  "width": 152,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Décembre",
+  "type": "button",
+  "x": 36,
+  "y": 1582,
+  "width": 151,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Janvier",
+  "type": "button",
+  "x": 199,
+  "y": 1582,
+  "width": 120,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Réinitialiser",
+  "type": "button",
+  "x": 350,
+  "y": 1653,
+  "width": 124,
+  "height": 33,
+  "tap": false
+ },
+ {
+  "label": "Appliquer",
+  "type": "button",
+  "x": 36,
+  "y": 1698,
+  "width": 752,
+  "height": 88,
+  "tap": false
+ }
+]

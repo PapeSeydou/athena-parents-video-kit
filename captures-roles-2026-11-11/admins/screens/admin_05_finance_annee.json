@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Voir le détail ›",
+  "type": "link",
+  "x": 606,
+  "y": 278,
+  "width": 144,
+  "height": 32,
+  "tap": false
+ },
+ {
+  "label": "Mois",
+  "type": "card",
+  "x": 548,
+  "y": 496,
+  "width": 90,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Année",
+  "type": "card",
+  "x": 647,
+  "y": 496,
+  "width": 109,
+  "height": 48,
+  "tap": true
+ },
+ {
+  "label": "Jour",
+  "type": "card",
+  "x": 450,
+  "y": 965,
+  "width": 88,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Mois",
+  "type": "card",
+  "x": 548,
+  "y": 965,
+  "width": 90,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Année",
+  "type": "card",
+  "x": 647,
+  "y": 965,
+  "width": 109,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 604,
+  "y": 1706,
+  "width": 150,
+  "height": 36,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire 6 classes concernées · CP → CE1 → CE2 3 281 000",
+  "type": "link",
+  "x": 290,
+  "y": 1750,
+  "width": 464,
+  "height": 84,
+  "tap": false
+ }
+]

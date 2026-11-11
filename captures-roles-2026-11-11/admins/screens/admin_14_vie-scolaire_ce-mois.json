@@ -1,0 +1,74 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Ce mois",
+  "type": "button",
+  "x": 40,
+  "y": 256,
+  "width": 127,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Trimestre",
+  "type": "button",
+  "x": 183,
+  "y": 256,
+  "width": 142,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Filtrer",
+  "type": "button",
+  "x": 588,
+  "y": 248,
+  "width": 196,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire 2 sanctions ›",
+  "type": "button",
+  "x": 70,
+  "y": 362,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moyen 11 absences · 7 retards · 2 sanctions ›",
+  "type": "button",
+  "x": 70,
+  "y": 469,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Secondaire 2 sanctions ›",
+  "type": "button",
+  "x": 70,
+  "y": 576,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ }
+]

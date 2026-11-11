@@ -1,0 +1,11 @@
+[
+ {
+  "label": "Scanner pour pointer",
+  "type": "button",
+  "x": 40,
+  "y": 1706,
+  "width": 744,
+  "height": 88,
+  "tap": true
+ }
+]

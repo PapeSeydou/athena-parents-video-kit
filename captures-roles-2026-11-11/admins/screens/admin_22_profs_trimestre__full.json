@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Semaine",
+  "type": "button",
+  "x": 40,
+  "y": 256,
+  "width": 135,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Trimestre",
+  "type": "button",
+  "x": 191,
+  "y": 256,
+  "width": 142,
+  "height": 48,
+  "tap": true
+ },
+ {
+  "label": "Filtrer",
+  "type": "button",
+  "x": 588,
+  "y": 248,
+  "width": 196,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "SA M. Sagna CP A, CM1 B, 6e A · 3 retards · 16 non pointés ›",
+  "type": "button",
+  "x": 70,
+  "y": 1400,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "SO Mme Sow CE2 B · 4 retards · 8 non pointés ›",
+  "type": "button",
+  "x": 70,
+  "y": 1507,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "GU M. Gueye CE1 B · 2 retards · 5 non pointés ›",
+  "type": "button",
+  "x": 70,
+  "y": 1613,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "DI M. Diagne 6e B · 9 retards · 1 non pointé ›",
+  "type": "button",
+  "x": 70,
+  "y": 1720,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "KA M. Kane CM1 D · 5 retards ›",
+  "type": "button",
+  "x": 70,
+  "y": 1827,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ }
+]

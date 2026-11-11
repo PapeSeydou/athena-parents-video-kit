@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Tout 5",
+  "type": "button",
+  "x": 46,
+  "y": 266,
+  "width": 138,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Non lues 2",
+  "type": "button",
+  "x": 184,
+  "y": 266,
+  "width": 187,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Cahier de texte à remplir — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 378,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Devoirs à valider — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 484,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Message de la direction — lue",
+  "type": "button",
+  "x": 70,
+  "y": 590,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Appel enregistré — lue",
+  "type": "button",
+  "x": 70,
+  "y": 696,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Sanction enregistrée — lue",
+  "type": "button",
+  "x": 70,
+  "y": 802,
+  "width": 684,
+  "height": 88,
+  "tap": false
+ },
+ {
+  "label": "Tout marquer comme lu",
+  "type": "button",
+  "x": 40,
+  "y": 944,
+  "width": 744,
+  "height": 72,
+  "tap": false
+ }
+]

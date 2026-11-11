@@ -1,0 +1,38 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Devoir — Mathématiques CM1 B · Lun 26/01 11,4 25/29 ont réussi",
+  "type": "button",
+  "x": 70,
+  "y": 764,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Devoir — Français 6e B · Mar 27/01 12,0 5/6 ont réussi",
+  "type": "button",
+  "x": 70,
+  "y": 871,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ }
+]

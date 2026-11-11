@@ -1,0 +1,110 @@
+[
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 108,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Lun 26",
+  "type": "button",
+  "x": 40,
+  "y": 915,
+  "width": 108,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Mar 27",
+  "type": "button",
+  "x": 164,
+  "y": 915,
+  "width": 110,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Mer 28",
+  "type": "button",
+  "x": 290,
+  "y": 915,
+  "width": 111,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Jeu 29",
+  "type": "button",
+  "x": 417,
+  "y": 915,
+  "width": 109,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Ven 30",
+  "type": "button",
+  "x": 542,
+  "y": 915,
+  "width": 113,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "EMPLOI DU TEMPS ›",
+  "type": "link",
+  "x": 507,
+  "y": 1012,
+  "width": 247,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "CM1 B Mathématiques 08h00 – 09h00",
+  "type": "link",
+  "x": 70,
+  "y": 1068,
+  "width": 684,
+  "height": 115,
+  "tap": false
+ },
+ {
+  "label": "6e A Français 10h00 – 11h00",
+  "type": "link",
+  "x": 70,
+  "y": 1183,
+  "width": 684,
+  "height": 115,
+  "tap": false
+ },
+ {
+  "label": "6e B Français 11h00 – 12h00",
+  "type": "link",
+  "x": 70,
+  "y": 1297,
+  "width": 684,
+  "height": 115,
+  "tap": false
+ },
+ {
+  "label": "CM1 A Mathématiques 13h00 – 14h00",
+  "type": "link",
+  "x": 70,
+  "y": 1412,
+  "width": 684,
+  "height": 115,
+  "tap": false
+ },
+ {
+  "label": "CM2 A Mathématiques 14h00 – 15h00",
+  "type": "link",
+  "x": 70,
+  "y": 1527,
+  "width": 684,
+  "height": 113,
+  "tap": false
+ }
+]

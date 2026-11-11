@@ -1,0 +1,587 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Scanner pour pointer (Salle 4)",
+  "type": "button",
+  "x": 40,
+  "y": 320,
+  "width": 744,
+  "height": 88,
+  "tap": false
+ },
+ {
+  "label": "Rechercher un apprenant",
+  "type": "input",
+  "x": 40,
+  "y": 502,
+  "width": 744,
+  "height": 86,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 604,
+  "width": 744,
+  "height": 104,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 618,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Mariama Diallo Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 708,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 740,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Ibrahima Ndiaye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 830,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 862,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Awa Sow Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 952,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 984,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Cheikh Fall Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1074,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1106,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Sokhna Sy Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1196,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1228,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Abdoulaye Kane Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1318,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1350,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Ramatoulaye Diop Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1440,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1472,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Modou Gueye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1562,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1594,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Bineta Touré Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1684,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1716,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Pape Cissé Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1806,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1838,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Seynabou Koné Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 1928,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 1960,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Coumba Traoré Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2050,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2082,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Assane Diarra Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2172,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2204,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Astou Baldé Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2294,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2326,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Lamine Barry Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2416,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2448,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Adja Camara Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2538,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2570,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Serigne Condé Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2660,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2692,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Mame Diarra Dème Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2782,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2814,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "El Hadji Faye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 2904,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 2936,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Ndèye Gaye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3026,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3058,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Moussa Mbaye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3148,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3180,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Aïssatou Ndao Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3270,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3302,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Ousmane Koné Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3392,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3424,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Fatou Bah Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3514,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3546,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Anta Pouye Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3636,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3668,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Daouda Sagna Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3758,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3790,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Khadija Samb Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 3880,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 3912,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Youssou Wade Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 4002,
+  "width": 744,
+  "height": 122,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 4034,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Ndeye Awa Youm Mathématiques Présent",
+  "type": "button",
+  "x": 40,
+  "y": 4124,
+  "width": 744,
+  "height": 102,
+  "tap": false
+ },
+ {
+  "label": "Présent",
+  "type": "checkbox",
+  "x": 574,
+  "y": 4156,
+  "width": 170,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Cahier de texte",
+  "type": "button",
+  "x": 40,
+  "y": 4278,
+  "width": 744,
+  "height": 88,
+  "tap": false
+ }
+]

@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Semaine",
+  "type": "button",
+  "x": 40,
+  "y": 256,
+  "width": 135,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Trimestre",
+  "type": "button",
+  "x": 191,
+  "y": 256,
+  "width": 142,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Filtrer",
+  "type": "button",
+  "x": 588,
+  "y": 248,
+  "width": 196,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "SO CE2 B Mme Sow · Lun 26 · Mar 27 · Mer 28 · 3 cours ›",
+  "type": "button",
+  "x": 70,
+  "y": 1445,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "SA CP A M. Sagna · Lun 26 · Mar 27 · Mer 28 · 3 cours ›",
+  "type": "button",
+  "x": 70,
+  "y": 1552,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "BA CE2 A M. Ba · Mar 27 · Mer 28 · 2 cours ›",
+  "type": "button",
+  "x": 70,
+  "y": 1658,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "GU CE1 B M. Gueye · Mar 27 · 1 cours ›",
+  "type": "button",
+  "x": 70,
+  "y": 1765,
+  "width": 684,
+  "height": 69,
+  "tap": false
+ }
+]

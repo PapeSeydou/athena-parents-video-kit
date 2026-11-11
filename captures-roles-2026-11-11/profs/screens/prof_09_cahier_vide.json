@@ -1,0 +1,65 @@
+[
+ {
+  "label": "Séance du jour",
+  "type": "button",
+  "x": 40,
+  "y": 1303,
+  "width": 744,
+  "height": 130,
+  "tap": false
+ },
+ {
+  "label": "La multiplication posée à deux chiffres.",
+  "type": "input",
+  "x": 40,
+  "y": 1347,
+  "width": 644,
+  "height": 86,
+  "tap": false
+ },
+ {
+  "label": "Dicter Séance du jour par la voix",
+  "type": "button",
+  "x": 700,
+  "y": 1348,
+  "width": 84,
+  "height": 84,
+  "tap": false
+ },
+ {
+  "label": "Travail donné",
+  "type": "button",
+  "x": 40,
+  "y": 1523,
+  "width": 744,
+  "height": 130,
+  "tap": false
+ },
+ {
+  "label": "Exercices 8-10 p.48",
+  "type": "input",
+  "x": 40,
+  "y": 1567,
+  "width": 644,
+  "height": 86,
+  "tap": false
+ },
+ {
+  "label": "Dicter Travail donné par la voix",
+  "type": "button",
+  "x": 700,
+  "y": 1568,
+  "width": 84,
+  "height": 84,
+  "tap": false
+ },
+ {
+  "label": "Publier",
+  "type": "button",
+  "x": 40,
+  "y": 1673,
+  "width": 744,
+  "height": 88,
+  "tap": true
+ }
+]

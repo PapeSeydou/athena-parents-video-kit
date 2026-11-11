@@ -1,0 +1,173 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Filtrer",
+  "type": "button",
+  "x": 584,
+  "y": 470,
+  "width": 196,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Fatou Bah CP B · FA2526-000117 · Octobre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 628,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Fatou Bah CP B · FA2526-000498 · Janvier 6 000",
+  "type": "button",
+  "x": 70,
+  "y": 734,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moussa Diop CE1 B · FA2526-000243 · Novembre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 841,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moussa Diop CE1 B · FA2526-000512 · Janvier 16 000",
+  "type": "button",
+  "x": 70,
+  "y": 948,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Ousmane Fall CE2 A · FA2526-000154 · Octobre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 1055,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Ousmane Fall CE2 A · FA2526-000377 · Décembre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 1161,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr CM1 B · FA2526-000261 · Novembre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 1388,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Amadou Sarr CM1 B · FA2526-000489 · Janvier 11 000",
+  "type": "button",
+  "x": 70,
+  "y": 1495,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Awa Sow CM1 B · FA2526-000372 · Décembre 16 000",
+  "type": "button",
+  "x": 70,
+  "y": 1602,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Bineta Touré CM1 B · FA2526-000505 · Janvier 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 1709,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moussa Konaté CM2 A · FA2526-000071 · Septembre 16 000",
+  "type": "button",
+  "x": 70,
+  "y": 1815,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Pape Ndiaye CM2 A · FA2526-000501 · Janvier 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 1922,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Awa Ba 6e B · FA2526-000143 · Octobre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 2149,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Awa Ba 6e B · FA2526-000521 · Janvier 11 000",
+  "type": "button",
+  "x": 70,
+  "y": 2256,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Ibrahima Ndiaye 6e C · FA2526-000287 · Novembre 26 000",
+  "type": "button",
+  "x": 70,
+  "y": 2362,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Samba Diop 6e C · FA2526-000391 · Décembre 16 000",
+  "type": "button",
+  "x": 70,
+  "y": 2469,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ }
+]

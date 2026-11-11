@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Tout 6",
+  "type": "button",
+  "x": 46,
+  "y": 266,
+  "width": 138,
+  "height": 60,
+  "tap": false
+ },
+ {
+  "label": "Non lues 4",
+  "type": "button",
+  "x": 184,
+  "y": 266,
+  "width": 189,
+  "height": 60,
+  "tap": true
+ },
+ {
+  "label": "Absences déclarées au transport — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 378,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "11 absents aujourd'hui — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 484,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Restants à recouvrer — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 590,
+  "width": 684,
+  "height": 106,
+  "tap": false
+ },
+ {
+  "label": "Professeurs non pointés — non lue",
+  "type": "button",
+  "x": 70,
+  "y": 696,
+  "width": 684,
+  "height": 88,
+  "tap": false
+ },
+ {
+  "label": "Tout marquer comme lu",
+  "type": "button",
+  "x": 40,
+  "y": 838,
+  "width": 744,
+  "height": 72,
+  "tap": false
+ }
+]

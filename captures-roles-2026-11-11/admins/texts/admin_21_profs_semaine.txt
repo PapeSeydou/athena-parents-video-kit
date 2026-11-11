@@ -1,0 +1,96 @@
+9:30
+Suivi des profs
+Semaine
+Trimestre
+Filtrer
+Présents
+18
+En retard
+4
+Profs non pointés
+7
+Cours à vérifier
+12
+RÉPARTITION — SEMAINE
+60
+POINTAGES
+À l'heure
+39
+En retard
+9
+Non pointés
+12
+
+20 profs × 3 jours · 60 pointages · référence 08h00 + 10 min
+
+RETARDS PAR JOUR
+3
+Lun 26
+2
+Mar 27
+4
+Mer 28
+
+Jeu 29 · Ven 30 — à venir
+
+CLASSES À VÉRIFIER
+SO
+CE2 B
+Mme Sow · Lun 26 · Mar 27 · Mer 28 · 3 cours
+›
+SA
+CP A
+M. Sagna · Lun 26 · Mar 27 · Mer 28 · 3 cours
+›
+BA
+CE2 A
+M. Ba · Mar 27 · Mer 28 · 2 cours
+›
+GU
+CE1 B
+M. Gueye · Mar 27 · 1 cours
+›
+FA
+CE2 C
+M. Faye · Mer 28 · 1 cours
+›
+MB
+CM2 B
+M. Mbaye · Lun 26 · 1 cours
+›
+CI
+6e A
+Mme Cissé · Mer 28 · 1 cours
+›
+
+Un prof non pointé un jour de cours = séance à vérifier (oubli de scan possible) — jamais compté absent.
+
+PROFS À SUIVRE
+SO
+Mme Sow
+CE2 B · 3 non pointés
+›
+SA
+M. Sagna
+CP A, CM1 B, 6e A · 3 non pointés
+›
+BA
+M. Ba
+CE2 A · 2 non pointés
+›
+DI
+M. Diagne
+6e B · 3 retards
+›
+SÈ
+M. Sène
+CP B · 2 retards
+›
+SY
+Mme Sy
+CM1 C · 2 retards
+›
+KA
+M. Kane
+CM1 D · 2 retards
+›

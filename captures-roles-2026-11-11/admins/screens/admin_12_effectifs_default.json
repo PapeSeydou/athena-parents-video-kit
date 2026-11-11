@@ -1,0 +1,47 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire 8 classes · 197 apprenants ›",
+  "type": "button",
+  "x": 290,
+  "y": 655,
+  "width": 464,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moyen 7 classes · 142 apprenants ›",
+  "type": "button",
+  "x": 290,
+  "y": 762,
+  "width": 464,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Secondaire 3 classes · 100 apprenants ›",
+  "type": "button",
+  "x": 290,
+  "y": 868,
+  "width": 464,
+  "height": 105,
+  "tap": false
+ }
+]

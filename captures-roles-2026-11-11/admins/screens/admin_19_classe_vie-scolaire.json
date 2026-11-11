@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Absences",
+  "type": "button",
+  "x": 40,
+  "y": 320,
+  "width": 199,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "Retards",
+  "type": "button",
+  "x": 251,
+  "y": 320,
+  "width": 175,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "Sanctions",
+  "type": "button",
+  "x": 437,
+  "y": 320,
+  "width": 200,
+  "height": 70,
+  "tap": false
+ },
+ {
+  "label": "Semaine",
+  "type": "button",
+  "x": 40,
+  "y": 418,
+  "width": 135,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Mois",
+  "type": "button",
+  "x": 191,
+  "y": 418,
+  "width": 90,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Année",
+  "type": "button",
+  "x": 296,
+  "y": 418,
+  "width": 109,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Filtres",
+  "type": "button",
+  "x": 585,
+  "y": 410,
+  "width": 199,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Rechercher un apprenant",
+  "type": "input",
+  "x": 40,
+  "y": 605,
+  "width": 744,
+  "height": 86,
+  "tap": false
+ }
+]

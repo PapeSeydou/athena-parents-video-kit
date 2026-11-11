@@ -1,0 +1,57 @@
+9:30
+Suivi des profs
+Semaine
+Trimestre
+Filtrer
+Pointages — trim
+1619
+Retards — trim
+42
+Jours sans pointage
+45
+Profs non pointés
+9
+RÉPARTITION — TRIMESTRE
+1664
+SÉANCES
+À l'heure
+1577
+En retard
+42
+Non pointés
+45
+
+Trimestre — septembre → janvier
+
+NON POINTÉS PAR MOIS
+6
+Sept
+8
+Oct
+9
+Nov
+10
+Déc
+12
+Janv
+PROFS À SUIVRE — TRIMESTRE
+SA
+M. Sagna
+CP A, CM1 B, 6e A · 3 retards · 16 non pointés
+›
+SO
+Mme Sow
+CE2 B · 4 retards · 8 non pointés
+›
+GU
+M. Gueye
+CE1 B · 2 retards · 5 non pointés
+›
+DI
+M. Diagne
+6e B · 9 retards · 1 non pointé
+›
+KA
+M. Kane
+CM1 D · 5 retards
+›

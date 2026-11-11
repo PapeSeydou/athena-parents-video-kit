@@ -1,0 +1,38 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Rechercher un apprenant",
+  "type": "input",
+  "x": 40,
+  "y": 418,
+  "width": 744,
+  "height": 86,
+  "tap": false
+ },
+ {
+  "label": "Fatou Bah 1 absence Astou Baldé Lamine Barry 1 retard Adja Camara Pape Cissé 1 r",
+  "type": "button",
+  "x": 40,
+  "y": 578,
+  "width": 744,
+  "height": 2990,
+  "tap": false
+ }
+]

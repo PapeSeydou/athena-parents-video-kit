@@ -1,0 +1,128 @@
+[
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 108,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Finance",
+  "type": "button",
+  "x": 76,
+  "y": 712,
+  "width": 336,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Effectifs",
+  "type": "button",
+  "x": 412,
+  "y": 712,
+  "width": 336,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "2 ANNULATIONS",
+  "type": "link",
+  "x": 314,
+  "y": 797,
+  "width": 256,
+  "height": 49,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 798,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire 6 classes concernées 3 281 000",
+  "type": "link",
+  "x": 290,
+  "y": 854,
+  "width": 464,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moyen 6 classes concernées 2 837 000",
+  "type": "link",
+  "x": 290,
+  "y": 961,
+  "width": 464,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Secondaire 3 classes concernées 2 232 000",
+  "type": "link",
+  "x": 290,
+  "y": 1068,
+  "width": 464,
+  "height": 105,
+  "tap": false
+ },
+ {
+  "label": "Vie scolaire",
+  "type": "button",
+  "x": 76,
+  "y": 1251,
+  "width": 336,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "Suivi profs",
+  "type": "button",
+  "x": 412,
+  "y": 1251,
+  "width": 336,
+  "height": 56,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 1336,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire 2 sanctions",
+  "type": "link",
+  "x": 70,
+  "y": 1392,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Moyen 11 absences · 7 retards · 2 sanctions",
+  "type": "link",
+  "x": 70,
+  "y": 1498,
+  "width": 684,
+  "height": 107,
+  "tap": false
+ },
+ {
+  "label": "Secondaire 2 sanctions",
+  "type": "link",
+  "x": 70,
+  "y": 1605,
+  "width": 684,
+  "height": 105,
+  "tap": false
+ }
+]

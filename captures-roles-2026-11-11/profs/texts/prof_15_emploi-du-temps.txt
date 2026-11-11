@@ -1,0 +1,79 @@
+9:30
+Emploi du temps
+Lun
+Mar
+Mer
+Jeu
+Ven
+08h
+Mathématiques
+Salle 4
+Français
+Salle 7
+Mathématiques
+Salle 4
+Mathématiques
+Salle 4
+Français
+Salle 7
+09h
+Mathématiques
+Salle 4
+Mathématiques
+Salle 4
+Français
+Salle 7
+Français
+Salle 7
+Mathématiques
+Salle 4
+10h
+Français
+Salle 7
+Mathématiques
+Salle 4
+Français
+Salle 7
+Français
+Salle 7
+Mathématiques
+Salle 4
+11h
+Français
+Salle 7
+Français
+Salle 7
+Français
+Salle 7
+Mathématiques
+Salle 4
+Français
+Salle 7
+12h
+Pause
+Pause
+Pause
+Pause
+Pause
+13h
+Mathématiques
+Salle 4
+Français
+Salle 7
+Mathématiques
+Salle 4
+Français
+Salle 7
+Mathématiques
+Salle 4
+14h
+Mathématiques
+Salle 4
+Mathématiques
+Salle 4
+Mathématiques
+Salle 4
+Français
+Salle 7
+Français
+Salle 7

@@ -1,0 +1,92 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Voir la liste des apprenants",
+  "type": "link",
+  "x": 348,
+  "y": 340,
+  "width": 40,
+  "height": 40,
+  "tap": false
+ },
+ {
+  "label": "Voir les absences",
+  "type": "link",
+  "x": 728,
+  "y": 340,
+  "width": 40,
+  "height": 40,
+  "tap": false
+ },
+ {
+  "label": "Voir les retards",
+  "type": "link",
+  "x": 348,
+  "y": 502,
+  "width": 40,
+  "height": 40,
+  "tap": false
+ },
+ {
+  "label": "Voir les sanctions",
+  "type": "link",
+  "x": 728,
+  "y": 502,
+  "width": 40,
+  "height": 40,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 686,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 1145,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 1591,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "TOUT VOIR ›",
+  "type": "link",
+  "x": 582,
+  "y": 2036,
+  "width": 172,
+  "height": 48,
+  "tap": false
+ }
+]

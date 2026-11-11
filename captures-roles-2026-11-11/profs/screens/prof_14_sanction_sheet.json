@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Bavardage",
+  "type": "button",
+  "x": 40,
+  "y": 1433,
+  "width": 159,
+  "height": 48,
+  "tap": true
+ },
+ {
+  "label": "Retard",
+  "type": "button",
+  "x": 211,
+  "y": 1433,
+  "width": 112,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Devoir non fait",
+  "type": "button",
+  "x": 334,
+  "y": 1433,
+  "width": 195,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Tenue",
+  "type": "button",
+  "x": 541,
+  "y": 1433,
+  "width": 106,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Insolence",
+  "type": "button",
+  "x": 40,
+  "y": 1492,
+  "width": 143,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Autre",
+  "type": "button",
+  "x": 195,
+  "y": 1492,
+  "width": 99,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Note (optionnel)",
+  "type": "button",
+  "x": 40,
+  "y": 1556,
+  "width": 744,
+  "height": 130,
+  "tap": false
+ },
+ {
+  "label": "Précisez…",
+  "type": "input",
+  "x": 40,
+  "y": 1600,
+  "width": 744,
+  "height": 86,
+  "tap": false
+ },
+ {
+  "label": "Ajouter la sanction",
+  "type": "button",
+  "x": 40,
+  "y": 1706,
+  "width": 744,
+  "height": 88,
+  "tap": true
+ }
+]

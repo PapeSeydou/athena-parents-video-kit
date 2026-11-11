@@ -1,0 +1,79 @@
+9:30
+Restants
+RESTANT — TOUTES PÉRIODES
+8 350 000
+15 classes concernées · tous les mois, toutes les années
+Factures impayées
+Filtrer
+Élémentaire
+CP → CE1 → CE2
+Fatou Bah
+CP B · FA2526-000117 · Octobre
+26 000
+Fatou Bah
+CP B · FA2526-000498 · Janvier
+6 000
+Moussa Diop
+CE1 B · FA2526-000243 · Novembre
+26 000
+Moussa Diop
+CE1 B · FA2526-000512 · Janvier
+16 000
+Ousmane Fall
+CE2 A · FA2526-000154 · Octobre
+26 000
+Ousmane Fall
+CE2 A · FA2526-000377 · Décembre
+26 000
+Moyen
+CM1 → CM2
+Amadou Sarr
+CM1 B · FA2526-000261 · Novembre
+26 000
+Amadou Sarr
+CM1 B · FA2526-000489 · Janvier
+11 000
+Awa Sow
+CM1 B · FA2526-000372 · Décembre
+16 000
+Bineta Touré
+CM1 B · FA2526-000505 · Janvier
+26 000
+Moussa Konaté
+CM2 A · FA2526-000071 · Septembre
+16 000
+Pape Ndiaye
+CM2 A · FA2526-000501 · Janvier
+26 000
+Secondaire
+6e
+Awa Ba
+6e B · FA2526-000143 · Octobre
+26 000
+Awa Ba
+6e B · FA2526-000521 · Janvier
+11 000
+Ibrahima Ndiaye
+6e C · FA2526-000287 · Novembre
+26 000
+Samba Diop
+6e C · FA2526-000391 · Décembre
+16 000
+
+Échantillon de factures impayées par apprenant — la liste complète sera alimentée par le back-office. Tap sur une facture pour voir ses reçus.
+
+Filtres — Restants
+Cycle
+Tous les cycles
+Élémentaire
+Moyen
+Secondaire
+Mois
+Tous les mois
+Septembre
+Octobre
+Novembre
+Décembre
+Janvier
+Réinitialiser
+Appliquer

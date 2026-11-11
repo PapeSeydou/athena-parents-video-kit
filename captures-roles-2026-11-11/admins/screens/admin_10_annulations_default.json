@@ -1,0 +1,47 @@
+[
+ {
+  "label": "Retour",
+  "type": "button",
+  "x": 40,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Menu",
+  "type": "button",
+  "x": 704,
+  "y": 104,
+  "width": 80,
+  "height": 80,
+  "tap": false
+ },
+ {
+  "label": "Semaine",
+  "type": "button",
+  "x": 546,
+  "y": 470,
+  "width": 234,
+  "height": 64,
+  "tap": false
+ },
+ {
+  "label": "Facture FA2526-000117 Fatou Bah · CP B Annulée 26 000 28/01 · M. Ndiaye",
+  "type": "button",
+  "x": 70,
+  "y": 628,
+  "width": 684,
+  "height": 155,
+  "tap": false
+ },
+ {
+  "label": "Reçu RE2526-000412 Moussa Diallo · CM1 B Annulée 60 000 27/01 · M. Ndiaye",
+  "type": "button",
+  "x": 70,
+  "y": 902,
+  "width": 684,
+  "height": 155,
+  "tap": false
+ }
+]

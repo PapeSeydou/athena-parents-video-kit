@@ -1,0 +1,83 @@
+[
+ {
+  "label": "Tous",
+  "type": "button",
+  "x": 36,
+  "y": 1449,
+  "width": 91,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Élémentaire",
+  "type": "button",
+  "x": 139,
+  "y": 1449,
+  "width": 168,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Moyen",
+  "type": "button",
+  "x": 319,
+  "y": 1449,
+  "width": 112,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Secondaire",
+  "type": "button",
+  "x": 443,
+  "y": 1449,
+  "width": 161,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Tous",
+  "type": "button",
+  "x": 36,
+  "y": 1570,
+  "width": 91,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Retards",
+  "type": "button",
+  "x": 139,
+  "y": 1570,
+  "width": 123,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Non pointés",
+  "type": "button",
+  "x": 274,
+  "y": 1570,
+  "width": 168,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Appliquer",
+  "type": "button",
+  "x": 36,
+  "y": 1645,
+  "width": 752,
+  "height": 88,
+  "tap": false
+ },
+ {
+  "label": "Réinitialiser",
+  "type": "button",
+  "x": 350,
+  "y": 1753,
+  "width": 124,
+  "height": 33,
+  "tap": false
+ }
+]

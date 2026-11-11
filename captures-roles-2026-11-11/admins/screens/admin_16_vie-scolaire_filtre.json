@@ -1,0 +1,47 @@
+[
+ {
+  "label": "Tous",
+  "type": "button",
+  "x": 36,
+  "y": 1626,
+  "width": 91,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Absence",
+  "type": "button",
+  "x": 139,
+  "y": 1626,
+  "width": 133,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Retard",
+  "type": "button",
+  "x": 284,
+  "y": 1626,
+  "width": 112,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Sanction",
+  "type": "button",
+  "x": 408,
+  "y": 1626,
+  "width": 135,
+  "height": 48,
+  "tap": false
+ },
+ {
+  "label": "Appliquer",
+  "type": "button",
+  "x": 36,
+  "y": 1698,
+  "width": 752,
+  "height": 88,
+  "tap": false
+ }
+]
