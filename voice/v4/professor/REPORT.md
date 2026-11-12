@@ -13,6 +13,7 @@
 - take 7 = 81.72 s — hors bande 92.0-108.0 s
 - take 8 = 81.84 s — hors bande 92.0-108.0 s
 - Prise retenue : take 5 (best-effort (dans la bande, gap max > 0,8 s)). Aucune edition audio, aucun traitement de tempo, de hauteur ou de vitesse.
+- Budget : 8 prises ont ete generees avant la regle des 3 prises maximum (2026-11-12). La prise retenue reste la plus concluante et aucune reprise n'est lancee.
 
 ## Mesures
 - Duree totale : 92.48 s (bande 92.0-108.0 s : ATTEINTE)

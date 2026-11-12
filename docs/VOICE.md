@@ -25,3 +25,13 @@
    entre scènes fait sonner deux narratrices.
 8. Tags de la doc Gemini 3.8 : en anglais, même pour un transcript français. Angle brackets.
 9. Run-to-run non déterministe : deux appels identiques ne rendent pas le même audio.
+
+## Budget de génération (règle du fondateur, 2026-11-12)
+
+Le budget de génération prime sur la perfection des mesures.
+
+- Maximum 3 prises par film. Une prise = une seule requête TTS pour toute la narration.
+- Après 2 ou 3 essais, on garde la plus concluante et on avance, même si la bande de durée ou la cible de gap n'est pas atteinte.
+- Ordre de choix : une prise dans la bande de durée d'abord, puis le gap maximal le plus court, puis la durée la plus proche du milieu de bande.
+- Les écarts sont notés dans REPORT.md. On ne relance pas pour les corriger.
+- La livraison v4 (2026-11-12) a été produite avant cette règle (6, 8 et 8 prises). Aucune reprise n'est lancée pour ne pas dépenser plus.
